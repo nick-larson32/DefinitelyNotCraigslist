@@ -1,17 +1,15 @@
 const Sequelize = require('sequelize')
 const sequelize = require('../config')
 
-let = require('./.js')(sequelize, Sequelize)
-let = require('./.js')(sequelize, Sequelize)
-let = require('./.js')(sequelize, Sequelize)
+let User = require('./users.js')(sequelize, Sequelize)
+let Item = require('./items.js')(sequelize, Sequelize)
+let Location = require('./location.js')(sequelize, Sequelize)
 
 
-.hasMany()
-  .belongsTo()
-  .hasMany()
-  .belongsTo()
+User.hasMany(Item)
+Item.belongsTo(User)
+Location.hasMany(User)
+User.belongsTo(Location)
 
 
-module.exports = {
-
-}
+module.exports = { User, Item, Location }
