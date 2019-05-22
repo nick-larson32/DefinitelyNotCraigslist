@@ -2,7 +2,8 @@ module.exports = (sequelize, Sequelize) => {
   class Item extends Sequelize.Model {}
   Item.init({
     text: Sequelize.STRING,
-    isDone: Sequelize.BOOLEAN
+    available: { type: Sequelize.BOOLEAN, allowNull: false, defaultValue: true },
+    price: Sequelize.INTEGER
   }, {
     sequelize,
     modelName: 'item'
