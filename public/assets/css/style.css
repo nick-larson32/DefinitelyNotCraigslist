@@ -1,3 +1,27 @@
-.menu, .item {
-  background-color: black;
+.navbar, .footer {
+  background-color: #376996;
+}
+
+.button {
+  background-color: #6290C8;
+}
+
+.navbar-item, span, .footer-text, strong {
+  color: #F5F5F5;
+}
+
+.footer-link {
+  color: #add8e6;
+  text-decoration: underline;
+}
+
+.footer {
+  margin-top: 200px;
+  width: 100%;
+  bottom: 0;
+  padding: 3rem 1.5rem 3rem;
+}
+
+.footer-text {
+  margin: auto;
 }
