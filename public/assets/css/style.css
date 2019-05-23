@@ -1,4 +1,5 @@
 /* Pure Menu stylings */
+
 .pure-img-responsive {
   max-width: 100%;
   height: auto;
@@ -99,9 +100,9 @@ appears on the left side of the page.
     */
 
 #menu a {
-  color: #999;
+  color: white;
   border: none;
-  padding: 0.6em 0.6 0.6em 0.6em;
+  padding: 0.6em;
 }
 
 /*
@@ -209,11 +210,6 @@ small screens.
   margin-top: 0.6em;
 }
 
-.logos {
-  display: block;
-  margin: auto;
-}
-
 /* -- Responsive Styles (Media Queries) ------------------------------------- */
 
 /*
@@ -258,6 +254,15 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 /* Non-CSS library stylings */
 
+.logo, .logo-text {
+  display: block;
+  margin: auto;
+}
+
+.logo-text {
+  margin-top: 5px;
+}
+
 .header {
   padding-top: 0;
 }
@@ -270,7 +275,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   background-color: #6290C8;
 }
 
-span, .footer-text, strong {
+.footer-text, strong {
   color: #F5F5F5;
 }
 
@@ -280,16 +285,12 @@ span, .footer-text, strong {
 }
 
 .footer {
-  margin-top: 200px;
   width: 100%;
   bottom: 0;
-  padding: 3rem 1.5rem 3rem;
+  padding: 1rem 0rem 1rem;
 }
 
 .footer-text {
   margin: auto;
-}
-
-.navbar-item img {
-  max-height: 200px;
+  padding-top: 50px;
 }

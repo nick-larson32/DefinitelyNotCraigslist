@@ -1,6 +1,6 @@
 (function (window, document) {
 
-  var layout = document.getElementById('layout'),
+  const layout = document.getElementById('layout'),
     menu = document.getElementById('menu'),
     menuLink = document.getElementById('menuLink'),
     content = document.getElementById('main');
