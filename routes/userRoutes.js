@@ -1,4 +1,4 @@
-const { Location, User, Item } = require('../models')
+const { Location, User, Item, Category } = require('../models')
 
 module.exports = app => {
   // GET all
