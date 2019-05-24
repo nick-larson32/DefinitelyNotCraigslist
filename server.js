@@ -11,4 +11,3 @@ require('./routes')(app)
 require('./config').sync()
   .then(_ => app.listen(process.env.PORT || 3000))
   .catch(e => console.log(e))
-  
