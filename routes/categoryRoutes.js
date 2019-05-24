@@ -2,36 +2,36 @@ const { Location, User, Item, Category } = require('../models')
 
 module.exports = app => {
   // GET all
-  app.get('/items', (req, res) => {
-    Item.findAll({ include: [User] })
-      .then(items => res.json(items))
+  app.get('/category', (req, res) => {
+    Category.findAll({ include: [User], include: [Location] })
+      .then(category => res.json(category))
       .catch(e => console.log(e))
   })
 
   // GET one
-  app.get('/items/:id', (req, res) => {
-    Item.findOne({ where: { id: req.params.id } })
-      .then(item => res.json(item))
+  app.get('/category/:id', (req, res) => {
+    Category.findOne({ where: { id: req.params.id } })
+      .then(category => res.json(category))
       .catch(e => console.log(e))
   })
 
   // POST one
-  app.post('/items', (req, res) => {
-    Item.create(req.body)
+  app.post('/category', (req, res) => {
+    Category.create(req.body)
       .then(_ => res.sendStatus(200))
       .catch(e => console.log(e))
   })
 
   // PUT one
-  app.put('/items/:id', (req, res) => {
-    Item.update(req.body, { where: { id: req.params.id } })
+  app.put('/category/:id', (req, res) => {
+    Category.update(req.body, { where: { id: req.params.id } })
       .then(_ => res.sendStatus(200))
       .catch(e => console.log(e))
   })
 
   // DELETE one
-  app.delete('/items/:id', (req, res) => {
-    Item.destroy({ where: { id: req.params.id } })
+  app.delete('/category/:id', (req, res) => {
+    Category.destroy({ where: { id: req.params.id } })
       .then(_ => res.sendStatus(200))
       .catch(e => console.log(e))
   })
