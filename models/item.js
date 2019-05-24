@@ -3,10 +3,15 @@ module.exports = (sequelize, Sequelize) => {
   Item.init({
     itemName: { type: Sequelize.STRING, allowNull: false, len: [2] },
     available: { type: Sequelize.BOOLEAN, allowNull: false, defaultValue: true },
+    bought: { type: Sequelize.BOOLEAN, allowNull: false, defaultValue: false },
     price: { type: Sequelize.INTEGER, allowNull: false },
-    condition: { type: Sequelize.STRING, allowNull: false, isIn: [
+    condition: {
+      type: Sequelize.STRING,
+      allowNull: false,
+      isIn: [
         ['New', 'Like New', 'Used', 'Poor']
-      ] }
+      ]
+    }
   }, {
     sequelize,
     modelName: 'item'
