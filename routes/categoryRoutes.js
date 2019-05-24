@@ -3,7 +3,7 @@ const { Location, User, Item, Category } = require('../models')
 module.exports = app => {
   // GET all
   app.get('/category', (req, res) => {
-    Category.findAll({ include: [User], include: [Location] })
+    Category.findAll({ include: [{ model: Item, include: [{ model: User, include: Location }] }] })
       .then(category => res.json(category))
       .catch(e => console.log(e))
   })
