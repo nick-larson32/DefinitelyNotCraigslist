@@ -1,7 +1,7 @@
 module.exports = (sequelize, Sequelize) => {
   class Category extends Sequelize.Model {}
   Category.init({
-    Category: {
+    category: {
       type: Sequelize.STRING,
       allowNull: false,
       isIn: [
