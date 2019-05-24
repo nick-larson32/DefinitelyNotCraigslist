@@ -1,7 +1,7 @@
 module.exports = (sequelize, Sequelize) => {
-  class Catagory extends Sequelize.Model {}
-  Catagory.init({
-    Catagory: {
+  class Category extends Sequelize.Model {}
+  Category.init({
+    Category: {
       type: Sequelize.STRING,
       allowNull: false,
       isIn: [
@@ -10,8 +10,8 @@ module.exports = (sequelize, Sequelize) => {
     }
   }, {
     sequelize,
-    modelName: 'catagory'
+    modelName: 'category'
   })
 
-  return Catagory
+  return Category
 }
