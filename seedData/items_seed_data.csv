@@ -1,4 +1,5 @@
 itemName,quantity,available,bought,price,condition,createdAt,updatedAt,userId,categoryId
+
 Placemat Scallop,4,1,0,655.22,New,2019-05-21 06:05:19,2019-05-21 06:05:19,10,4
 Plain Fried Rice,1,1,0,373.56,Used,2019-05-21 06:05:19,2019-05-21 06:05:19,3,6
 Alize Gold Passion,4,1,0,557.13,New,2019-05-21 06:05:19,2019-05-21 06:05:19,3,1

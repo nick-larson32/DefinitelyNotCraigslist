@@ -10,7 +10,7 @@ module.exports = app => {
 
   // GET one
   app.get('/category/:id', (req, res) => {
-    Category.findOne({ where: { id: req.params.id } })
+    Category.findOne({ where: { id: req.params.id }, include: [{ model: Item, include: [{ model: User, include: Location }] }] })
       .then(category => res.json(category))
       .catch(e => console.log(e))
   })
