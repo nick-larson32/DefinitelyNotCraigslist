@@ -8,6 +8,6 @@ app.use(express.json())
 
 require('./routes')(app)
 
-require('./config').sync()
+require('./config').sync({force: true})
   .then(_ => app.listen(process.env.PORT || 3000))
   .catch(e => console.log(e))
