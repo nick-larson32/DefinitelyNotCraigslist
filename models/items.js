@@ -12,6 +12,11 @@ module.exports = (sequelize, Sequelize) => {
       isIn: [
         ['New', 'Like New', 'Used', 'Poor']
       ]
+    },
+    description: {
+      type: Sequelize.TEXT,
+      allowNull: true,
+      len: [1, 500]
     }
   }, {
     sequelize,
