@@ -15,9 +15,8 @@ module.exports = (sequelize, Sequelize) => {
     },
     description: {
       type: Sequelize.TEXT,
-      allowNull: false,
-      len: [1, 500],
-      defaultValue: Sequelize.col('itemName')
+      allowNull: true,
+      len: [1, 500]
     }
   }, {
     sequelize,
