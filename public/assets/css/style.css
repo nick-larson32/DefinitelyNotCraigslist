@@ -294,3 +294,20 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   margin: auto;
   padding-top: 50px;
 }
+
+.pure-menu {
+  word-wrap: break-word;
+  position: relative;
+}
+
+.pure-button {
+  width: 100%;
+}
+
+#login-button {
+  background: #909090;
+}
+
+.signup-login {
+  margin-top: 50px;
+}
