@@ -5,7 +5,8 @@ module.exports = (sequelize, Sequelize) => {
     email: { type: Sequelize.STRING, allowNull: false, isEmail: true },
     password: { type: Sequelize.STRING, allowNull: false, notContains: 'password', len: [8, 24] },
     address: { type: Sequelize.STRING, allowNull: false },
-    DOB: { type: Sequelize.DATEONLY, allowNull: false }
+    DOB: { type: Sequelize.DATEONLY, allowNull: false },
+    gender: { type: Sequelize.STRING, allowNull: false, len: [2, 20] }
   }, {
     sequelize,
     modelName: 'user'
