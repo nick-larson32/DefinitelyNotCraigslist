@@ -304,9 +304,8 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   width: 100%;
 }
 
-.login-button {
-  background: #E8E8E8;
-  color: #191818
+#login-button {
+  background: #909090;
 }
 
 .signup-login {
