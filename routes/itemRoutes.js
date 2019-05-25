@@ -7,7 +7,6 @@ module.exports = app => {
     Item.findAll({ include: [User], include: [Category] })
       .then(items => res.json(items))
       .catch(e => console.log(e))
-      res.sendFile(path.join(__dirname, '../public/donor.html'))
   })
 
   // GET one

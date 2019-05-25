@@ -13,21 +13,31 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
-    <h1>Donor</h1>
+    <div class="section">
     <div class="container">
-        <form>
-            <input type="text">name
+            <h1 class="title">Add Donation</h1>
+            <form>
+            <input type="text" id="name">name
             <br>
-            <input type="text">Price
+            <input type="text" id="price">Price
             <br>
-            <select name="condition">
+            <select name="Categories" id="categories">
+                    <option value="furniture">Furniture</option>
+                    <option value="toys">Toys</option>
+                    <option value="kitchen ware">Kitchen Ware</option>
+                </select>
+            <br>
+            <select name="condition" id="condition">
                 <option value="excellent">Excellent</option>
                 <option value="good">Good</option>
                 <option value="bad">Bad</option>
             </select>
+            <br>
+            <button type="submit" id="addDonation">Add Donation</button>
         </form>
     </div>
+    </div>
     <div id="donorView"></div>
-    <scrip src="./assets/js/donor.js"></script>
+    <script src="./assets/js/addDonation.js"></script>
 </body>
 </html>
