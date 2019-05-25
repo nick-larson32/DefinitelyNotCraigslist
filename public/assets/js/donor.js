@@ -39,3 +39,4 @@ const getUsersItems = _ => {
       .catch(e => console.error(e))
   })
   getUsersItems()
+console.log('ping')

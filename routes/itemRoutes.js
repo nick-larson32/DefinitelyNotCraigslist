@@ -1,4 +1,5 @@
 const { Location, User, Item, Category } = require('../models')
+const path = require('path')
 
 module.exports = app => {
   // GET all
@@ -6,6 +7,7 @@ module.exports = app => {
     Item.findAll({ include: [User], include: [Category] })
       .then(items => res.json(items))
       .catch(e => console.log(e))
+      res.sendFile(path.join(__dirname, '../public/donor.html'))
   })
 
   // GET one
