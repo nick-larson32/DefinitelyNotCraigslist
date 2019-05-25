@@ -13,18 +13,46 @@
     integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/menu.css">
 </head>
 
 <body>
+  <div class="custom-menu-wrapper">
+    <div class="pure-menu custom-menu custom-menu-top">
+      <a class="pure-menu-heading" href="./index.html">
+        <img class="logo" src="./assets/images/app-logo/logo_transparent2.png" width="50px" height="50px">
+        <img class="logo-text" src="./assets/images/app-logo/logo-text.png" width="200px" height="200px">
+      </a>
+      <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+    </div>
+    <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
+      id="tuckedMenu">
+      <div class="custom-menu-screen"></div>
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item pure-menu-has-children pure-menu-allow-hover">
+          <a href="#" id="menuLink1" class="pure-menu-link">Browse By Category</a>
+          <ul class="pure-menu-children">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link" id="dropdown-link">Food</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link" id="dropdown-link">Furniture</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link" id="dropdown-link">Books</a></li>
+          </ul>
+        </li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Donate</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Report a Problem</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Safety Tips</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">About Us</a></li>
+      </ul>
+    </div>
+  </div>
   <div class="section">
     <div class="containeris is-fullhd">
-      <div class="columns">
-        <!-- Menu -->
-        <div id="layout">
-          <!-- Menu toggle -->
-          <a href="#menu" id="menuLink" class="menu-link">
-            <!-- Hamburger icon -->
-            <span></span>
+      <!-- <div class="columns"> -->
+      <!-- Menu -->
+      <!-- <div id="layout"> -->
+      <!-- Menu toggle -->
+      <!-- <a href="#menu" id="menuLink" class="menu-link"> -->
+      <!-- Hamburger icon -->
+      <!-- <span></span>
           </a>
           <div id="menu">
             <div class="pure-menu">
@@ -38,111 +66,111 @@
                 <li class="pure-menu-item menu-item-divided"><a href="#" class="pure-menu-link">Donate</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">Browse</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">Report a Problem</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Safety Tips</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">FAQ</a></li>
-                <!-- <li class="pure-menu-item"><a class="pure-button pure-button-primary" href="#">A Primary Button</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Safety Tips</a></li> -->
+      <!-- <li class="pure-menu-item"><a href="#" class="pure-menu-link">FAQ</a></li> -->
+      <!-- <li class="pure-menu-item"><a class="pure-button pure-button-primary" href="#">A Primary Button</a></li>
                  -->
-              </ul>
+      <!-- </ul>
               <div class="signup-login">
                 <a class="pure-button pure-button-primary" href="#">Sign Up</a>
                 <a id="login-button" class="pure-button pure-button-active" href="#">Log In</a>
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
 
-        <div id="main" class="column">
-          <div class="header">
-            <h1>Browse By Category</h1>
-            <h2> </h2>
-          </div>
-          <div class="tile is-ancestor">
-            <div class="tile is-vertical is-12">
-              <div class="tile">
-                <div class="tile is-parent">
-                  <article class="tile is-child notification is-info">
-                    <p class="title">Middle tile</p>
-                    <p class="subtitle">With an image</p>
-                    <figure class="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                  </article>
-                </div>
-                <div class="tile is-parent">
-                  <article class="tile is-child notification is-info">
-                    <p class="title">Middle tile</p>
-                    <p class="subtitle">With an image</p>
-                    <figure class="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                  </article>
-                </div>
-                <div class="tile is-parent">
-                  <article class="tile is-child notification is-info">
-                    <p class="title">Middle tile</p>
-                    <p class="subtitle">With an image</p>
-                    <figure class="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                  </article>
-                </div>
-                <div class="tile is-parent">
-                  <article class="tile is-child notification is-info">
-                    <p class="title">Middle tile</p>
-                    <p class="subtitle">With an image</p>
-                    <figure class="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                  </article>
-                </div>
+      <div id="main" class="column">
+        <div class="header">
+          <h1>Browse By Category</h1>
+          <h2> </h2>
+        </div>
+        <div class="tile is-ancestor">
+          <div class="tile is-vertical is-12">
+            <div class="tile">
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-info">
+                  <p class="title">Middle tile</p>
+                  <p class="subtitle">With an image</p>
+                  <figure class="image is-4by3">
+                    <img src="https://bulma.io/images/placeholders/640x480.png">
+                  </figure>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-info">
+                  <p class="title">Middle tile</p>
+                  <p class="subtitle">With an image</p>
+                  <figure class="image is-4by3">
+                    <img src="https://bulma.io/images/placeholders/640x480.png">
+                  </figure>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-info">
+                  <p class="title">Middle tile</p>
+                  <p class="subtitle">With an image</p>
+                  <figure class="image is-4by3">
+                    <img src="https://bulma.io/images/placeholders/640x480.png">
+                  </figure>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-info">
+                  <p class="title">Middle tile</p>
+                  <p class="subtitle">With an image</p>
+                  <figure class="image is-4by3">
+                    <img src="https://bulma.io/images/placeholders/640x480.png">
+                  </figure>
+                </article>
               </div>
             </div>
           </div>
-          <div class="tile is-ancestor">
-            <div class="tile is-vertical is-12">
-              <div class="tile">
-                <div class="tile is-parent">
-                  <article class="tile is-child notification is-info">
-                    <p class="title">Middle tile</p>
-                    <p class="subtitle">With an image</p>
-                    <figure class="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                  </article>
-                </div>
-                <div class="tile is-parent">
-                  <article class="tile is-child notification is-info">
-                    <p class="title">Middle tile</p>
-                    <p class="subtitle">With an image</p>
-                    <figure class="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                  </article>
-                </div>
-                <div class="tile is-parent">
-                  <article class="tile is-child notification is-info">
-                    <p class="title">Middle tile</p>
-                    <p class="subtitle">With an image</p>
-                    <figure class="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                  </article>
-                </div>
-                <div class="tile is-parent">
-                  <article class="tile is-child notification is-info">
-                    <p class="title">Middle tile</p>
-                    <p class="subtitle">With an image</p>
-                    <figure class="image is-4by3">
-                      <img src="https://bulma.io/images/placeholders/640x480.png">
-                    </figure>
-                  </article>
-                </div>
+        </div>
+        <div class="tile is-ancestor">
+          <div class="tile is-vertical is-12">
+            <div class="tile">
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-info">
+                  <p class="title">Middle tile</p>
+                  <p class="subtitle">With an image</p>
+                  <figure class="image is-4by3">
+                    <img src="https://bulma.io/images/placeholders/640x480.png">
+                  </figure>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-info">
+                  <p class="title">Middle tile</p>
+                  <p class="subtitle">With an image</p>
+                  <figure class="image is-4by3">
+                    <img src="https://bulma.io/images/placeholders/640x480.png">
+                  </figure>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-info">
+                  <p class="title">Middle tile</p>
+                  <p class="subtitle">With an image</p>
+                  <figure class="image is-4by3">
+                    <img src="https://bulma.io/images/placeholders/640x480.png">
+                  </figure>
+                </article>
+              </div>
+              <div class="tile is-parent">
+                <article class="tile is-child notification is-info">
+                  <p class="title">Middle tile</p>
+                  <p class="subtitle">With an image</p>
+                  <figure class="image is-4by3">
+                    <img src="https://bulma.io/images/placeholders/640x480.png">
+                  </figure>
+                </article>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 
   <!-- Footer -->
