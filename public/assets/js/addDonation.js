@@ -15,6 +15,7 @@ const {fetch} = window
         price: document.querySelector('#price').value,
         categories: document.querySelector('#categories').value,
         condition: document.querySelector('#condition').value,
+        description: document.querySelector('#description').value,
         createdAt: '2019-01-01 06:05:19',
         updatedAt: '2019-01-01 06:05:19',
         usersId: 1,
