@@ -294,3 +294,8 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   margin: auto;
   padding-top: 50px;
 }
+
+.pure-menu {
+  word-wrap: break-word;
+  position: relative;
+}
