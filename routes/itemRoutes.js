@@ -1,4 +1,5 @@
 const { Location, User, Item, Category } = require('../models')
+const path = require('path')
 
 module.exports = app => {
   // GET all
