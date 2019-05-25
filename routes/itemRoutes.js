@@ -3,15 +3,23 @@ const { Location, User, Item, Category } = require('../models')
 module.exports = app => {
   // GET all
   app.get('/items', (req, res) => {
-    Item.findAll({ include: [User], include: [Category] })
-      .then(items => res.json(items))
+    Item.findAll({ include: [Category] })
+      .then(items => {
+        Item.findAll({ include: [{ model: User, include: Location }] })
+          .then(user => res.json({ items, user }))
+          .catch(e => console.log(e))
+      })
       .catch(e => console.log(e))
   })
 
   // GET one
   app.get('/items/:id', (req, res) => {
-    Item.findOne({ where: { id: req.params.id } })
-      .then(item => res.json(item))
+    Item.findOne({ where: { id: req.params.id }, include: [Category] })
+      .then(item => {
+        Item.findOne({ include: [{ model: User, include: Location }] })
+          .then(user => res.json({ item, user }))
+          .catch(e => console.log(e))
+      })
       .catch(e => console.log(e))
   })
 
