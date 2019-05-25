@@ -1,46 +1,53 @@
-(function (window, document) {
+// (function (window, document) {
 
-  const layout = document.getElementById('layout'),
-    menu = document.getElementById('menu'),
-    menuLink = document.getElementById('menuLink'),
-    content = document.getElementById('main');
+//   const layout = document.getElementById('layout'),
+//     menu = document.getElementById('menu'),
+//     menuLink = document.getElementById('menuLink'),
+//     content = document.getElementById('main');
 
-  function toggleClass(element, className) {
-    var classes = element.className.split(/\s+/),
-      length = classes.length,
-      i = 0;
+//   function toggleClass(element, className) {
+//     var classes = element.className.split(/\s+/),
+//       length = classes.length,
+//       i = 0;
 
-    for (; i < length; i++) {
-      if (classes[i] === className) {
-        classes.splice(i, 1);
-        break;
-      }
-    }
+//     for (; i < length; i++) {
+//       if (classes[i] === className) {
+//         classes.splice(i, 1);
+//         break;
+//       }
+//     }
     // The className is not found
-    if (length === classes.length) {
-      classes.push(className);
-    }
+//     if (length === classes.length) {
+//       classes.push(className);
+//     }
 
-    element.className = classes.join(' ');
-  }
+//     element.className = classes.join(' ');
+//   }
 
-  function toggleAll(e) {
-    var active = 'active';
+//   function toggleAll(e) {
+//     var active = 'active';
 
-    e.preventDefault();
-    toggleClass(layout, active);
-    toggleClass(menu, active);
-    toggleClass(menuLink, active);
-  }
+//     e.preventDefault();
+//     toggleClass(layout, active);
+//     toggleClass(menu, active);
+//     toggleClass(menuLink, active);
+//   }
 
-  menuLink.onclick = function (e) {
-    toggleAll(e);
-  };
+//   menuLink.onclick = function (e) {
+//     toggleAll(e);
+//   };
 
-  content.onclick = function (e) {
-    if (menu.className.indexOf('active') !== -1) {
-      toggleAll(e);
-    }
-  };
+//   content.onclick = function (e) {
+//     if (menu.className.indexOf('active') !== -1) {
+//       toggleAll(e);
+//     }
+//   };
 
-}(this, this.document));
+// }(this, this.document));
+
+(function (window, document) {
+  document.getElementById('toggle').addEventListener('click', function (e) {
+    document.getElementById('tuckedMenu').classList.toggle('custom-menu-tucked');
+    document.getElementById('toggle').classList.toggle('x');
+  });
+})(this, this.document);
