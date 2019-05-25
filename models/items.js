@@ -12,6 +12,12 @@ module.exports = (sequelize, Sequelize) => {
       isIn: [
         ['New', 'Like New', 'Used', 'Poor']
       ]
+    },
+    Description: {
+      type: Sequelize.TEXT,
+      allowNull: false,
+      len: [1, 500],
+      defaultValue: Sequelize.col('itemName')
     }
   }, {
     sequelize,
