@@ -13,7 +13,7 @@ module.exports = (sequelize, Sequelize) => {
         ['New', 'Like New', 'Used', 'Poor']
       ]
     },
-    Description: {
+    description: {
       type: Sequelize.TEXT,
       allowNull: false,
       len: [1, 500],
