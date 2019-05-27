@@ -16,32 +16,44 @@
     <div class="section">
     <div class="container">
             <h1 class="title">Add Donation</h1>
-            <form>
-            <input type="text" id="name">name
-            <br>
-            <input type="text" id="price">Price
-            <br>
-            <select name="Categories" id="categories">
-                    <option value="furniture">Furniture</option>
-                    <option value="toys">Toys</option>
-                    <option value="kitchen ware">Kitchen Ware</option>
-                </select>
-            <br>
-            <select name="condition" id="condition">
-                <option value="new">Like New</option>
-                <option value="like new">New</option>
-                <option value="Used">Used</option>
-                <option value="Poor">Poor</option>
-            </select>
-            <br>
-            <textarea rows="4" cols="50" id="description" value="">
-
-            </textarea>
-            <button type="submit" id="addDonation">Add Donation</button>
-        </form>
+            <div class="modal is-active">
+                    <div class="modal-background"></div>
+                    <div class="modal-card">
+                      <header class="modal-card-head">
+                        <p class="modal-card-title">Modal title</p>
+                        <button class="delete" aria-label="close"></button>
+                      </header>
+                      <section class="modal-card-body">
+                            <form>
+                                    <input type="text" id="name">name
+                                    <br>
+                                    <input type="text" id="price">Price
+                                    <br>
+                                    <select name="Categories" id="categories">
+                                            <option value="furniture">Furniture</option>
+                                            <option value="toys">Toys</option>
+                                            <option value="kitchen ware">Kitchen Ware</option>
+                                        </select>
+                                    <br>
+                                    <select name="condition" id="condition">
+                                        <option value="new">Like New</option>
+                                        <option value="like new">New</option>
+                                        <option value="Used">Used</option>
+                                        <option value="Poor">Poor</option>
+                                    </select>
+                                    <br>
+                                    <textarea rows="4" cols="50" id="description" value="">
+                        
+                                    </textarea>
+                                    <button type="submit" class="button is-success"id="addDonation">Add Donation</button>
+                                </form>
+                      </section>
+                    </div>
+                  </div>
     </div>
     </div>
     <div id="donorView"></div>
     <script src="./assets/js/addDonation.js"></script>
+    <script src="./assets/js/viewUserDonations.js"></script>
 </body>
 </html>
