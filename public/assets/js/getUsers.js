@@ -1,13 +1,12 @@
 const { fetch } = window
 
-document.addEventListener('click', e => {
-  if (e.target.id === 'users') {
-    users()
-  } else if (e.target.id === 'getUserItems') {
-    // console.log('this works')
-    users()
-  }
-})
+// document.addEventListener('click', e => {
+//   if (e.target.id === 'users') {
+//     users()
+//   } else if (e.target.id === 'getUserItems') {
+//     users()
+//   }
+// })
 
 // this needs to change to be reflective of the current user logged in
 // for now, hardcoded as 1 for demo purposes
