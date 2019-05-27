@@ -5,18 +5,40 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Testing User Items</title>
+  <title>Testing User Adding</title>
 </head>
 
 <body>
 
-  <button id="getUserItems">Get User Items</button>
+ <form>
+   <label for="name">Name:</label>
+   <input type="text" name="name" id="name">
+   <br>
+   <label for="email">Email:</label>
+   <input type="email" name="email" id="email">
+   <br>
+   <label for="password">Password</label>
+   <input type="password" name="password" id="password">
+   <br>
+   <label for="address">Address</label>
+   <input type="text" name="address" id="address" placeholder="1234 Any Street, City, Zip">
+   <br>
+   <label for="dateofbirth">Date of Birth</label>
+   <input type="date" name="DOB" id="DOB">
+   <br>
+   <label for="gender">Gender:</label>
+   <input type="text" name="gender" id="gender">
+   <br>
+   <label for="location">Location:</label>
+   <select name="location" id="location">
+     <option value="1">Orange County</option>
+     <option value="2">Los Angeles County</option>
+   </select>
+   <br>
+   <button id="submitUser">Submit</button>
+ </form>
 
-  <div class="user"></div>
-
-  <div class="userItems"></div>
-
-  <script src="./assets/js/getUsers.js"></script>
+  <script src="./assets/js/addUser.js"></script>
 </body>
 
 </html>
