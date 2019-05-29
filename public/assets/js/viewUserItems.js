@@ -25,8 +25,7 @@ let currUser = 3
            <h5>Category it belongs to: ${category.category}</h5>
            <h5>Location: ${user.location.county}</h5>
                 `
-                document.querySelector('#test').append(userItemDiv)
-            
+                document.querySelector('#userItemView').append(userItemDiv)
             })
         }else{
             console.log('add listing')
