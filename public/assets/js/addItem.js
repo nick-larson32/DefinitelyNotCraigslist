@@ -1,5 +1,7 @@
 const {fetch} = window
-  
+
+// giving default categoryId and userId for demo purposes
+
   document.querySelector('#addDonation').addEventListener('click', e => {
     e.preventDefault()
     fetch('/items', {
@@ -13,13 +15,15 @@ const {fetch} = window
         available: true,
         bought: false,
         price: document.querySelector('#price').value,
-        categories: document.querySelector('#categories').value,
+        categoryId: 3,
+        // categoryId: parseInt(document.querySelector('#category').value)
         condition: document.querySelector('#condition').value,
         description: document.querySelector('#description').value,
-        usersId: 1,
-        category: 1
+        userId: 3
       })
     })
+    // need to call repopulate userItems
+    // getUserItems()
       .then(_ => {
         console.log('successful')
       })

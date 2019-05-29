@@ -3,7 +3,7 @@
 // using a placement user for demo purposes
 // will need to dynamically integrate user
 let currUser = 3
-
+const getUserItems = _ =>{
     fetch('/items')
     .then(items => items.json())
     .then(items => {
@@ -32,4 +32,5 @@ let currUser = 3
         }
        })
     .catch(e => console.error(e))
-
+    }
+    getUserItems()
