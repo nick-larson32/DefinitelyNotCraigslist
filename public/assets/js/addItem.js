@@ -10,7 +10,7 @@ const {fetch} = window
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        itemName: document.querySelector('#name').value,
+        itemName: document.querySelector('#itemName').value,
         quantity: 1,
         available: true,
         bought: false,
@@ -29,3 +29,22 @@ const {fetch} = window
       })
       .catch(e => console.log(e))
   })
+
+  // Activate Modal
+
+  let getModal = document.querySelector('#modalOpen')
+  let modal = document.querySelector('#myModal')
+  let close = document.getElementsByClassName('modal-close')[0]
+
+  getModal.addEventListener('click', e =>{
+    modal.style.display = 'block'
+  })
+  close.addEventListener('click', e =>{
+    modal.style.display = 'none'
+  })
+
+window.addEventListener('click', e =>{
+  if(e.target.className === 'modal-background'){
+    modal.style.display = 'none'
+  }
+})

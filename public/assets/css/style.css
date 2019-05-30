@@ -226,3 +226,15 @@
  .custom-menu-screen {
    width: 100%;
  }
+
+ /* Add Item Modal */
+
+ .page-modal{
+  margin-right: 10%;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}

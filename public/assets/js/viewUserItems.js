@@ -9,7 +9,7 @@ const getUserItems = _ =>{
     .then(items => {
        const userItem = items.filter(data =>
         data.userId === currUser)
-        // console.log(userItem)
+        console.log(userItem)
         if(userItem.length >0){
         userItem.forEach(({ itemName, quantity, available, bought, price, condition, description, user, category}) =>{
             let userItemDiv = document.createElement('div')
@@ -22,7 +22,6 @@ const getUserItems = _ =>{
            <h4>Condition: ${condition}</h4>
            <h5>Description: ${description}</h5>
            <h5>User it belongs to: ${user.name}</h5>
-           <h5>Category it belongs to: ${category.category}</h5>
            <h5>Location: ${user.location.county}</h5>
                 `
                 document.querySelector('#userItemView').append(userItemDiv)

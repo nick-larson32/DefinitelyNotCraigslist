@@ -15,35 +15,63 @@
 <body>
     <div class="section">
     <div class="container">
-            <h1 class="title">Add Donation</h1>
-            <form>
-                    <input type="text" id="name">name
-                    <br>
-                    <input type="text" id="price">Price
-                    <br>
-                    <select name="Categories" id="category">
-                            <option value="4">Furniture</option>
-                            <option value="5">Toys</option>
-                            <option value="6">Kitchenware</option>
-                            <option value="2">Electronics</option>
-                            <option value="3">Food</option>
-                            <option value="1">Clothing</option>
-                            <option value="7">Miscellaneous</option>
-                        </select>
-                    <br>
-                    <select name="condition" id="condition">
-                        <option value="new">Like New</option>
-                        <option value="like new">New</option>
-                        <option value="Used">Used</option>
-                        <option value="Poor">Poor</option>
-                    </select>
-                    <br>
-                    <textarea rows="4" cols="50" id="description" value="">
-        
-                    </textarea>
-                    <br>
-                    <button type="submit" class="button is-success"id="addDonation">Add Donation</button>
-                </form>
+            <a class="button is-primary" id="modalOpen">Add Listing</a>
+            <div class="modal" id="myModal">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                    <div class="section page-modal">
+                      <h1 class="title">Add Listing</h1>
+                        <form>
+                            <div class="field">
+                                <label class="label">Item Name</label>
+                                    <div class="control">
+                                        <input class="input" type="text" id="itemName"placeholder="i.e Victorian Table">
+                                    </div>
+                            </div>
+                            <div class="field">
+                                <label class="label">Price</label>
+                                    <div class="control">
+                                        <input class="input" type="number" id="price"placeholder="i.e 10">
+                                    </div>
+                            </div>
+                            <div class="field">
+                                <div class="control">
+                                <div class="select">
+                                <select name="Categories" id="category">
+                                        <option value="4">Furniture</option>
+                                        <option value="5">Toys</option>
+                                        <option value="6">Kitchenware</option>
+                                        <option value="2">Electronics</option>
+                                        <option value="3">Food</option>
+                                        <option value="1">Clothing</option>
+                                        <option value="7">Miscellaneous</option>
+                                    </select>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="field">
+                                <div class="control">
+                                <div class="select">
+                                    <select name="condition" id="condition">
+                                        <option value="new">Like New</option>
+                                        <option value="like new">New</option>
+                                        <option value="Used">Used</option>
+                                        <option value="Poor">Poor</option>
+                                     </select>
+                                </div>
+                                </div>
+                                </div>
+                                <div class="field">
+                                <div class="control">
+                                    <textarea class="textarea" id="description" placeholder="Enter Description"></textarea>
+                                </div>
+                                </div>                    
+                                <button type="submit" class="button is-success"id="addDonation">Add Donation</button>
+                            </form>
+                        </div>
+                    </div>
+                    <button class="modal-close is-large" aria-label="close"></button>
+                  </div>
     </div>
     </div>
     <div class="section">
