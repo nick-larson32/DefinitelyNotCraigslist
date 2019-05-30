@@ -23,6 +23,7 @@ const getUserItems = _ =>{
            <h5>Description: ${description}</h5>
            <h5>User it belongs to: ${user.name}</h5>
            <h5>Location: ${user.location.county}</h5>
+           <hr>
                 `
                 document.querySelector('#userItemView').append(userItemDiv)
             })

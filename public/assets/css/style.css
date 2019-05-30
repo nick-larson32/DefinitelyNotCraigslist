@@ -238,3 +238,8 @@
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
 }
+
+hr{
+ backgorund-color:black;
+ height:1px;
+}
