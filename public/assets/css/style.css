@@ -24,7 +24,8 @@ This is the parent `<div>` that contains the menu and the content area.
 #layout {
   position: relative;
   left: 0;
-  padding-left: 0;
+  padding: 0;
+
 }
 
 #layout.active #menu {
@@ -293,4 +294,53 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 .footer-text {
   margin: auto;
   padding-top: 50px;
+}
+
+.logo_home{
+  width: 100px;
+  height: 100px;
+  align-content: center;
+  margin-top: 10%;
+
+}
+.logo_text{
+  align-content: center;
+  width: 50%;
+  
+}
+#login_background{
+  background-color: #333;
+  text-align: center;
+}
+.label_color{
+  color: white;
+  text-align: left;
+  margin-left: 25%;
+}
+.inputbox{
+  margin-left: 5%;
+  width: 90%;
+}
+.sectionLogin{
+  padding:0;
+
+}
+.buttonStyle{
+  margin: 10px;
+}
+.tagLogin{
+  margin-left :5%;
+  width:10%;
+background-color:#333;
+}
+.fieldStyle{
+  margin: 5%;
+  border:solid grey;
+}
+.selectStyle{
+  display:inline-block;
+}
+.genderLabel{
+  display: inline-block;
+  margin: 5%;
 }
