@@ -21,7 +21,6 @@ document.querySelector("#submitButton").addEventListener('click', e => {
   fetch('/users')
     .then(r => r.json())
     .then(users => {
-      // totalNum = users.length
       fetch('/users', {
         method: 'POST',
         headers: {
