@@ -7,7 +7,8 @@ module.exports = app => {
   // GET all
   app.get('/items', (req, res) => {
     Item.findAll({ include: [Category, { model: User, include: Location }] })
-      .then(items => res.json(items))
+      .then(items => {res.json(items)
+        console.log(items)})
       .catch(e => console.log(e))
   })
 
