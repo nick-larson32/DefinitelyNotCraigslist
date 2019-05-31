@@ -1,4 +1,5 @@
 const { Location, User, Item, Category } = require('../models')
+const { Op } = require('sequelize')
 const path = require('path')
 
 
@@ -7,30 +8,33 @@ module.exports = app => {
   // GET all
   app.get('/items', (req, res) => {
     Item.findAll({ include: [Category, { model: User, include: Location }] })
-      .then(items => res.json(items))
+      .then(items => {
+        res.json(items)
+        console.log(items)
+      })
       .catch(e => console.log(e))
   })
 
   // GET one
   app.get('/items/:id', (req, res) => {
+    console.log('ping')
     Item.findOne({ where: { id: req.params.id }, include: [Category, { include: [{ model: User, include: Location }] }] })
       .then(item => res.json(item))
       .catch(e => console.log(e))
   })
 
   // get item like search
-  // app.get('/items/search', (req, res) => {
-  //   const Op = Sequelize.Op
-  //   Item.findAll({
-  //       where: {
-  //         itemName: {
-  //           [Op.substring]: req.body.itemName
-  //         }
-  //       }
-  //     })
-  //     .then(items => res.json(items))
-  //     .catch(e => console.log(e))
-  // })
+  app.get('/searchitems', (req, res) => {
+    Item.findAll({
+        where: {
+          itemName: {
+            [Op.like]: `%${req.body.name}%`
+          }
+        }
+      })
+      .then(items => res.json(items))
+      .catch(e => console.log(e))
+  })
 
   // POST one
   app.post('/items', (req, res) => {
