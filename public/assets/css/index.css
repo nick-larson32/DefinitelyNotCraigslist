@@ -343,3 +343,20 @@ a.pure-button-primary {
         width: 60%;
     }
 }
+
+/* Logo stylings */
+.logo {
+    width: 50px;
+    height: 51.05px;
+}
+
+.logo, .logo-text {
+    display: block;
+    margin: auto;
+}
+
+.logo-text {
+    margin-top: 5px;
+    width: 200px;
+    height: 18.7px;
+}

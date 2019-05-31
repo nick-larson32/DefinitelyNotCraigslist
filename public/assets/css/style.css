@@ -255,6 +255,10 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 }
 
 /* Non-CSS library stylings */
+.logo {
+  width: 50px;
+  height: 51.05px;
+}
 
 .logo, .logo-text {
   display: block;
@@ -263,6 +267,8 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 
 .logo-text {
   margin-top: 5px;
+  width: 200px;
+  height: 18.7px;
 }
 
 .header {
