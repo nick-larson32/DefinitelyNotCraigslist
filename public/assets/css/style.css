@@ -496,6 +496,14 @@ background-color:#333;
 
  /* Non-CSS library stylings */
 
+ .notification.is-info {
+   background-color: #376996;
+ }
+
+ h1 {
+   text-align: center;
+ }
+
  .logo, .logo-text {
    display: block;
    margin: auto;
@@ -641,4 +649,8 @@ hr{
  .genderLabel {
    display: inline-block;
    margin: 5%;
+<<<<<<< HEAD
   }
+=======
+ }
+>>>>>>> c454b15019b4ca801b50ef90a152a4d60d063ec5

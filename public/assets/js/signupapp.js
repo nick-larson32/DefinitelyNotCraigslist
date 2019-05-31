@@ -14,14 +14,10 @@ document.querySelector("#submitButton").addEventListener('click', e=>{
                  password:document.querySelector("#signupPassword").value,
                  address:document.querySelector("#signupAddress").value,
                  DOB:`${document.querySelector("#selectMonth").options.selectedIndex<10?'0'+document.querySelector("#selectMonth").options.selectedIndex:document.querySelector("#selectMonth").options.selectedIndex}-${document.querySelector("#selectDay").options.selectedIndex<10?'0'+document.querySelector("#selectDay").options.selectedIndex:document.querySelector("#selectDay").options.selectedIndex}-${2006-document.querySelector("#selectYear").options.selectedIndex}`,
-                 gender:document.querySelector("#selectGender").options.selectedIndex,
-                 locationId:document.querySelector("#selectLocation").options.selectedIndex,
-                 createdAt:moment().format("YYYY-MM-DD HH:mm:ss"),
-                 updateAt:moment().format("YYYY-MM-DD HH:mm:ss")}
-    fetch('/users')
-    .then(r=>r.json())
-     .then(users=>{totalNum=users.length
-                newUser.id=totalNum+1     
+                 gender:document.querySelector("#selectGender").options.selectedIndex-1?Male:Female,
+                 locationId:document.querySelector("#selectLocation").options.selectedIndex}
+                //  createdAt:moment().format("YYYY-MM-DD HH:mm:ss"),
+                //  updateAt:moment().format("YYYY-MM-DD HH:mm:ss")}
                  fetch('/users', {
                      method: 'POST',
                      headers: {
@@ -29,16 +25,14 @@ document.querySelector("#submitButton").addEventListener('click', e=>{
                      },
                      body: JSON.stringify(newUser)
              })
-        .then(console.log(newUser))
-            .catch(e=>console.log(e))
-       })
-    .then(_=>console.log(newUser))
-    .catch(e=>console.log(e))
+            .then(_=>{
+            localStorage.setItem('CraiglistLogin', `{name:${newUser.name},logedin:true}`)
             document.querySelector("#signupName").value=''
             document.querySelector("#signupEmail").value=''
             document.querySelector("#signupPassword").value=''
             document.querySelector("#signupAddress").value=''
         
-
-
-})
+          })
+            .catch(e=>console.log(e))
+       })
+    
