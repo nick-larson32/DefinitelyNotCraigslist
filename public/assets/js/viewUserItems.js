@@ -14,15 +14,17 @@ const getUserItems = _ =>{
         userItem.forEach(({ itemName, quantity, available, bought, price, condition, description, user, category}) =>{
             let userItemDiv = document.createElement('div')
              userItemDiv.innerHTML = `
-           <h1>Item Name: ${itemName}</h1>
-           <h3>Quantity: ${quantity}</h3>
+           <h2>Item Name: ${itemName}</h2>
+           <h4>Quantity: ${quantity}</h4>
            <h4>Available (donator):${available}</h4>
            <h4>Bought (buyer):${bought}</h4>
-           <h3>Price: $${price}</h3>
+           <h4>Price: $${price}</h4>
            <h4>Condition: ${condition}</h4>
-           <h5>Description: ${description}</h5>
-           <h5>User it belongs to: ${user.name}</h5>
-           <h5>Location: ${user.location.county}</h5>
+           <h4>Description: ${description}</h4>
+           <h4>User it belongs to: ${user.name}</h4>
+           <h4>Location: ${user.location.county}</h4>
+           <a class="itemEdit"><i class="fas fa-edit"></i></a>
+           <a class="delete" id="itemDel"></a>
            <hr>
                 `
                 document.querySelector('#userItemView').append(userItemDiv)

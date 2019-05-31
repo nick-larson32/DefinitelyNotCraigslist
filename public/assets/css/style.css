@@ -239,7 +239,11 @@
   -o-border-radius: 8px;
 }
 
+#modalContainer {
+  text-align: center;
+}
+
 hr{
- backgorund-color:black;
+ background-color:black;
  height:1px;
 }

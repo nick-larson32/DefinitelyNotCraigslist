@@ -22,19 +22,19 @@ const {fetch} = window
         userId: 3
       })
     })
-    // need to call repopulate userItems
-    // getUserItems()
       .then(_ => {
         console.log('successful')
         // closes modal once added
         modal.style.display = 'none';
+        // need to call repopulate userItems
+        getUserItems()
       })
       .catch(e => console.log(e))
   })
 
   // Activate Modal
 
-  let getModal = document.querySelector('#modalOpen')
+  let getModal = document.querySelector('#modalButton')
   let modal = document.querySelector('#myModal')
   let close = document.getElementsByClassName('modal-close')[0]
 
