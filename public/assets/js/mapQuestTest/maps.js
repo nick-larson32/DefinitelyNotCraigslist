@@ -7,8 +7,7 @@ window.onload = function() {
 
   function addDirections() {
     var directions = L.mapquest.directions();
-    directions.route(
-      {
+    directions.route({
         start: addressTest,
         end: "One Liberty Plaza, New York, NY 10006",
         waypoints: [
