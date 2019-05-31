@@ -235,6 +235,10 @@
   -o-border-radius: 8px;
 }
 
+#modalContainer {
+  text-align: center;
+}
+
 hr{
  background-color:black;
  height:1px;
