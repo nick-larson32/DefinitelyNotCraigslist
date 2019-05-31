@@ -112,7 +112,7 @@
      position: absolute;
      width: 100%;
      border-top: 1px solid #eee;
-     background-color: #808080\9;
+     background-color: #808080;
      z-index: 100;
    }
    .custom-menu-bottom .pure-menu-link {
@@ -236,6 +236,6 @@
 }
 
 hr{
- backgorund-color:black;
+ background-color:black;
  height:1px;
 }
