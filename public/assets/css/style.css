@@ -149,6 +149,14 @@
 
  /* Non-CSS library stylings */
 
+ .notification.is-info {
+   background-color: #376996;
+ }
+
+ h1 {
+   text-align: center;
+ }
+
  .logo, .logo-text {
    display: block;
    margin: auto;
