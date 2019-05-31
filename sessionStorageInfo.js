@@ -1,7 +1,3 @@
-const config = {
-
-}
-
 firebase.initializeApp(config)
 
 let db = firebase.firestore()
