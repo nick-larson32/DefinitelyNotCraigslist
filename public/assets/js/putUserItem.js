@@ -1,15 +1,15 @@
 let choice
 
-let userId = 3
+let itemId = 15
 
 document.addEventListener('click', e => {
     e.preventDefault()
-    if (e.target.id === 'itemEdit') {
+    if (e.target.id === 'infoUpdate') {
       document.querySelector('#infoUpdate').style.display = 'none'
-      document.querySelector('#updateUser').style.display = 'block'
+      document.querySelector('#updateItem').style.display = 'block'
       updateUserItem()
-    } else if (e.target.id === 'updateUser') {
-      putUser(choice)
+    } else if (e.target.id === 'updateItem') {
+      putUserItem(choice)
     }
   })
 
@@ -23,6 +23,8 @@ document.addEventListener('click', e => {
       case ('price'):
         document.querySelector('#priceDiv').style.display = 'block'
         break
+      case ('quantity'):
+        document.querySelector('#priceDiv').style.display = 'block'
       case ('category'):
         document.querySelector('#categoryDiv').style.display = 'block'
         break
@@ -38,45 +40,48 @@ document.addEventListener('click', e => {
     return choice
 }
 
-// const putUserItem = choice => {
-//     let changingInfo
-//     if (document.querySelector('#itemDiv').style.display === 'block') {
-//       changingInfo = document.querySelector('#itemUpdate').value
-//     } else if (document.querySelector('#priceDiv').style.display === 'block') {
-//       changingInfo = document.querySelector('#priceUpdate').value
-//     } else if (document.querySelector('#categoryDiv').style.display === 'block') {
-//       changingInfo = document.querySelector('#categoryUpdate').value
-//     } else if (document.querySelector('#conditionDiv').style.display === 'block') {
-//       changingInfo = document.querySelector('#conditionUpdate').value
-//     }
-// }
+const putUserItem = choice => {
+    let changingInfo
+    if (document.querySelector('#itemDiv').style.display === 'block') {
+      changingInfo = document.querySelector('#itemUpdate').value
+    } else if (document.querySelector('#priceDiv').style.display === 'block') {
+      changingInfo = document.querySelector('#priceUpdate').value
+    } else if (document.querySelector('#categoryDiv').style.display === 'block') {
+      changingInfo = document.querySelector('#categoryUpdate').value
+    } else if (document.querySelector('#conditionDiv').style.display === 'block') {
+      changingInfo = document.querySelector('#conditionUpdate').value
+    }
 
-// console.log(`choice: ${choice}`)
-// console.log(`changingInfo: ${changingInfo}`)
 
-// fetch(`/items/8`, {
-//   method: 'PUT',
-//   headers: {
-//     'Content-Type': 'application/json'
-//   },
-//   body: JSON.stringify({
-//     choice: changingInfo
-//   })
-// })
-//   .then(_ => console.log('okay'))
-//   .catch(e => console.log(e))
-// }
+console.log(`choice: ${choice}`)
+console.log(`changingInfo: ${changingInfo}`)
+
+fetch(`/items/${itemId}`, {
+  method: 'PUT',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({
+    choice: changingInfo
+  })
+})
+  .then(_ => {
+    getUserItems()
+    console.log('success!')
+    modalUp.style.display = 'none'
+  })
+  .catch(e => console.log(e))
+}
 
 // Toggle Modal for update
 
-let getModalUpdate = document.querySelector('.itemEdit')
   let modalUp = document.querySelector('#modalUpdate')
   let closeUpdate = document.getElementsByClassName('modal-close')[0]
 
   document.addEventListener('click', e =>{
-    if(e.target.className === itemEdit){
-        console.log('ping')
-    }
+      if(e.target.className === 'button is-primary itemEdit'){
+          modalUp.style.display = 'block'
+      }
   })
   closeUpdate.addEventListener('click', e =>{
     modalUp.style.display = 'none'

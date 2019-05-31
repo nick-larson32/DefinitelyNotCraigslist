@@ -62,7 +62,7 @@ const putUser = choice => {
   console.log(`choice: ${choice}`)
   console.log(`changingInfo: ${changingInfo}`)
 
-  fetch(`/users/12`, {
+  fetch(`/users/11`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'

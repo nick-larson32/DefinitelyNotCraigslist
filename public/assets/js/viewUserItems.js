@@ -23,7 +23,7 @@ const getUserItems = _ =>{
            <h4>Description: ${description}</h4>
            <h4>User it belongs to: ${user.name}</h4>
            <h4>Location: ${user.location.county}</h4>
-           <a class="itemEdit"><i class="fas fa-edit"></i></a>
+           <button class="button is-primary itemEdit">Edit</button>
            <a class="delete" id="itemDel"></a>
            <hr>
                 `

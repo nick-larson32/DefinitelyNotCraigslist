@@ -239,7 +239,7 @@
   -o-border-radius: 8px;
 }
 
-#modalContainer {
+.modalContainer {
   text-align: center;
 }
 
@@ -247,3 +247,25 @@ hr{
  background-color:black;
  height:1px;
 }
+
+/* Update User Item Modal */
+
+#itemDiv {
+  display:none;
+}
+
+#priceDiv{
+  display:none;
+}
+
+#categoryDiv{
+  display:none;
+}
+
+#conditionDiv{
+  display:none;
+}
+#descriptionDiv{
+  display:none;
+}
+
