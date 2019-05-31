@@ -1,7 +1,9 @@
 const { Location, User, Item, Category } = require('../models')
 const path = require('path')
 
+
 module.exports = app => {
+
   // GET all
   app.get('/items', (req, res) => {
     Item.findAll({ include: [Category, { model: User, include: Location }] })
@@ -15,6 +17,20 @@ module.exports = app => {
       .then(item => res.json(item))
       .catch(e => console.log(e))
   })
+
+  // get item like search
+  // app.get('/items/search', (req, res) => {
+  //   const Op = Sequelize.Op
+  //   Item.findAll({
+  //       where: {
+  //         itemName: {
+  //           [Op.substring]: req.body.itemName
+  //         }
+  //       }
+  //     })
+  //     .then(items => res.json(items))
+  //     .catch(e => console.log(e))
+  // })
 
   // POST one
   app.post('/items', (req, res) => {
