@@ -225,21 +225,68 @@
 
  /* Add Item Modal */
 
- .page-modal{
-  margin-right: 10%;
-  background-color: white;
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
-}
+ .page-modal {
+   margin-right: 10%;
+   background-color: white;
+   border-radius: 8px;
+   -webkit-border-radius: 8px;
+   -moz-border-radius: 8px;
+   -ms-border-radius: 8px;
+   -o-border-radius: 8px;
+ }
 
-#modalContainer {
-  text-align: center;
-}
+ hr {
+   background-color: black;
+   height: 1px;
+ }
 
-hr{
- background-color:black;
- height:1px;
-}
+ .logo_home {
+   width: 100px;
+   height: 100px;
+   align-content: center;
+   margin-top: 10%;
+ }
+
+ #login_background {
+   background-color: #333;
+   text-align: center;
+ }
+
+ .label_color {
+   color: white;
+   text-align: left;
+   margin-left: 25%;
+ }
+
+ .inputbox {
+   margin-left: 5%;
+   width: 90%;
+ }
+
+ .sectionLogin {
+   padding: 0;
+ }
+
+ .buttonStyle {
+   margin: 10px;
+ }
+
+ .tagLogin {
+   margin-left: 5%;
+   width: 10%;
+   background-color: #333;
+ }
+
+ .fieldStyle {
+   margin: 5%;
+   border: solid grey;
+ }
+
+ .selectStyle {
+   display: inline-block;
+ }
+
+ .genderLabel {
+   display: inline-block;
+   margin: 5%;
+ }
