@@ -1,12 +1,3 @@
-const config = {
-  apiKey: 'AIzaSyCCOFVr3gl2dMgq-Jk6JuIPUswsAZwKGfU',
-  authDomain: 'stuffandmorethings-82665.firebaseapp.com',
-  databaseURL: 'https://stuffandmorethings-82665.firebaseio.com',
-  projectId: 'stuffandmorethings-82665',
-  storageBucket: 'stuffandmorethings-82665.appspot.com',
-  messagingSenderId: '995213301250'
-}
-
 firebase.initializeApp(config)
 
 let db = firebase.firestore()
