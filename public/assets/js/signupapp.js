@@ -39,4 +39,6 @@ document.querySelector("#submitButton").addEventListener('click', e=>{
             document.querySelector("#signupPassword").value=''
             document.querySelector("#signupAddress").value=''
         
+
+
 })

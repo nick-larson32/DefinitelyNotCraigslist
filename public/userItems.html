@@ -14,8 +14,8 @@
 </head>
 <body>
     <div class="section">
-    <a class="button is-primary" id="modalOpen">Add Listing</a>
-    <div class="container">
+    <div class="container modalContainer" >
+            <a class="button is-primary" id="modalButton">Add Listing</a>
             <div class="modal" id="myModal">
                     <div class="modal-background"></div>
                     <div class="modal-content">
@@ -71,13 +71,89 @@
                         </div>
                     </div>
                     <button class="modal-close is-large" aria-label="close"></button>
-                  </div>
+            </div>
     </div>
     </div>
     <div class="section">
+            <div class="container modalContainer">
+                    <div class="modal" id="modalUpdate">
+                            <div class="modal-background"></div>
+                            <div class="modal-content">
+                            <div class="section page-modal">
+                              <h1 class="title">Update Listing</h1>
+                                <form>
+                                    <div class="field">
+                                    <div class="control">
+                                    <div class="select">
+                                        <label for="change">Select the information you want to change:</label>
+                                        <select name="changed" id="itemUpdate">
+                                            <option value="itemName">Item Name</option>
+                                            <option value="price">Price</option>
+                                            <option value="category">Category</option>
+                                            <option value="condition">Condition</option>
+                                            <option value="description">Description</option>
+                                        </select>
+                                    </div>
+                                    </div>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">Item Name</label>
+                                            <div class="control" id="itemDiv">
+                                                <input class="input" type="text" id="itemUpdate"placeholder="i.e Victorian Table">
+                                            </div>
+                                    </div>
+                                    <div class="field">
+                                        <label class="label">Price</label>
+                                            <div class="control" id="priceDiv">
+                                                <input class="input" type="number" id="priceUpdate"placeholder="i.e 10">
+                                            </div>
+                                    </div>
+                                        <div class="field">
+                                        <div class="control">
+                                        <div class="select" id="categoryDiv">
+                                        <select name="Categories" id="categoryUpdate">
+                                                <option value="4">Furniture</option>
+                                                <option value="5">Toys</option>
+                                                <option value="6">Kitchenware</option>
+                                                <option value="2">Electronics</option>
+                                                <option value="3">Food</option>
+                                                <option value="1">Clothing</option>
+                                                <option value="7">Miscellaneous</option>
+                                            </select>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="field">
+                                        <div class="control">
+                                        <div class="select" id="conditionDiv">
+                                            <select name="condition" id="conditionUpdate">
+                                                <option value="new">Like New</option>
+                                                <option value="like new">New</option>
+                                                <option value="Used">Used</option>
+                                                <option value="Poor">Poor</option>
+                                             </select>
+                                        </div>
+                                        </div>
+                                        </div>
+                                        <div class="field">
+                                        <div class="control" id="decriptionDiv">
+                                            <textarea class="textarea" id="descriptionUpdate" placeholder="Enter Description"></textarea>
+                                        </div>
+                                        </div>                    
+                                        <button type="submit" class="button is-success"id="updateItem">Update Listing</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <button class="modal-close is-large" aria-label="close"></button>
+                          </div>
+            </div>
+            </div>
+    <div class="section">
     <div id="userItemView"></div>
     </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="./assets/js/viewUserItems.js"></script>
     <script src="./assets/js/addItem.js"></script>
+    <script src="./assets/js/putUserItem.js"></script>
 </body>
 </html>
