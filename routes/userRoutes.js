@@ -19,7 +19,10 @@ module.exports = app => {
   // POST one
   app.post('/users', (req, res) => {
     User.create(req.body)
-      .then(_ => res.sendStatus(200))
+      .then(_ => {
+        console.log(req.body)
+        res.sendStatus(200)
+      })
       .catch(e => console.log(e))
   })
 
