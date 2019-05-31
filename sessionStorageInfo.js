@@ -1,12 +1,3 @@
-const config = {
-  apiKey: 'AIzaSyCCOFVr3gl2dMgq-Jk6JuIPUswsAZwKGfU',
-  authDomain: 'stuffandmorethings-82665.firebaseapp.com',
-  databaseURL: 'https://stuffandmorethings-82665.firebaseio.com',
-  projectId: 'stuffandmorethings-82665',
-  storageBucket: 'stuffandmorethings-82665.appspot.com',
-  messagingSenderId: '995213301250'
-}
-
 firebase.initializeApp(config)
 
 let db = firebase.firestore()
@@ -14,10 +5,10 @@ let db = firebase.firestore()
 document.querySelector('#add-user').addEventListener('click', e => {
   e.preventDefault()
 
-  name = document.querySelector('#name-input').value
-  email = document.querySelector('#email-input').value
-  age = document.querySelector('#age-input').value
-  comment = document.querySelector('#comment-input').value
+  let name = document.querySelector('#name-input').value
+  let email = document.querySelector('#email-input').value
+  let age = document.querySelector('#age-input').value
+  let comment = document.querySelector('#comment-input').value
 
   localStorage.setItem('name', name)
   localStorage.setItem('email', email)
