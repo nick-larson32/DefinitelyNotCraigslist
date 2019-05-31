@@ -56,23 +56,22 @@ const putUserItem = choice => {
 console.log(`choice: ${choice}`)
 console.log(`changingInfo: ${changingInfo}`)
 
-fetch(`/items/${itemId}`, {
-  method: 'PUT',
-  headers: {
-    'Content-Type': 'application/json'
-  },
-  body: JSON.stringify({
-    choice: changingInfo
-  })
-})
-  .then(_ => {
-    getUserItems()
-    console.log('success!')
-    modalUp.style.display = 'none'
-  })
-  .catch(e => console.log(e))
-}
-
+            fetch(`/items/${itemId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                choice: changingInfo
+            })
+            })
+            .then(_ => {
+                getUserItems()
+                console.log('success!')
+                modalUp.style.display = 'none'
+            })
+            .catch(e => console.log(e))
+            }
 // Toggle Modal for update
 
   let modalUp = document.querySelector('#modalUpdate')

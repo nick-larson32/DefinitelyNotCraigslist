@@ -7,6 +7,7 @@ const getUserItems = _ =>{
     fetch('/items')
     .then(items => items.json())
     .then(items => {
+        document.querySelector('#userItemView').innerHTML = ''
        const userItem = items.filter(data =>
         data.userId === currUser)
         console.log(userItem)
