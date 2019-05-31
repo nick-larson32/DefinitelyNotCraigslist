@@ -134,14 +134,14 @@ a.pure-button-primary {
     /* The following styles are required for the "scroll-over" effect */
     width: 100%;
     height: 88%;
-    top: 0;
-    left: 0;
+    /* top: 0; */
+    /* left: 0; */
     position: fixed !important;
 }
 
 .splash {
     /* absolute center .splash within .splash-container */
-    width: 80%;
+    width: 90%;
     height: 50%;
     margin: auto;
     position: absolute;
@@ -160,7 +160,7 @@ a.pure-button-primary {
     font-weight: bold;
     color: white;
     border: 3px solid white;
-    padding: 1em 1.6em;
+    padding: 1em 0;
     font-weight: 100;
     border-radius: 5px;
     line-height: 1em;
@@ -195,7 +195,7 @@ a.pure-button-primary {
 /* We want to give the content area some more padding */
 
 .content {
-    padding: 1em 1em 3em;
+    padding: 0.5em
 }
 
 /* This is the class used for the main content headers (<h2>) */
@@ -230,13 +230,34 @@ a.pure-button-primary {
     color: #aaa;
 }
 
-/* This is the class used for the footer */
+/* Footer stylings */
 
 .footer {
-    background: #111;
+    background-color: #191818;
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 1;
+    padding: 1rem;
+    text-align: center;
+}
+
+.button {
+    background-color: #6290C8;
+}
+
+.footer-text, strong {
+    color: #F5F5F5;
+}
+
+.footer-link {
+    color: #add8e6;
+    text-decoration: underline;
+}
+
+.footer-text {
+    margin: auto;
+    padding: 0 25px;
 }
 
 /*
@@ -245,7 +266,31 @@ a.pure-button-primary {
  * of the mobile styles.
  */
 
-@media (min-width: 48em) {
+@media screen and (min-width: 250px) and (max-width: 418px) {
+    .splash {
+        width: 90%;
+    }
+}
+
+@media (min-width: 548px) {
+    .footer {
+        padding: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 418px) and (max-width: 586px) {
+    .splash {
+        width: 70%;
+    }
+}
+
+@media (min-width: 586px) {
+    .splash {
+        width: 70%;
+    }
+}
+
+@media (min-width: 768px) {
     /* We increase the body font size */
     body {
         font-size: 16px;
@@ -259,13 +304,13 @@ a.pure-button-primary {
         float: right;
     }
     /* We increase the height of the splash-container */
-    /*    .splash-container {
-        height: 500px;
-    }*/
+    .splash-container {
+        height: 100%;
+    }
     /* We decrease the width of the .splash, since we have more width
     to work with */
     .splash {
-        width: 50%;
+        width: 75%;
         height: 50%;
     }
     .splash-head {
@@ -277,15 +322,24 @@ a.pure-button-primary {
     }
 }
 
+@media (min-width: 968px) {
+    .splash {
+        width: 60%;
+    }
+}
+
 /*
  * -- DESKTOP (AND UP) MEDIA QUERIES --
  * On desktops and other large devices, we want to over-ride some
  * of the mobile and tablet styles.
  */
 
-@media (min-width: 78em) {
+@media (min-width: 1248px) {
     /* We increase the header font size even more */
     .splash-head {
         font-size: 300%;
+    }
+    .splash {
+        width: 60%;
     }
 }

@@ -42,13 +42,13 @@ This is the parent `<div>` that contains the menu and the content area.
 The content `<div>` is where all your content goes.
 */
 
-.content {
+/* .content {
   margin: 0 auto;
   padding: 0 2em;
   max-width: 800px;
   margin-bottom: 50px;
   line-height: 1.6em;
-}
+} */
 
 .header {
   margin: 0;
@@ -344,6 +344,7 @@ background-color:#333;
 .genderLabel{
   display: inline-block;
   margin: 5%;
+}
 
  /* Pure Menu stylings */
 
@@ -459,7 +460,7 @@ background-color:#333;
      position: absolute;
      width: 100%;
      border-top: 1px solid #eee;
-     background-color: #808080;
+     /* background-color: #808080; */
      z-index: 100;
    }
    .custom-menu-bottom .pure-menu-link {
@@ -554,6 +555,12 @@ background-color:#333;
    width: 100%;
  }
 
+/* Category link stylings */
+/* .category:hover {
+  box-shadow: 2px 2px;
+} */
+
+/* Category tile images */
  #furniture {
    background: url(../images/stock-images/furniture.jpg);
    background-size: 100% 100%;
