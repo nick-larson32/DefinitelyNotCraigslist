@@ -26,6 +26,8 @@ const {fetch} = window
     // getUserItems()
       .then(_ => {
         console.log('successful')
+        // closes modal once added
+        modal.style.display = 'none';
       })
       .catch(e => console.log(e))
   })
@@ -43,8 +45,8 @@ const {fetch} = window
     modal.style.display = 'none'
   })
 
-window.addEventListener('click', e =>{
-  if(e.target.className === 'modal-background'){
-    modal.style.display = 'none'
-  }
-})
+  window.addEventListener('click', e =>{
+    if(e.target.className === 'modal-background'){
+      modal.style.display = 'none'
+    }
+  })

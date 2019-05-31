@@ -459,7 +459,7 @@ background-color:#333;
      position: absolute;
      width: 100%;
      border-top: 1px solid #eee;
-     background-color: #808080\9;
+     background-color: #808080;
      z-index: 100;
    }
    .custom-menu-bottom .pure-menu-link {
@@ -566,10 +566,6 @@ background-color:#333;
    color: black;
  }
 
- /* .pure-menu-horizontal.pure-menu-scrollable {
-   overflow: visible;
- } */
-
  .custom-menu-screen {
    width: 100%;
  }
@@ -584,5 +580,13 @@ background-color:#333;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
+<<<<<<< HEAD
 >>>>>>> a8a7707e69af0c3a5666aa8c9d0a72c906edfe92
+=======
+}
+
+hr{
+ background-color:black;
+ height:1px;
+>>>>>>> c464eb1d0546c8f77d2f313750ad23d3bfb50823
 }
