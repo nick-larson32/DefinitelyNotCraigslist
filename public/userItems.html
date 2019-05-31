@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,77 +8,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" type="text/css" media="screen"
-      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css"/>
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
-      integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
+
 <body>
+    <!-- Menu -->
+    <div class="custom-menu-wrapper">
+        <div class="pure-menu custom-menu custom-menu-top">
+            <a class="pure-menu-heading" href="./index.html">
+                <img class="logo" src="./assets/images/app-logo/logo_transparent2.png" width="50px" height="50px">
+                <img class="logo-text" src="./assets/images/app-logo/logo-text.png" width="200px" height="200px">
+            </a>
+            <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+        </div>
+        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
+            id="tuckedMenu">
+            <div class="custom-menu-screen"></div>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Browse By Category</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Donate</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Report a Problem</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">Safety Tips</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">About Us</a></li>
+            </ul>
+        </div>
+    </div>
     <div class="section">
-    <a class="button is-primary" id="modalOpen">Add Listing</a>
-    <div class="container">
+        <a class="button is-primary" id="modalOpen">Add Listing</a>
+        <div class="container">
             <div class="modal" id="myModal">
-                    <div class="modal-background"></div>
-                    <div class="modal-content">
+                <div class="modal-background"></div>
+                <div class="modal-content">
                     <div class="section page-modal">
-                      <h1 class="title">Add Listing</h1>
+                        <h1 class="title">Add Listing</h1>
                         <form>
                             <div class="field">
                                 <label class="label">Item Name</label>
-                                    <div class="control">
-                                        <input class="input" type="text" id="itemName"placeholder="i.e Victorian Table">
-                                    </div>
+                                <div class="control">
+                                    <input class="input" type="text" id="itemName" placeholder="i.e Victorian Table">
+                                </div>
                             </div>
                             <div class="field">
                                 <label class="label">Price</label>
-                                    <div class="control">
-                                        <input class="input" type="number" id="price"placeholder="i.e 10">
-                                    </div>
+                                <div class="control">
+                                    <input class="input" type="number" id="price" placeholder="i.e 10">
+                                </div>
                             </div>
                             <div class="field">
                                 <div class="control">
-                                <div class="select">
-                                <select name="Categories" id="category">
-                                        <option value="4">Furniture</option>
-                                        <option value="5">Toys</option>
-                                        <option value="6">Kitchenware</option>
-                                        <option value="2">Electronics</option>
-                                        <option value="3">Food</option>
-                                        <option value="1">Clothing</option>
-                                        <option value="7">Miscellaneous</option>
-                                    </select>
+                                    <div class="select">
+                                        <select name="Categories" id="category">
+                                            <option value="4">Furniture</option>
+                                            <option value="5">Toys</option>
+                                            <option value="6">Kitchenware</option>
+                                            <option value="2">Electronics</option>
+                                            <option value="3">Food</option>
+                                            <option value="1">Clothing</option>
+                                            <option value="7">Miscellaneous</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                </div>
-                                </div>
-                                <div class="field">
+                            </div>
+                            <div class="field">
                                 <div class="control">
-                                <div class="select">
-                                    <select name="condition" id="condition">
-                                        <option value="new">Like New</option>
-                                        <option value="like new">New</option>
-                                        <option value="Used">Used</option>
-                                        <option value="Poor">Poor</option>
-                                     </select>
+                                    <div class="select">
+                                        <select name="condition" id="condition">
+                                            <option value="new">Like New</option>
+                                            <option value="like new">New</option>
+                                            <option value="Used">Used</option>
+                                            <option value="Poor">Poor</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                </div>
-                                </div>
-                                <div class="field">
+                            </div>
+                            <div class="field">
                                 <div class="control">
-                                    <textarea class="textarea" id="description" placeholder="Enter Description"></textarea>
+                                    <textarea class="textarea" id="description"
+                                        placeholder="Enter Description"></textarea>
                                 </div>
-                                </div>                    
-                                <button type="submit" class="button is-success"id="addDonation">Add Listing</button>
-                            </form>
-                        </div>
+                            </div>
+                            <button type="submit" class="button is-success" id="addDonation">Add Listing</button>
+                        </form>
                     </div>
-                    <button class="modal-close is-large" aria-label="close"></button>
-                  </div>
-    </div>
+                </div>
+                <button class="modal-close is-large" aria-label="close"></button>
+            </div>
+        </div>
     </div>
     <div class="section">
-    <div id="userItemView"></div>
+        <div id="userItemView"></div>
     </div>
     <script src="./assets/js/viewUserItems.js"></script>
     <script src="./assets/js/addItem.js"></script>
+    <!-- Pure js -->
+    <script src="./assets/js/puremenu.js"></script>
 </body>
+
 </html>
