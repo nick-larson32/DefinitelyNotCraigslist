@@ -11,7 +11,7 @@ const getUserItems = _ =>{
         data.userId === currUser)
         console.log(userItem)
         if(userItem.length >0){
-        userItem.forEach(({ itemName, quantity, available, bought, price, condition, description, user, category}) =>{
+        userItem.forEach(({ id, itemName, quantity, available, bought, price, condition, description, user, category}) =>{
             let userItemDiv = document.createElement('div')
              userItemDiv.innerHTML = `
            <h2>Item Name: ${itemName}</h2>
@@ -24,7 +24,7 @@ const getUserItems = _ =>{
            <h4>User it belongs to: ${user.name}</h4>
            <h4>Location: ${user.location.county}</h4>
            <button class="button is-primary itemEdit">Edit</button>
-           <a class="delete" id="itemDel"></a>
+           <a class="delete" data-id="${id}"></a>
            <hr>
                 `
                 document.querySelector('#userItemView').append(userItemDiv)
