@@ -2,7 +2,7 @@ const { fetch } = window
 let choice
 // this needs to change to be reflective of the current user logged in
 // for now, hardcoded as 1 for demo purposes
-let userId = 11
+let userId = 1
 
 document.addEventListener('click', e => {
   e.preventDefault()

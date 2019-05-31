@@ -6,40 +6,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Testing User Adding</title>
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+    integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-
-  <form>
-    <label for="name">Name:</label>
-    <input type="text" name="name" id="name">
-    <br>
-    <label for="email">Email:</label>
-    <input type="email" name="email" id="email">
-    <br>
-    <label for="password">Password</label>
-    <input type="password" name="password" id="password">
-    <br>
-    <label for="address">Address</label>
-    <input type="text" name="address" id="address" placeholder="1234 Any Street, City, Zip">
-    <br>
-    <label for="dateofbirth">Date of Birth</label>
-    <input type="date" name="DOB" id="DOB">
-    <br>
-    <label for="gender">Gender:</label>
-    <input type="text" name="gender" id="gender">
-    <br>
-    <label for="location">Location:</label>
-    <select name="location" id="location">
-      <option disabled selected>Choose Your Location</option>
-      <option value="1">Orange County</option>
-      <option value="2">Los Angeles County</option>
-    </select>
-    <br>
-    <button id="submitUser">Submit</button>
-  </form>
+  <!-- Menu -->
+  <div class="custom-menu-wrapper">
+    <div class="pure-menu custom-menu custom-menu-top">
+      <a class="pure-menu-heading" href="./index.html">
+        <img class="logo" src="./assets/images/app-logo/logo_transparent2.png" width="50px" height="50px">
+        <img class="logo-text" src="./assets/images/app-logo/logo-text.png" width="200px" height="200px">
+      </a>
+      <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+    </div>
+    <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
+      id="tuckedMenu">
+      <div class="custom-menu-screen"></div>
+      <ul class="pure-menu-list">
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Browse By Category</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Donate</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Report a Problem</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">Safety Tips</a></li>
+        <li class="pure-menu-item"><a href="#" class="pure-menu-link">About Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="section">
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" name="name" id="name">
+      <br>
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email">
+      <br>
+      <label for="password">Password</label>
+      <input type="password" name="password" id="password">
+      <br>
+      <label for="address">Address</label>
+      <input type="text" name="address" id="address" placeholder="1234 Any Street, City, Zip">
+      <br>
+      <label for="dateofbirth">Date of Birth</label>
+      <input type="date" name="DOB" id="DOB">
+      <br>
+      <label for="gender">Gender:</label>
+      <input type="text" name="gender" id="gender">
+      <br>
+      <label for="location">Location:</label>
+      <select name="location" id="location">
+        <option disabled selected>Choose Your Location</option>
+        <option value="1">Orange County</option>
+        <option value="2">Los Angeles County</option>
+      </select>
+      <br>
+      <button id="submitUser">Submit</button>
+    </form>
+  </div>
 
   <script src="./assets/js/postUser.js"></script>
+  <!-- Pure js -->
+  <script src="./assets/js/puremenu.js"></script>
 </body>
 
 </html>

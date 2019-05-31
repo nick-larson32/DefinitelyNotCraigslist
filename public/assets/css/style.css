@@ -496,6 +496,14 @@ background-color:#333;
 
  /* Non-CSS library stylings */
 
+ /* .notification.is-info {
+   background-color: #376996;
+ } */
+
+ h1 {
+   text-align: center;
+ }
+
  .logo, .logo-text {
    display: block;
    margin: auto;
@@ -510,7 +518,7 @@ background-color:#333;
  }
 
  .footer {
-   background-color: #376996;
+   background-color: #191818;
  }
 
  .button {
@@ -534,7 +542,7 @@ background-color:#333;
 
  .footer-text {
    margin: auto;
-   padding-top: 50px;
+   padding: 0 25px;
  }
 
  .pure-menu {
@@ -544,6 +552,52 @@ background-color:#333;
 
  .pure-button {
    width: 100%;
+ }
+
+ #furniture {
+   background: url(../images/stock-images/furniture.jpg);
+   background-size: 100% 100%;
+ }
+
+ #kitchenware {
+   background: url(../images/stock-images/kitchenware.jpg);
+   background-size: 100% 100%;
+ }
+
+ #electronics {
+   background: url(../images/stock-images/electronics.jpg);
+   background-size: 100% 100%;
+ }
+
+ #clothes {
+   background: url(../images/stock-images/clothes.jpg);
+   background-size: 100% 100%;
+ }
+
+ #food {
+   background: url(../images/stock-images/food.jpg);
+   background-size: 100% 100%;
+ }
+
+ #toys {
+   background: url(../images/stock-images/toys.jpg);
+   background-size: 100% 100%;
+ }
+
+ #miscellaneous {
+   background: url(../images/stock-images/miscellaneous.jpg);
+   background-size: 100% 100%;
+ }
+
+ .tile-text {
+   width: 100%;
+   background-color: #376996;
+   padding: 10px 20px;
+   text-align: center
+ }
+
+ .notification {
+   padding: 0 0 20px 0;
  }
 
  #login-button {
@@ -641,4 +695,5 @@ hr{
  .genderLabel {
    display: inline-block;
    margin: 5%;
-  }
+ }
+
