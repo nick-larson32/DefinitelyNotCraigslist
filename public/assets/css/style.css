@@ -611,7 +611,7 @@ hr{
 #descriptionDiv{
   display:none;
 }
-
+/* Modal CSS */
  .page-modal {
    margin-right: 10%;
    background-color: white;
@@ -620,6 +620,10 @@ hr{
    -moz-border-radius: 8px;
    -ms-border-radius: 8px;
    -o-border-radius: 8px;
+ }
+
+ .modalContainer{
+   text-align:center;
  }
 
  hr {
