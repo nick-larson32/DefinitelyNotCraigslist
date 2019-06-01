@@ -1,5 +1,3 @@
-require('dotenv').config()
-
 // Yelp API code
 let URL
 require('dotenv').config()
