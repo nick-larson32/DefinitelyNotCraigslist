@@ -140,7 +140,8 @@
         transform: translateX(-140px);
         opacity: 0;
         opacity: 1\9;
-    }
+        -o-transform: translateX(-140px);
+}
     .pure-menu-horizontal.custom-menu-tucked {
         z-index: -1;
         top: 45px;
@@ -685,90 +686,56 @@ strong {
     text-align: center
 }
 
-.notification {
-    padding: 0 0 20px 0;
-}
+ .logo_home {
+   width: 100px;
+   height: 100px;
+   align-content: center;
+   margin-top: 10%;
+ }
 
-#login-button {
-    background: #909090;
-}
+ #login_background {
+   background-color: #333;
+   text-align: center;
+ }
 
-.signup-login {
-    margin-top: 50px;
-}
+ .label_color {
+   color: white;
+   text-align: left;
+   margin-left: 25%;
+ }
 
-.section {
-    padding: 0 1.5rem 3rem;
-}
+ .inputbox {
+   margin-left: 5%;
+   width: 90%;
+ }
 
-.pure-menu-item {
-    z-index: 10
-}
+ .sectionLogin {
+   padding: 0;
+ }
 
-#dropdown-link {
-    color: black;
-}
+ .buttonStyle {
+   margin: 10px;
+ }
 
-.custom-menu-screen {
-    width: 100%;
-}
+ .tagLogin {
+   margin-left: 5%;
+   width: 10%;
+   background-color: #333;
+ }
 
+ .fieldStyle {
+   margin: 5%;
+   border: solid grey;
+ }
 
-/* Add Item Modal */
+ .selectStyle {
+   display: inline-block;
+ }
 
-.modalContainer {
-    text-align: center;
-}
-
-hr {
-    background-color: black;
-    height: 1px;
-}
-
-
-/* Update User Item Modal */
-
-#itemDiv {
-    display: none;
-}
-
-#priceDiv {
-    display: none;
-}
-
-#categoryDiv {
-    display: none;
-}
-
-#conditionDiv {
-    display: none;
-}
-
-#descriptionDiv {
-    display: none;
-}
-
-
-/* Modal CSS */
-
-.page-modal {
-    margin-right: 10%;
-    background-color: white;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-}
-
-.modalContainer {
-    text-align: center;
-}
-
-hr {
-    background-color: black;
-    height: 1px;
-}
+ .genderLabel {
+   display: inline-block;
+   margin: 5%;
+ }
 
 .logo_home {
     width: 100px;
