@@ -7,10 +7,8 @@
     <title>User's Item Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" media="screen"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
-        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -19,13 +17,12 @@
     <div class="custom-menu-wrapper">
         <div class="pure-menu custom-menu custom-menu-top">
             <a class="pure-menu-heading" href="./index.html">
-                <img class="logo" src="./assets/images/app-logo/logo_transparent2.png" width="50px" height="50px">
-                <img class="logo-text" src="./assets/images/app-logo/logo-text.png" width="200px" height="200px">
+                <img class="logo" src="./assets/images/app-logo/logo_transparent2.png">
+                <img class="logo-text" src="./assets/images/app-logo/logo-text.png">
             </a>
             <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
         </div>
-        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
-            id="tuckedMenu">
+        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
             <div class="custom-menu-screen"></div>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">Browse By Category</a></li>
@@ -37,7 +34,7 @@
         </div>
     </div>
     <div class="section">
-    <div class="container modalContainer" >
+        <div class="container modalContainer">
             <a class="button is-primary" id="modalButton">Add Listing</a>
             <div class="modal" id="myModal">
                 <div class="modal-background"></div>
@@ -86,55 +83,77 @@
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <textarea class="textarea" id="description"
-                                        placeholder="Enter Description"></textarea>
+                                    <textarea class="textarea" id="description" placeholder="Enter Description"></textarea>
                                 </div>
                             </div>
                             <button type="submit" class="button is-success" id="addDonation">Add Listing</button>
                         </form>
                     </div>
                     <button class="modal-close is-large" aria-label="close"></button>
+                </div>
             </div>
-    </div>
-    </div>
-    <div class="section">
+        </div>
+        <div class="section">
             <div class="container modalContainer">
-                    <div class="modal" id="modalUpdate">
-                            <div class="modal-background"></div>
-                            <div class="modal-content">
-                            <div class="section page-modal">
-                              <h1 class="title">Update Listing</h1>
-                                <form>
-                                    <div class="field">
+                <div class="modal" id="modalUpdate">
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <div class="section page-modal">
+                            <h1 class="title">Update Listing</h1>
+                            <form>
+                                <div class="field">
                                     <div class="control">
-                                    <div class="select">
-                                        <label class="label" for="change">Select the information you want to change:</label>
-                                        <select name="changed" id="change">
+                                        <div class="select">
+                                            <label class="label" for="change">Select the information you want to change:</label>
+                                            <select name="changed" id="change">
                                             <option value="itemName">Item Name</option>
                                             <option value="price">Price</option>
                                             <option value="category">Category</option>
                                             <option value="condition">Condition</option>
                                             <option value="description">Description</option>
                                         </select>
+                                        </div>
                                     </div>
+                                </div>
+                                <button id="infoUpdate">Submit</button>
+                                <br>
+                                <div class="field">
+                                    <div class="control" id="itemDiv">
+                                        Item Name : <input class="input" type="text" id="itemUpdate" placeholder="i.e Victorian Table">
                                     </div>
+                                </div>
+                                <div class="field">
+                                    <div class="control" id="priceDiv">
+                                        <input class="input" type="number" id="priceUpdate" placeholder="i.e 10">
                                     </div>
-                                    <button id="infoUpdate">Submit</button>
-                                    <br>
-                                    <div class="field">
-                                            <div class="control" id="itemDiv">
-                                                Item Name : <input class="input" type="text" id="itemUpdate"placeholder="i.e Victorian Table">
-                                            </div>
+                                    <div class="select">
+                                        <label for="change">Select the information you want to change:</label>
+                                        <select name="changed" id="itemUpdate">
+                                                <option value="itemName">Item Name</option>
+                                                <option value="price">Price</option>
+                                                <option value="category">Category</option>
+                                                <option value="condition">Condition</option>
+                                                <option value="description">Description</option>
+                                            </select>
                                     </div>
-                                    <div class="field">
-                                            <div class="control" id="priceDiv">
-                                                <input class="input" type="number" id="priceUpdate"placeholder="i.e 10">
-                                            </div>
-                                    </div>
-                                        <div class="field">
-                                        <div class="control">
-                                        <div class="select" id="categoryDiv">
-                                        <select name="Categories" id="categoryUpdate">
+                                </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Item Name</label>
+                            <div class="control" id="itemDiv">
+                                <input class="input" type="text" id="itemUpdate" placeholder="i.e Victorian Table">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="label">Price</label>
+                            <div class="control" id="priceDiv">
+                                <input class="input" type="number" id="priceUpdate" placeholder="i.e 10"> >>>>>>> master
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select" id="categoryDiv">
+                                    <select name="Categories" id="categoryUpdate">
                                                 <option value="4">Furniture</option>
                                                 <option value="5">Toys</option>
                                                 <option value="6">Kitchenware</option>
@@ -143,36 +162,42 @@
                                                 <option value="1">Clothing</option>
                                                 <option value="7">Miscellaneous</option>
                                             </select>
-                                        </div>
-                                        </div>
-                                        </div>
-                                        <div class="field">
-                                        <div class="control">
-                                        <div class="select" id="conditionDiv">
-                                            <select name="condition" id="conditionUpdate">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="control">
+                                <div class="select" id="conditionDiv">
+                                    <select name="condition" id="conditionUpdate">
                                                 <option value="new">Like New</option>
                                                 <option value="like new">New</option>
                                                 <option value="Used">Used</option>
                                                 <option value="Poor">Poor</option>
                                              </select>
-                                        </div>
-                                        </div>
-                                        </div>
-                                        <div class="field">
-                                        <div class="control" id="descriptionDiv">
-                                            <textarea class="textarea" id="descriptionUpdate" placeholder="Enter Description"></textarea>
-                                        </div>
-                                        </div>                    
-                                        <button type="submit" class="button is-success"id="updateItem">Update Listing</button>
-                                    </form>
                                 </div>
                             </div>
-                            <button class="modal-close is-large" aria-label="close"></button>
-                          </div>
+                        </div>
+                        <div class="field">
+                            <div class="control" id="descriptionDiv">
+                                <textarea class="textarea" id="descriptionUpdate" placeholder="Enter Description"></textarea> =======
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="control" id="decriptionDiv">
+                            <textarea class="textarea" id="descriptionUpdate" placeholder="Enter Description"></textarea>
+                        </div>
+                    </div>
+                    <button type="submit" class="button is-success" id="updateItem">Update Listing</button>
+                    </form>
+                </div>
             </div>
-            </div>
+            <button class="modal-close is-large" aria-label="close"></button>
+        </div>
+    </div>
     <div class="section">
-    <div id="userItemView"></div>
+        <div id="userItemView"></div>
     </div>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="./assets/js/viewUserItems.js"></script>
@@ -181,6 +206,17 @@
     <script src="./assets/js/puremenu.js"></script>
     <script src="./assets/js/putUserItem.js"></script>
     <script src="./assets/js/deleteUserItem.js"></script>
+
+    </div>
+    <div class="section">
+        <div id="userItemView"></div>
+    </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="./assets/js/viewUserItems.js"></script>
+    <script src="./assets/js/addItem.js"></script>
+    <!-- Pure js -->
+    <script src="./assets/js/puremenu.js"></script>
+    <script src="./assets/js/putUserItem.js"></script>
 </body>
 
 </html>
