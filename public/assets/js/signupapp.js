@@ -21,7 +21,7 @@ document.querySelector('#submitButton').addEventListener('click', e => {
     body: JSON.stringify(newUser)
   })
     .then(_ => {
-      localStorage.setItem('CraiglistLogin', `{name:${newUser.name},logedin:true}`)
+      localStorage.setItem('CraiglistLogin',JSON.stringify( {name:newUser.name,logedin:true}))
       document.querySelector('#signupName').value = ''
       document.querySelector('#signupEmail').value = ''
       document.querySelector('#signupPassword').value = ''
