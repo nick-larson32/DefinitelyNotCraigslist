@@ -1,10 +1,6 @@
-const { fetch, alert } = window
+const { fetch } = window
 let newUser
-let totalNum
-// fetch('/users')
-//     .then(r=>r.json())
-//     .then(user=> console.log(user))
-//     .catch(e=>console.log(e))
+
 document.querySelector('#submitButton').addEventListener('click', e => {
   e.preventDefault()
   newUser =
@@ -24,14 +20,25 @@ document.querySelector('#submitButton').addEventListener('click', e => {
     },
     body: JSON.stringify(newUser)
   })
-    .then(_ => {
-      localStorage.setItem('CraiglistLogin', `{name:${newUser.name},logedin:true}`)
+    .then(newUser => {
+      sessionStorage.setItem('name', document.querySelector('#signupName').value)
+      sessionStorage.setItem('address', document.querySelector('#signupAddress').value)
+
       document.querySelector('#signupName').value = ''
       document.querySelector('#signupEmail').value = ''
       document.querySelector('#signupPassword').value = ''
       document.querySelector('#signupAddress').value = ''
-
+      fetch('/users')
+        .then(r => r.json())
+        .then(users => {
+          users.map(user => {
+            if (user.name === sessionStorage.getItem('name')) {
+              sessionStorage.setItem('id', user.id)
+            }
+            window.location.href = '/browse.html'
+          })
+        })
+        .catch(e => console.log(e))
     })
     .catch(e => console.log(e))
 })
-
