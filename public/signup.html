@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="./assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" media="screen"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+    integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Signup</title>
+</head>
+
+<body>
+  <div class="section sectionLogin">
+    <div class="containeris is-fullhd">
+      <!-- Menu -->
+      <div class="custom-menu-wrapper">
+        <div class="pure-menu custom-menu custom-menu-top">
+          <a class="pure-menu-heading" href="./index.html">
+            <img class="logo" src="./assets/images/app-logo/logo_transparent2.png">
+            <img class="logo-text" src="./assets/images/app-logo/logo-text.png">
+          </a>
+          <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+        </div>
+        <div
+          class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
+          id="tuckedMenu">
+          <div class="custom-menu-screen"></div>
+          <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="./browse.html" class="pure-menu-link">
+                <p class="menu-text">Browse By Category</p>
+              </a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">
+                <p class="menu-text">Donate</p>
+              </a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">
+                <p class="menu-text">Report a Problem</p>
+              </a></li>
+            <li class="pure-menu-item"><a href="./safety.html" class="pure-menu-link">
+                <p class="menu-text">Safety Tips</p>
+              </a></li>
+            <li class="pure-menu-item"><a href="./about.html" class="pure-menu-link">
+                <p class="menu-text">About Us</p>
+              </a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="container is-fullhd " id="login_background">
+        <img src="./assets/images/app-logo/logo_transparent2.png" class="logo_home" alt="logo_image">
+        <img src="./assets/images/app-logo/logo-text.png" class="logo_text" alt="logo-text">
+        <br></br>
+        <div class="field fieldStyle">
+          <div class="tags are-medium">
+            <span class="tag has-background-grey-darker has-text-grey tagLogin">Sign Up</span>
+
+          </div>
+          <label class="label label_color">Name</label>
+          <div class="control">
+            <input class="input inputbox" id="signupName" type="text" placeholder="Username">
+          </div>
+          <label class="label label_color">Email</label>
+          <div class="control">
+            <input class="input inputbox" id="signupEmail" type="text" placeholder="Email">
+          </div>
+          <label class="label label_color">Password</label>
+          <div class="control">
+            <input class="input inputbox" id="signupPassword" type="password">
+          </div>
+          <label class="label label_color">Address</label>
+          <div class="control">
+            <input class="input inputbox" id="signupAddress" type="text">
+          </div>
+
+          <label class="label label_color">Date of Birth</label>
+
+          <div class="field">
+            <div class="select is-small selectStyle">
+              <select id="selectMonth">
+                <option>Month</option>
+                <option>January</option>
+                <option>February</option>
+                <option>March</option>
+                <option>April</option>
+                <option>May</option>
+                <option>June</option>
+                <option>July</option>
+                <option>August</option>
+                <option>September</option>
+                <option>October</option>
+                <option>November</option>
+                <option>December</option>
+              </select>
+            </div>
+            <div class="select is-small selectStyle">
+              <select id="selectDay">
+                <option>Day</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>14</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+              </select>
+            </div>
+            <div class="select is-small selectStyle">
+              <select id="selectYear">
+                <option>Year</option>
+                <option>2005</option>
+                <option>2004</option>
+                <option>2003</option>
+                <option>2002</option>
+                <option>2001</option>
+                <option>2000</option>
+                <option>1999</option>
+                <option>1998</option>
+                <option>1997</option>
+                <option>1996</option>
+                <option>1995</option>
+                <option>1994</option>
+                <option>1993</option>
+                <option>1992</option>
+                <option>1991</option>
+                <option>1990</option>
+                <option>1989</option>
+                <option>1988</option>
+                <option>1987</option>
+                <option>1986</option>
+                <option>1985</option>
+                <option>1984</option>
+                <option>1983</option>
+                <option>1982</option>
+                <option>1981</option>
+                <option>1980</option>
+                <option>1979</option>
+                <option>1978</option>
+                <option>1977</option>
+                <option>1976</option>
+                <option>1975</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="select is-small selectStyle">
+            <select id="selectGender">
+              <option>Gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Prefer not to say</option>
+            </select>
+
+          </div>
+
+          <button class="button buttonStyle" id="submitButton"
+            onclick="window.location.href='/browse.html'">Submit</button>
+          <button class="button buttonStyle">Cancel</button>
+        </div>
+        <br></br>
+
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="content has-text-centered">
+        <p class="footer-text">
+          <strong>DefinitelyNotCraigslist</strong> created by <a class="footer-link"
+            href="https://github.com/SPFlores">Samantha Flores</a>, <a class="footer-link"
+            href="https://github.com/Pandapoc">Nick Larson</a>, <a class="footer-link"
+            href="https://github.com/safavis">Mahya Safavi</a>, <a class="footer-link"
+            href="https://github.com/aminehdhd">Amine Haddouch</a>, <a class="footer-link"
+            href="https://github.com/diennguyen90">Dien Nguyen</a>, <a class="footer-link"
+            href="https://github.com/cdkedits">Connor Nguyen</a>. Powered by caffeine!
+        </p>
+      </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+
+    <script src="./assets/js/signupapp.js"></script>
+    <!-- Link to use icons w/ Bulma: -->
+
+</body>
+
+</html>
