@@ -14,8 +14,10 @@ document.querySelector("#submitButton").addEventListener('click', e=>{
                  password:document.querySelector("#signupPassword").value,
                  address:document.querySelector("#signupAddress").value,
                  DOB:`${document.querySelector("#selectMonth").options.selectedIndex<10?'0'+document.querySelector("#selectMonth").options.selectedIndex:document.querySelector("#selectMonth").options.selectedIndex}-${document.querySelector("#selectDay").options.selectedIndex<10?'0'+document.querySelector("#selectDay").options.selectedIndex:document.querySelector("#selectDay").options.selectedIndex}-${2006-document.querySelector("#selectYear").options.selectedIndex}`,
-                 gender:document.querySelector("#selectGender").options.selectedIndex-1?Male:Female,
-                 locationId:document.querySelector("#selectLocation").options.selectedIndex}
+                 gender:document.querySelector("#selectGender").options.selectedIndex-1?'Male':'Female',
+                 locationId:document.querySelector("#selectLocation").options.selectedIndex
+                }
+                console.log(newUser)
                 //  createdAt:moment().format("YYYY-MM-DD HH:mm:ss"),
                 //  updateAt:moment().format("YYYY-MM-DD HH:mm:ss")}
                  fetch('/users', {
@@ -31,6 +33,7 @@ document.querySelector("#submitButton").addEventListener('click', e=>{
             document.querySelector("#signupEmail").value=''
             document.querySelector("#signupPassword").value=''
             document.querySelector("#signupAddress").value=''
+            window.location.href='/browse.html'
         
           })
             .catch(e=>console.log(e))
