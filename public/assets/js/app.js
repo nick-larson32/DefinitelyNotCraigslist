@@ -17,4 +17,3 @@ let yelpObject = {
     "Authorization": `Bearer ${API_KEY}`
   }
 }
-
