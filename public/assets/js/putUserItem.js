@@ -78,7 +78,7 @@ console.log(`changingInfo: ${changingInfo}`)
   let closeUpdate = document.getElementsByClassName('modal-close')[0]
 
   document.addEventListener('click', e =>{
-      if(e.target.className === 'button is-primary itemEdit'){
+      if(e.target.className === 'card-footer-item itemEdit'){
           modalUp.style.display = 'block'
       }
   })
