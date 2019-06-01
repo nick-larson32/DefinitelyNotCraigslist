@@ -1,10 +1,6 @@
 const { fetch, alert } = window
 let newUser
 let totalNum
-// fetch('/users')
-//     .then(r=>r.json())
-//     .then(user=> console.log(user))
-//     .catch(e=>console.log(e))
 document.querySelector('#submitButton').addEventListener('click', e => {
   e.preventDefault()
   newUser =
@@ -25,11 +21,12 @@ document.querySelector('#submitButton').addEventListener('click', e => {
     body: JSON.stringify(newUser)
   })
     .then(_ => {
-      localStorage.setItem('CraiglistLogin', `{name:${newUser.name},logedin:true}`)
+      localStorage.setItem('CraiglistLogin',JSON.stringify( {name:newUser.name,logedin:true,email:newUser.email,password:newUser.password}))
       document.querySelector('#signupName').value = ''
       document.querySelector('#signupEmail').value = ''
       document.querySelector('#signupPassword').value = ''
       document.querySelector('#signupAddress').value = ''
+      window.location.href='/browse.html'
 
     })
     .catch(e => console.log(e))
