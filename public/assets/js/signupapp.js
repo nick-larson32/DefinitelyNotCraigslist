@@ -17,8 +17,6 @@ document.querySelector("#submitButton").addEventListener('click', e => {
       gender: document.querySelector("#selectGender").options.selectedIndex - 1 ? Male : Female,
       locationId: document.querySelector("#selectLocation").options.selectedIndex
     }
-  //  createdAt:moment().format("YYYY-MM-DD HH:mm:ss"),
-  //  updateAt:moment().format("YYYY-MM-DD HH:mm:ss")}
   fetch('/users', {
     method: 'POST',
     headers: {
