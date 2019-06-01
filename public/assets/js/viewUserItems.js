@@ -17,25 +17,33 @@ const getUserItems = _ =>{
              userItemDiv.innerHTML = `
              <div class="card">
              <header class="card-harder">
-\                     <p class="card-header-title"> ${itemName}</p>
+\                    <a href="./users"><p class="card-header-title"> ${itemName}</p></a>
              </header>
              <div class="card-content">
+             <div class="media">
+             <div class="media-left">
                 <figure class="image is-128x128">
                     <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
                 </figure>
-                     <h4>Quantity: ${quantity}</h4>
-                     <h4>Available:${available}</h4>
-                     <h4>Bought (buyer):${bought}</h4>
-                     <h4>Price: $${price}</h4>
-                     <h4>Condition: ${condition}</h4>
-                     <h4>Description: ${description}</h4>
-                     <h4>User it belongs to: ${user.name}</h4>
-                     <h4>Location: ${user.location.county}</h4>
+             </div>
+             <div class="media-content">
+             </div>
+            </div>
+            <div class="content">
+                <p>Quantity: ${quantity}</p>
+                <p>Available:${available}</p>
+                <p>Bought (buyer):${bought}</p>
+                <p>Price: $${price}</p>
+                <p>Condition: ${condition}</p>
+                <p>Description: ${description}</p>
+                <p>User it belongs to: ${user.name}</p>
+                <p>Location: ${user.location.county}</p>
+            </div>
              </div>
              <footer class="card-footer">
-                 <a class="card-footer-item itemEdit">Edit</a>
+                 <a class="card-footer-item itemEdit" data-id="${id}">Edit</a>
                  <a class="card-footer-item itemDel" data-id="${id}">Delete</a>
-                 <a class="card-footer-item soldButton">Mark Sold</a>
+                 <a class="card-footer-item soldButton" data-available="${available}">Mark Sold</a>
              </footer>
          </div>
                 `

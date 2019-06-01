@@ -95,7 +95,6 @@
                 </div>
             </div>
         </div>
-        <div class="section">
             <div class="container modalContainer">
                 <div class="modal" id="modalUpdate">
                     <div class="modal-background"></div>
@@ -105,9 +104,9 @@
                             <form>
                                 <div class="field">
                                     <div class="control">
+                                        <label class="label" for="change">Select the information you want to change:</label>
                                         <div class="select">
-                                            <label class="label" for="change">Select the information you want to change:</label>
-                                            <select name="changed" id="change">
+                                            <select name="change" id="change">
                                             <option value="itemName">Item Name</option>
                                             <option value="price">Price</option>
                                             <option value="category">Category</option>
@@ -147,7 +146,7 @@
                                                 <option value="3">Food</option>
                                                 <option value="1">Clothing</option>
                                                 <option value="7">Miscellaneous</option>
-                                            </select>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -159,7 +158,7 @@
                                                 <option value="like new">New</option>
                                                 <option value="Used">Used</option>
                                                 <option value="Poor">Poor</option>
-                                             </select>
+                                    </select>
                                 </div>
                             </div>
                         </div>
@@ -169,12 +168,11 @@
                                 </select>
                             </div>
                         </div>
+                        <button type="submit" class="button is-success" id="updateItem">Update Listing</button>
                     </div>
-                    <button type="submit" class="button is-success" id="updateItem">Update Listing</button>
                     </form>
                 </div>
-            </div>
-            <button class="modal-close is-large" aria-label="close"></button>
+            <!-- <button class="modal-close is-large" aria-label="close"></button> -->
         </div>
     </div>
     <div class="section">
