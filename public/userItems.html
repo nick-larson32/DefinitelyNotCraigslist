@@ -10,6 +10,8 @@
     <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/item.css">
+
 </head>
 
 <body>
@@ -126,28 +128,12 @@
                                     <div class="control" id="priceDiv">
                                         <input class="input" type="number" id="priceUpdate" placeholder="i.e 10">
                                     </div>
-                                    <div class="select">
-                                        <label for="change">Select the information you want to change:</label>
-                                        <select name="changed" id="itemUpdate">
-                                                <option value="itemName">Item Name</option>
-                                                <option value="price">Price</option>
-                                                <option value="category">Category</option>
-                                                <option value="condition">Condition</option>
-                                                <option value="description">Description</option>
-                                            </select>
-                                    </div>
                                 </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Item Name</label>
-                            <div class="control" id="itemDiv">
-                                <input class="input" type="text" id="itemUpdate" placeholder="i.e Victorian Table">
-                            </div>
                         </div>
                         <div class="field">
                             <label class="label">Price</label>
                             <div class="control" id="priceDiv">
-                                <input class="input" type="number" id="priceUpdate" placeholder="i.e 10"> >>>>>>> master
+                                <input class="input" type="number" id="priceUpdate" placeholder="i.e 10">
                             </div>
                         </div>
                         <div class="field">
@@ -179,14 +165,9 @@
                         </div>
                         <div class="field">
                             <div class="control" id="descriptionDiv">
-                                <textarea class="textarea" id="descriptionUpdate" placeholder="Enter Description"></textarea> =======
+                                <textarea class="textarea" id="descriptionUpdate" placeholder="Enter Description"></textarea>
                                 </select>
                             </div>
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control" id="decriptionDiv">
-                            <textarea class="textarea" id="descriptionUpdate" placeholder="Enter Description"></textarea>
                         </div>
                     </div>
                     <button type="submit" class="button is-success" id="updateItem">Update Listing</button>
@@ -199,21 +180,11 @@
     <div class="section">
         <div id="userItemView"></div>
     </div>
+    </div>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="./assets/js/viewUserItems.js"></script>
     <script src="./assets/js/addItem.js"></script>
-    <!-- Pure js -->
-    <script src="./assets/js/puremenu.js"></script>
-    <script src="./assets/js/putUserItem.js"></script>
     <script src="./assets/js/deleteUserItem.js"></script>
-
-    </div>
-    <div class="section">
-        <div id="userItemView"></div>
-    </div>
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="./assets/js/viewUserItems.js"></script>
-    <script src="./assets/js/addItem.js"></script>
     <!-- Pure js -->
     <script src="./assets/js/puremenu.js"></script>
     <script src="./assets/js/putUserItem.js"></script>

@@ -34,7 +34,7 @@ const getUserItems = _ =>{
              </div>
              <footer class="card-footer">
                  <a class="card-footer-item itemEdit">Edit</a>
-                 <a class="card-footer-item" data-id="${id}">Delete</a>
+                 <a class="card-footer-item itemDel" data-id="${id}">Delete</a>
                  <a class="card-footer-item soldButton">Mark Sold</a>
              </footer>
          </div>
