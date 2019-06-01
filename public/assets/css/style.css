@@ -366,6 +366,333 @@ strong {
     background: #909090;
 }
 
+.footer-text {
+    margin: auto;
+    padding-top: 50px;
+}
+
+.logo_home {
+    width: 100px;
+    height: 100px;
+    align-content: center;
+    margin-top: 10%;
+}
+
+.logo_text {
+    align-content: center;
+    width: 50%;
+}
+
+#login_background {
+    background-color: #333;
+    text-align: center;
+}
+
+.label_color {
+    color: white;
+    text-align: left;
+    margin-left: 25%;
+}
+
+.inputbox {
+    margin-left: 5%;
+    width: 90%;
+}
+
+.sectionLogin {
+    padding: 0;
+}
+
+.buttonStyle {
+    margin: 10px;
+}
+
+.tagLogin {
+    margin-left: 5%;
+    width: 10%;
+    background-color: #333;
+}
+
+.fieldStyle {
+    margin: 5%;
+    border: solid grey;
+}
+
+.selectStyle {
+    display: inline-block;
+}
+
+.genderLabel {
+    display: inline-block;
+    margin: 5%;
+}
+
+
+/* Pure Menu stylings */
+
+.custom-menu-wrapper {
+    background-color: #191818;
+    margin-bottom: 2.5em;
+    white-space: nowrap;
+    position: relative;
+}
+
+.custom-menu {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+
+.custom-menu .pure-menu-link,
+.custom-menu .pure-menu-heading {
+    color: white;
+}
+
+.custom-menu .pure-menu-link:hover,
+.custom-menu .pure-menu-heading:hover {
+    background-color: transparent;
+}
+
+.custom-menu-top {
+    position: relative;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.custom-menu-brand {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+.custom-menu-toggle {
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    display: none;
+}
+
+.custom-menu-toggle .bar {
+    background-color: white;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 100px;
+    position: absolute;
+    top: 22px;
+    right: 12px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.custom-menu-toggle .bar:first-child {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.custom-menu-toggle.x .bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.custom-menu-toggle.x .bar:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.custom-menu-screen {
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    height: 3em;
+    width: 70em;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.custom-menu-tucked .custom-menu-screen {
+    -webkit-transform: translateY(-44px);
+    -moz-transform: translateY(-44px);
+    -ms-transform: translateY(-44px);
+    transform: translateY(-44px);
+}
+
+@media (max-width: 62em) {
+    .custom-menu {
+        display: block;
+    }
+    .custom-menu-toggle {
+        display: block;
+        display: none\9;
+    }
+    .custom-menu-bottom {
+        position: absolute;
+        width: 100%;
+        border-top: 1px solid #eee;
+        background-color: #808080;
+        z-index: 100;
+    }
+    .custom-menu-bottom .pure-menu-link {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .custom-menu-bottom.custom-menu-tucked .pure-menu-link {
+        -webkit-transform: translateX(-140px);
+        -moz-transform: translateX(-140px);
+        -ms-transform: translateX(-140px);
+        transform: translateX(-140px);
+        opacity: 0;
+        opacity: 1\9;
+    }
+    .pure-menu-horizontal.custom-menu-tucked {
+        z-index: -1;
+        top: 45px;
+        position: absolute;
+        overflow: hidden;
+    }
+}
+
+.main {
+    padding: 2em;
+    color: black;
+}
+
+
+/* Non-CSS library stylings */
+
+
+/* .notification.is-info {
+   background-color: #376996;
+ } */
+
+h1 {
+    text-align: center;
+}
+
+.logo,
+.logo-text {
+    display: block;
+    margin: auto;
+}
+
+.logo-text {
+    margin-top: 5px;
+}
+
+.header {
+    padding-top: 0;
+}
+
+.footer {
+    background-color: #191818;
+}
+
+.button {
+    background-color: #6290C8;
+}
+
+.footer-text,
+strong {
+    color: #F5F5F5;
+}
+
+.footer-link {
+    color: #add8e6;
+    text-decoration: underline;
+}
+
+.footer {
+    width: 100%;
+    bottom: 0;
+    padding: 1rem 0rem 1rem;
+}
+
+.footer-text {
+    margin: auto;
+    padding: 0 25px;
+}
+
+.pure-menu {
+    word-wrap: break-word;
+    position: relative;
+}
+
+.pure-button {
+    width: 100%;
+}
+
+#furniture {
+    background: url(../images/stock-images/furniture.jpg);
+    background-size: 100% 100%;
+}
+
+#kitchenware {
+    background: url(../images/stock-images/kitchenware.jpg);
+    background-size: 100% 100%;
+}
+
+#electronics {
+    background: url(../images/stock-images/electronics.jpg);
+    background-size: 100% 100%;
+}
+
+#clothes {
+    background: url(../images/stock-images/clothes.jpg);
+    background-size: 100% 100%;
+}
+
+#food {
+    background: url(../images/stock-images/food.jpg);
+    background-size: 100% 100%;
+}
+
+#toys {
+    background: url(../images/stock-images/toys.jpg);
+    background-size: 100% 100%;
+}
+
+#miscellaneous {
+    background: url(../images/stock-images/miscellaneous.jpg);
+    background-size: 100% 100%;
+}
+
+.tile-text {
+    width: 100%;
+    background-color: #376996;
+    padding: 10px 20px;
+    text-align: center
+}
+
+.notification {
+    padding: 0 0 20px 0;
+}
+
+#login-button {
+    background: #909090;
+}
+
 .signup-login {
     margin-top: 50px;
 }
@@ -389,10 +716,40 @@ strong {
 
 /* Add Item Modal */
 
+.modalContainer {
+    text-align: center;
+}
+
 hr {
     background-color: black;
     height: 1px;
 }
+
+
+/* Update User Item Modal */
+
+#itemDiv {
+    display: none;
+}
+
+#priceDiv {
+    display: none;
+}
+
+#categoryDiv {
+    display: none;
+}
+
+#conditionDiv {
+    display: none;
+}
+
+#descriptionDiv {
+    display: none;
+}
+
+
+/* Modal CSS */
 
 .page-modal {
     margin-right: 10%;
@@ -402,4 +759,64 @@ hr {
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+}
+
+.modalContainer {
+    text-align: center;
+}
+
+hr {
+    background-color: black;
+    height: 1px;
+}
+
+.logo_home {
+    width: 100px;
+    height: 100px;
+    align-content: center;
+    margin-top: 10%;
+}
+
+#login_background {
+    background-color: #333;
+    text-align: center;
+}
+
+.label_color {
+    color: white;
+    text-align: left;
+    margin-left: 25%;
+}
+
+.inputbox {
+    margin-left: 5%;
+    width: 90%;
+}
+
+.sectionLogin {
+    padding: 0;
+}
+
+.buttonStyle {
+    margin: 10px;
+}
+
+.tagLogin {
+    margin-left: 5%;
+    width: 10%;
+    background-color: #333;
+}
+
+.fieldStyle {
+    margin: 5%;
+    border: solid grey;
+}
+
+.selectStyle {
+    display: inline-block;
+}
+
+.genderLabel {
+    display: inline-block;
+    margin: 5%;
 }
