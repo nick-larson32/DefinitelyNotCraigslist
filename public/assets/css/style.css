@@ -1,700 +1,405 @@
-
 /* Pure Menu stylings */
 
-.pure-img-responsive {
-  max-width: 100%;
-  height: auto;
-}
-
-/*
-Add transition to containers so they can push in and out.
-*/
-
-#layout, #menu, .menu-link {
-  -webkit-transition: all 0.2s ease-out;
-  -moz-transition: all 0.2s ease-out;
-  -ms-transition: all 0.2s ease-out;
-  -o-transition: all 0.2s ease-out;
-  transition: all 0.2s ease-out;
-}
-
-/*
-This is the parent `<div>` that contains the menu and the content area.
-*/
-
-#layout {
-  position: relative;
-  left: 0;
-  padding: 0;
-
-}
-
-#layout.active #menu {
-  left: 150px;
-  width: 150px;
-}
-
-#layout.active .menu-link {
-  left: 150px;
-}
-
-/*
-The content `<div>` is where all your content goes.
-*/
-
-.content {
-  margin: 0 auto;
-  padding: 0 2em;
-  max-width: 800px;
-  margin-bottom: 50px;
-  line-height: 1.6em;
-}
-
-.header {
-  margin: 0;
-  color: #333;
-  text-align: center;
-  padding: 2.5em 2em;
-  border-bottom: 1px solid #eee;
-}
-
-.header h1 {
-  margin: 0.2em 0;
-  font-size: 3em;
-  font-weight: 300;
-}
-
-.header h2 {
-  font-weight: 300;
-  color: #ccc;
-  padding: 0;
-  margin-top: 0;
-}
-
-.content-subhead {
-  margin: 50px 0 20px 0;
-  font-weight: 300;
-  color: #888;
-}
-
-/*
-The `#menu` `<div>` is the parent `<div>` that contains the `.pure-menu` that
-appears on the left side of the page.
-*/
-
-#menu {
-  margin-left: -150px;
-  /* "#menu" width */
-  width: 150px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 1000;
-  /* so the menu or its navicon stays above all content */
-  background: #191818;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-/*
-    All anchors inside the menu should be styled like this.
-    */
-
-#menu a {
-  color: white;
-  border: none;
-  padding: 0.6em;
-}
-
-/*
-    Remove all background/borders, since we are applying them to #menu.
-    */
-
-#menu .pure-menu, #menu .pure-menu ul {
-  border: none;
-  background: transparent;
-}
-
-/*
-    Add that light border to separate items into groups.
-    */
-
-#menu .pure-menu ul, #menu .pure-menu .menu-item-divided {
-  border-top: 1px solid #333;
-}
-
-/*
-        Change color of the anchor links on hover/focus.
-        */
-
-#menu .pure-menu li a:hover, #menu .pure-menu li a:focus {
-  background: #333;
-}
-
-/*
-    This styles the selected menu item `<li>`.
-    */
-
-#menu .pure-menu-selected, #menu .pure-menu-heading {
-  background: #376996;
-}
-
-/*
-        This styles a link within a selected menu item `<li>`.
-        */
-
-#menu .pure-menu-selected a {
-  color: #fff;
-}
-
-/*
-    This styles the menu heading.
-    */
-
-#menu .pure-menu-heading {
-  font-size: 110%;
-  color: #fff;
-  margin: 0;
-}
-
-/* -- Dynamic Button For Responsive Menu -------------------------------------*/
-
-/*
-The button to open/close the Menu is custom-made and not part of Pure. Here's
-how it works:
-*/
-
-/*
-`.menu-link` represents the responsive menu toggle that shows/hides on
-small screens.
-*/
-
-.menu-link {
-  position: fixed;
-  display: block;
-  /* show this only on small screens */
-  top: 0;
-  left: 0;
-  /* "#menu width" */
-  background: #000;
-  background: rgba(0, 0, 0, 0.7);
-  font-size: 10px;
-  /* change this value to increase/decrease button size */
-  z-index: 10;
-  width: 2em;
-  height: auto;
-  padding: 2.1em 1.6em;
-}
-
-.menu-link:hover, .menu-link:focus {
-  background: #000;
-}
-
-.menu-link span {
-  position: relative;
-  display: block;
-}
-
-.menu-link span, .menu-link span:before, .menu-link span:after {
-  background-color: #fff;
-  width: 100%;
-  height: 0.2em;
-}
-
-.menu-link span:before, .menu-link span:after {
-  position: absolute;
-  margin-top: -0.6em;
-  content: " ";
-}
-
-.menu-link span:after {
-  margin-top: 0.6em;
-}
-
-/* -- Responsive Styles (Media Queries) ------------------------------------- */
-
-/*
-Hides the menu at `48em`, but modify this based on your app's needs.
-*/
-
-@media (min-width: 48em) {
-  .header, .content {
-    padding-left: 2em;
-    padding-right: 2em;
-  }
-  #layout {
-    padding-left: 150px;
-    /* left col width "#menu" */
-    left: 0;
-  }
-  #menu {
-    left: 150px;
-  }
-  .menu-link {
-    position: fixed;
-    left: 150px;
-    display: none;
-  }
-  #layout.active .menu-link {
-    left: 150px;
-  }
-}
-
-@media (max-width: 48em) {
-  /* Only apply this when the window is small. Otherwise, the following
-    case results in extra padding on the left:
-        * Make the window small.
-        * Tap the menu to trigger the active state.
-        * Make the window large again.
-    */
-  #layout.active {
+.custom-menu-wrapper {
+    background-color: #191818;
+    margin-bottom: 2.5em;
+    white-space: nowrap;
     position: relative;
-    left: 150px;
-  }
 }
+
+.custom-menu {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    -webkit-font-smoothing: antialiased;
+}
+
+.custom-menu .pure-menu-link,
+.custom-menu .pure-menu-heading {
+    color: white;
+    text-decoration: underline;
+    text-decoration-color: white;
+    -moz-text-decoration-color: white;
+}
+
+.custom-menu .pure-menu-link:hover,
+.custom-menu .pure-menu-heading:hover {
+    background-color: transparent;
+    text-decoration-color: #376996;
+    -moz-text-decoration-color: #376996;
+}
+
+.custom-menu-top {
+    position: relative;
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+
+.custom-menu-brand {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+.custom-menu-toggle {
+    width: 44px;
+    height: 44px;
+    display: block;
+    position: absolute;
+    top: 3px;
+    right: 0;
+    display: none;
+}
+
+.custom-menu-toggle .bar {
+    background-color: white;
+    display: block;
+    width: 20px;
+    height: 2px;
+    border-radius: 100px;
+    position: absolute;
+    top: 22px;
+    right: 12px;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.custom-menu-toggle .bar:first-child {
+    -webkit-transform: translateY(-6px);
+    -moz-transform: translateY(-6px);
+    -ms-transform: translateY(-6px);
+    transform: translateY(-6px);
+}
+
+.custom-menu-toggle.x .bar {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.custom-menu-toggle.x .bar:first-child {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+.custom-menu-screen {
+    background-color: #191818;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    height: 3em;
+    width: 70em;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+}
+
+.custom-menu-tucked .custom-menu-screen {
+    -webkit-transform: translateY(-44px);
+    -moz-transform: translateY(-44px);
+    -ms-transform: translateY(-44px);
+    transform: translateY(-44px);
+}
+
+@media (max-width: 62em) {
+    .custom-menu {
+        display: block;
+    }
+    .custom-menu-toggle {
+        display: block;
+        display: none\9;
+    }
+    .custom-menu-bottom {
+        position: absolute;
+        width: 100%;
+        border-top: 1px solid #eee;
+        /* background-color: #808080; */
+        z-index: 100;
+    }
+    .custom-menu-bottom .pure-menu-link {
+        opacity: 1;
+        -webkit-transform: translateX(0);
+        -moz-transform: translateX(0);
+        -ms-transform: translateX(0);
+        transform: translateX(0);
+        -webkit-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+    .custom-menu-bottom.custom-menu-tucked .pure-menu-link {
+        -webkit-transform: translateX(-140px);
+        -moz-transform: translateX(-140px);
+        -ms-transform: translateX(-140px);
+        transform: translateX(-140px);
+        opacity: 0;
+        opacity: 1\9;
+    }
+    .pure-menu-horizontal.custom-menu-tucked {
+        z-index: -1;
+        top: 45px;
+        position: absolute;
+        overflow: hidden;
+    }
+}
+
+.main {
+    padding: 2em;
+    color: black;
+}
+
 
 /* Non-CSS library stylings */
 
-.logo, .logo-text {
-  display: block;
-  margin: auto;
+#tuckedMenu {
+    background-color: #191818
+}
+
+h1 {
+    text-align: center;
+    margin: 0 0 50px 0;
+}
+
+.pure-menu {
+    word-wrap: break-word;
+    position: relative;
+}
+
+.pure-button {
+    width: 100%;
+}
+
+.logo {
+    width: 50px;
+    height: 51.05px;
+}
+
+.logo,
+.logo-text {
+    display: block;
+    margin: auto;
 }
 
 .logo-text {
-  margin-top: 5px;
+    margin-top: 5px;
+    width: 200px;
+    height: 18.7px;
 }
 
 .header {
-  padding-top: 0;
+    padding-top: 0;
 }
 
 .footer {
-  background-color: #376996;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem 0rem 1rem;
+    background-color: #191818;
 }
 
 .button {
-  background-color: #6290C8;
-}
-
-.footer-text, strong {
-  color: #F5F5F5;
-}
-
-.footer-link {
-  color: #add8e6;
-  text-decoration: underline;
-}
-
-.footer {
-  width: 100%;
-  bottom: 0;
-  padding: 1rem 0rem 1rem;
+    background-color: #6290C8;
 }
 
 .footer-text {
-  margin: auto;
-  padding-top: 50px;
+    color: #F5F5F5;
 }
 
-.logo_home{
-  width: 100px;
-  height: 100px;
-  align-content: center;
-  margin-top: 10%;
-
-}
-.logo_text{
-  align-content: center;
-  width: 50%;
-  
-}
-#login_background{
-  background-color: #333;
-  text-align: center;
-}
-.label_color{
-  color: white;
-  text-align: left;
-  margin-left: 25%;
-}
-.inputbox{
-  margin-left: 5%;
-  width: 90%;
-}
-.sectionLogin{
-  padding:0;
-
-}
-.buttonStyle{
-  margin: 10px;
-}
-.tagLogin{
-  margin-left :5%;
-  width:10%;
-background-color:#333;
-}
-.fieldStyle{
-  margin: 5%;
-  border:solid grey;
-}
-.selectStyle{
-  display:inline-block;
-}
-.genderLabel{
-  display: inline-block;
-  margin: 5%;
+strong {
+    color: #F5F4D9;
 }
 
-
- /* Pure Menu stylings */
-
- .custom-menu-wrapper {
-   background-color: #191818;
-   margin-bottom: 2.5em;
-   white-space: nowrap;
-   position: relative;
- }
-
- .custom-menu {
-   display: inline-block;
-   width: auto;
-   vertical-align: middle;
-   -webkit-font-smoothing: antialiased;
- }
-
- .custom-menu .pure-menu-link, .custom-menu .pure-menu-heading {
-   color: white;
- }
-
- .custom-menu .pure-menu-link:hover, .custom-menu .pure-menu-heading:hover {
-   background-color: transparent;
- }
-
- .custom-menu-top {
-   position: relative;
-   padding-top: .5em;
-   padding-bottom: .5em;
- }
-
- .custom-menu-brand {
-   display: block;
-   text-align: center;
-   position: relative;
- }
-
- .custom-menu-toggle {
-   width: 44px;
-   height: 44px;
-   display: block;
-   position: absolute;
-   top: 3px;
-   right: 0;
-   display: none;
- }
-
- .custom-menu-toggle .bar {
-   background-color: white;
-   display: block;
-   width: 20px;
-   height: 2px;
-   border-radius: 100px;
-   position: absolute;
-   top: 22px;
-   right: 12px;
-   -webkit-transition: all 0.5s;
-   -moz-transition: all 0.5s;
-   -ms-transition: all 0.5s;
-   transition: all 0.5s;
- }
-
- .custom-menu-toggle .bar:first-child {
-   -webkit-transform: translateY(-6px);
-   -moz-transform: translateY(-6px);
-   -ms-transform: translateY(-6px);
-   transform: translateY(-6px);
- }
-
- .custom-menu-toggle.x .bar {
-   -webkit-transform: rotate(45deg);
-   -moz-transform: rotate(45deg);
-   -ms-transform: rotate(45deg);
-   transform: rotate(45deg);
- }
-
- .custom-menu-toggle.x .bar:first-child {
-   -webkit-transform: rotate(-45deg);
-   -moz-transform: rotate(-45deg);
-   -ms-transform: rotate(-45deg);
-   transform: rotate(-45deg);
- }
-
- .custom-menu-screen {
-   background-color: rgba(0, 0, 0, 0.5);
-   -webkit-transition: all 0.5s;
-   -moz-transition: all 0.5s;
-   -ms-transition: all 0.5s;
-   transition: all 0.5s;
-   height: 3em;
-   width: 70em;
-   position: absolute;
-   top: 0;
-   z-index: -1;
- }
-
- .custom-menu-tucked .custom-menu-screen {
-   -webkit-transform: translateY(-44px);
-   -moz-transform: translateY(-44px);
-   -ms-transform: translateY(-44px);
-   transform: translateY(-44px);
- }
-
- @media (max-width: 62em) {
-   .custom-menu {
-     display: block;
-   }
-   .custom-menu-toggle {
-     display: block;
-     display: none\9;
-   }
-   .custom-menu-bottom {
-     position: absolute;
-     width: 100%;
-     border-top: 1px solid #eee;
-     background-color: #808080;
-     z-index: 100;
-   }
-   .custom-menu-bottom .pure-menu-link {
-     opacity: 1;
-     -webkit-transform: translateX(0);
-     -moz-transform: translateX(0);
-     -ms-transform: translateX(0);
-     transform: translateX(0);
-     -webkit-transition: all 0.5s;
-     -moz-transition: all 0.5s;
-     -ms-transition: all 0.5s;
-     transition: all 0.5s;
-   }
-   .custom-menu-bottom.custom-menu-tucked .pure-menu-link {
-     -webkit-transform: translateX(-140px);
-     -moz-transform: translateX(-140px);
-     -ms-transform: translateX(-140px);
-     transform: translateX(-140px);
-     opacity: 0;
-     opacity: 1\9;
-   }
-   .pure-menu-horizontal.custom-menu-tucked {
-     z-index: -1;
-     top: 45px;
-     position: absolute;
-     overflow: hidden;
-   }
- }
-
- .main {
-   padding: 2em;
-   color: black;
- }
-
- /* Non-CSS library stylings */
-
- /* .notification.is-info {
-   background-color: #376996;
- } */
-
- h1 {
-   text-align: center;
- }
-
- .logo, .logo-text {
-   display: block;
-   margin: auto;
- }
-
- .logo-text {
-   margin-top: 5px;
- }
-
- .header {
-   padding-top: 0;
- }
-
- .footer {
-   background-color: #191818;
- }
-
- .button {
-   background-color: #6290C8;
- }
-
- .footer-text, strong {
-   color: #F5F5F5;
- }
-
- .footer-link {
-   color: #add8e6;
-   text-decoration: underline;
- }
-
- .footer {
-   width: 100%;
-   bottom: 0;
-   padding: 1rem 0rem 1rem;
- }
-
- .footer-text {
-   margin: auto;
-   padding: 0 25px;
- }
-
- .pure-menu {
-   word-wrap: break-word;
-   position: relative;
- }
-
- .pure-button {
-   width: 100%;
- }
-
- #furniture {
-   background: url(../images/stock-images/furniture.jpg);
-   background-size: 100% 100%;
- }
-
- #kitchenware {
-   background: url(../images/stock-images/kitchenware.jpg);
-   background-size: 100% 100%;
- }
-
- #electronics {
-   background: url(../images/stock-images/electronics.jpg);
-   background-size: 100% 100%;
- }
-
- #clothes {
-   background: url(../images/stock-images/clothes.jpg);
-   background-size: 100% 100%;
- }
-
- #food {
-   background: url(../images/stock-images/food.jpg);
-   background-size: 100% 100%;
- }
-
- #toys {
-   background: url(../images/stock-images/toys.jpg);
-   background-size: 100% 100%;
- }
-
- #miscellaneous {
-   background: url(../images/stock-images/miscellaneous.jpg);
-   background-size: 100% 100%;
- }
-
- .tile-text {
-   width: 100%;
-   background-color: #376996;
-   padding: 10px 20px;
-   text-align: center
- }
-
- .notification {
-   padding: 0 0 20px 0;
- }
-
- #login-button {
-   background: #909090;
- }
-
- .signup-login {
-   margin-top: 50px;
- }
-
- .section {
-   padding: 0 1.5rem 3rem;
- }
-
- .pure-menu-item {
-   z-index: 10
- }
-
- #dropdown-link {
-   color: black;
- }
-
- .custom-menu-screen {
-   width: 100%;
- }
-
- /* Add Item Modal */
-
-hr{
- background-color:black;
- height:1px;
+.footer-link {
+    color: #add8e6;
+    text-decoration: underline;
 }
 
- .page-modal {
-   margin-right: 10%;
-   background-color: white;
-   border-radius: 8px;
-   -webkit-border-radius: 8px;
-   -moz-border-radius: 8px;
-   -ms-border-radius: 8px;
-   -o-border-radius: 8px;
- }
+.footer-link:hover {
+    color: #376996;
+    text-decoration-color: #376996;
+    -moz-text-decoration-color: #376996;
+}
 
- hr {
-   background-color: black;
-   height: 1px;
- }
+.footer-text {
+    margin: auto;
+    padding: 0 25px;
+}
 
- .logo_home {
-   width: 100px;
-   height: 100px;
-   align-content: center;
-   margin-top: 10%;
- }
+.logo_home {
+    width: 100px;
+    height: 100px;
+    align-content: center;
+    margin-top: 10%;
+}
 
- #login_background {
-   background-color: #333;
-   text-align: center;
- }
+.logo_text {
+    align-content: center;
+    width: 50%;
+}
 
- .label_color {
-   color: white;
-   text-align: left;
-   margin-left: 25%;
- }
+#login_background {
+    background-color: #333;
+    text-align: center;
+}
 
- .inputbox {
-   margin-left: 5%;
-   width: 90%;
- }
+.label_color {
+    color: white;
+    text-align: left;
+    margin-left: 25%;
+}
 
- .sectionLogin {
-   padding: 0;
- }
+.inputbox {
+    margin-left: 5%;
+    width: 90%;
+}
 
- .buttonStyle {
-   margin: 10px;
- }
+.sectionLogin {
+    padding: 0;
+}
 
- .tagLogin {
-   margin-left: 5%;
-   width: 10%;
-   background-color: #333;
- }
+.buttonStyle {
+    margin: 10px;
+}
 
- .fieldStyle {
-   margin: 5%;
-   border: solid grey;
- }
+.tagLogin {
+    margin-left: 5%;
+    width: 10%;
+    background-color: #333;
+}
 
- .selectStyle {
-   display: inline-block;
- }
+.fieldStyle {
+    margin: 5%;
+    border: solid grey;
+}
 
- .genderLabel {
-   display: inline-block;
-   margin: 5%;
- }
+.selectStyle {
+    display: inline-block;
+}
+
+.genderLabel {
+    display: inline-block;
+    margin: 5%;
+}
+
+
+/* Menu link styling */
+
+.menu-text:hover {
+    color: #376996;
+    text-decoration-color: #376996;
+    -moz-text-decoration-color: #376996;
+}
+
+
+/* Category link stylings */
+
+.category {
+    width: 100%;
+    height: 100%;
+}
+
+.category:hover,
+.category:active {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hover-active {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* Category tile images */
+
+#furniture {
+    background: url(../images/stock-images/furniture.jpg);
+    background-size: 100% 100%;
+}
+
+#kitchenware {
+    background: url(../images/stock-images/kitchenware.jpg);
+    background-size: 100% 100%;
+}
+
+#electronics {
+    background: url(../images/stock-images/electronics.jpg);
+    background-size: 100% 100%;
+}
+
+#clothes {
+    background: url(../images/stock-images/clothes.jpg);
+    background-size: 100% 100%;
+}
+
+#food {
+    background: url(../images/stock-images/food.jpg);
+    background-size: 100% 100%;
+}
+
+#toys {
+    background: url(../images/stock-images/toys.jpg);
+    background-size: 100% 100%;
+}
+
+#miscellaneous {
+    background: url(../images/stock-images/miscellaneous.jpg);
+    background-size: 100% 100%;
+}
+
+.tile-text {
+    width: 100%;
+    background-color: #376996;
+    padding: 10px 20px;
+    text-align: center
+}
+
+.notification {
+    padding: 0 0 20px 0;
+}
+
+#login-button {
+    background: #909090;
+}
+
+.signup-login {
+    margin-top: 50px;
+}
+
+.section {
+    padding: 0 1.5rem 3rem;
+}
+
+.pure-menu-item {
+    z-index: 10
+}
+
+#dropdown-link {
+    color: black;
+}
+
+.custom-menu-screen {
+    width: 100%;
+}
+
+
+/* Add Item Modal */
+
+hr {
+    background-color: black;
+    height: 1px;
+}
+
+.page-modal {
+    margin-right: 10%;
+    background-color: white;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
