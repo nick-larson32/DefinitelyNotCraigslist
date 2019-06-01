@@ -1,0 +1,41 @@
+/* Add Item Modal */
+
+.page-modal{
+    margin-right: 10%;
+    background-color: white;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+  }
+  
+  .modalContainer {
+    text-align: center;
+  }
+  
+  hr{
+   background-color:black;
+   height:1px;
+  }
+  
+  /* Update User Item Modal */
+  
+  #itemDiv {
+    display:none;
+  }
+  
+  #priceDiv{
+    display:none;
+  }
+  
+  #categoryDiv{
+    display:none;
+  }
+  
+  #conditionDiv{
+    display:none;
+  }
+  #descriptionDiv{
+    display:none;
+  }
