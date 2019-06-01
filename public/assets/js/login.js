@@ -16,7 +16,7 @@ document.querySelector('#submit').addEventListener('click', e => {
       })
       document.querySelector('#loginEmail').value = ''
       document.querySelector('#loginPassword').value = ''
-        //   console.log(users)
+      //   console.log(users)
     })
     .catch(e => console.log(e))
 })
