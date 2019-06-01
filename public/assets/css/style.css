@@ -156,6 +156,7 @@
 
 h1 {
   text-align: center;
+  margin: 0 0 50px 0;
 }
 
 .pure-menu {
@@ -198,8 +199,12 @@ h1 {
   background-color: #6290C8;
 }
 
-.footer-text, strong {
+.footer-text {
   color: #F5F5F5;
+}
+
+strong {
+  color: #F5F4D9;
 }
 
 .footer-link {
@@ -275,6 +280,7 @@ h1 {
 }
 
 /* Menu link styling */
+
 .menu-text:hover {
   color: #376996;
   text-decoration-color: #376996;
