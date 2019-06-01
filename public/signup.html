@@ -10,7 +10,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
         integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/browse.css">
     <title>Signup</title>
 </head>
 
@@ -18,7 +18,7 @@
     <div class="section sectionLogin">
         <div class="containeris is-fullhd">
             <!-- Menu -->
-            <div class="custom-menu-wrapper">
+            <div class="custom-menu-wrapper" id="custom-menu-id">
                 <div class="pure-menu custom-menu custom-menu-top">
                     <a class="pure-menu-heading" href="./index.html">
                         <img class="logo" src="./assets/images/app-logo/logo_transparent2.png">
@@ -59,9 +59,7 @@
                 </div>
             </div>
             <div class="container is-fullhd " id="login_background">
-                <img src="./assets/images/app-logo/logo_transparent2.png" class="logo_home" alt="logo_image">
-                <img src="./assets/images/app-logo/logo-text.png" class="logo_text" alt="logo-text">
-                <br></br>
+               
                 <div class="field fieldStyle">
                     <div class="tags are-medium">
                         <span class="tag has-background-grey-darker has-text-grey tagLogin">Sign Up</span>
@@ -176,9 +174,29 @@
                                 <option>1975</option>
                             </select>
                         </div>
+                        <label class="label label_color">Gender</label>
+                        <div class="select is-small selectStyle" id="selectGenderDiv">
+                            <select id="selectGender">
+                                <option>Gender</option>
+                                <option>Male</option>
+                                <option>Female</option>
+                                <option>Prefer not to say</option>
+                            </select>
+                        </div>
+    
+                        <label class="label label_color">Location</label>
+                        <div class="select is-small selectStyle" id="selectLocationDiv">
+                            <select id="selectLocation">
+                                <option>Location</option>
+                                <option value="1">Orange County</option>
+                                <option value="2">Los Angeles County</option>
+                            </select>
+                        </div>
+    
+                      </div>
+
                         <button class="button buttonStyle" id="submitButton">Submit</button>
                             <button class="button buttonStyle">Cancel</button>
-                          </div>
                          <br></br>
                          
                   </div>   
@@ -186,51 +204,9 @@
       </div>
     </div>
    
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="content has-text-centered">
-      <p class="footer-text">
-        <strong>DefinitelyNotCraigslist</strong> created by <a class="footer-link"
-          href="https://github.com/SPFlores">Samantha Flores</a>, <a class="footer-link"
-          href="https://github.com/Pandapoc">Nick Larson</a>, <a class="footer-link"
-          href="https://github.com/safavis">Mahya Safavi</a>, <a class="footer-link"
-          href="https://github.com/aminehdhd">Amine Haddouch</a>, <a class="footer-link"
-          href="https://github.com/diennguyen90">Dien Nguyen</a>, <a class="footer-link"
-          href="https://github.com/cdkedits">Connor Nguyen</a>. Powered by caffeine!
-      </p>
-    </div>
-  </footer>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script> 
-  <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-
-                    <label class="label label_color">Gender</label>
-                    <div class="select is-small selectStyle">
-                        <select id="selectGender">
-                            <option>Gender</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Prefer not to say</option>
-                        </select>
-                    </div>
-
-                    <label class="label label_color">Location</label>
-                    <div class="select is-small selectStyle">
-                        <select id="selectLocation">
-                            <option>Location</option>
-                            <option value="1">Orange County</option>
-                            <option value="2">Los Angeles County</option>
-                        </select>
-                    </div>
-
-                    <button class="button buttonStyle" id="submitButton"
-                        onclick="window.location.href='/browse.html'">Submit</button>
-                    <button class="button buttonStyle">Cancel</button>
-                </div>
-                <br></br>
-
-            </div>
-        </div>
-
+  
+                   
+       
         <!-- Footer -->
         <footer class="footer">
             <div class="content has-text-centered">

@@ -109,6 +109,12 @@
   .custom-menu {
     display: block;
   }
+  #custom-menu-id{
+    margin-bottom: 0%;
+  }
+  #signupField{
+    margin: 0%;
+  }
   .custom-menu-toggle {
     display: block;
     display: none\9;
@@ -240,6 +246,7 @@ strong {
 #login_background {
   background-color: #333;
   text-align: center;
+  margin: 0%;
 }
 
 .label_color {
@@ -268,13 +275,30 @@ strong {
 }
 
 .fieldStyle {
-  margin: 5%;
   border: solid grey;
 }
 
 .selectStyle {
   display: inline-block;
 }
+#selectGender{
+  width:100%;
+  margin: 0%;
+}
+#selectGenderDiv{
+  width:50%;
+  margin: 0%;
+}
+
+#selectLocation{
+  width: 100%;
+  margin: 0%;
+}
+#selectLocationDiv{
+  width: 50%;
+  margin: 0%;
+}
+
 
 .genderLabel {
   display: inline-block;
