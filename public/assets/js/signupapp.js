@@ -23,7 +23,6 @@ document.querySelector('#submitButton').addEventListener('click', e => {
     .then(newUser => {
       sessionStorage.setItem('name', document.querySelector('#signupName').value)
       sessionStorage.setItem('address', document.querySelector('#signupAddress').value)
-
       document.querySelector('#signupName').value = ''
       document.querySelector('#signupEmail').value = ''
       document.querySelector('#signupPassword').value = ''
