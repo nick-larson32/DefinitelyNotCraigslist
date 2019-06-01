@@ -1,4 +1,3 @@
-
 /* Pure Menu stylings */
 
 .pure-img-responsive {
@@ -26,7 +25,6 @@ This is the parent `<div>` that contains the menu and the content area.
   position: relative;
   left: 0;
   padding: 0;
-
 }
 
 #layout.active #menu {
@@ -129,7 +127,9 @@ appears on the left side of the page.
         */
 
 #menu .pure-menu li a:hover, #menu .pure-menu li a:focus {
-  background: #333;
+  text-decoration: underline;
+  text-decoration-color: #FFF;
+  -moz-text-decoration-color: #FFF;
 }
 
 /*
@@ -255,6 +255,7 @@ Hides the menu at `48em`, but modify this based on your app's needs.
 }
 
 /* Non-CSS library stylings */
+
 .logo {
   width: 50px;
   height: 51.05px;
@@ -303,415 +304,430 @@ Hides the menu at `48em`, but modify this based on your app's needs.
   padding-top: 50px;
 }
 
-.logo_home{
+.logo_home {
   width: 100px;
   height: 100px;
   align-content: center;
   margin-top: 10%;
-
 }
-.logo_text{
+
+.logo_text {
   align-content: center;
   width: 50%;
-  
 }
-#login_background{
+
+#login_background {
   background-color: #333;
   text-align: center;
 }
-.label_color{
+
+.label_color {
   color: white;
   text-align: left;
   margin-left: 25%;
 }
-.inputbox{
+
+.inputbox {
   margin-left: 5%;
   width: 90%;
 }
-.sectionLogin{
-  padding:0;
 
+.sectionLogin {
+  padding: 0;
 }
-.buttonStyle{
+
+.buttonStyle {
   margin: 10px;
 }
-.tagLogin{
-  margin-left :5%;
-  width:10%;
-background-color:#333;
+
+.tagLogin {
+  margin-left: 5%;
+  width: 10%;
+  background-color: #333;
 }
-.fieldStyle{
+
+.fieldStyle {
   margin: 5%;
-  border:solid grey;
+  border: solid grey;
 }
-.selectStyle{
-  display:inline-block;
+
+.selectStyle {
+  display: inline-block;
 }
-.genderLabel{
+
+.genderLabel {
   display: inline-block;
   margin: 5%;
 }
 
- /* Pure Menu stylings */
+/* Pure Menu stylings */
 
- .custom-menu-wrapper {
-   background-color: #191818;
-   margin-bottom: 2.5em;
-   white-space: nowrap;
-   position: relative;
- }
+.custom-menu-wrapper {
+  background-color: #191818;
+  margin-bottom: 2.5em;
+  white-space: nowrap;
+  position: relative;
+}
 
- .custom-menu {
-   display: inline-block;
-   width: auto;
-   vertical-align: middle;
-   -webkit-font-smoothing: antialiased;
- }
+.custom-menu {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+}
 
- .custom-menu .pure-menu-link, .custom-menu .pure-menu-heading {
-   color: white;
- }
+.custom-menu .pure-menu-link, .custom-menu .pure-menu-heading {
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: white;
+  -moz-text-decoration-color: white;
+}
 
- .custom-menu .pure-menu-link:hover, .custom-menu .pure-menu-heading:hover {
-   background-color: transparent;
- }
+.custom-menu .pure-menu-link:hover, .custom-menu .pure-menu-heading:hover {
+  background-color: transparent;
+}
 
- .custom-menu-top {
-   position: relative;
-   padding-top: .5em;
-   padding-bottom: .5em;
- }
+.custom-menu-top {
+  position: relative;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
 
- .custom-menu-brand {
-   display: block;
-   text-align: center;
-   position: relative;
- }
+.custom-menu-brand {
+  display: block;
+  text-align: center;
+  position: relative;
+}
 
- .custom-menu-toggle {
-   width: 44px;
-   height: 44px;
-   display: block;
-   position: absolute;
-   top: 3px;
-   right: 0;
-   display: none;
- }
+.custom-menu-toggle {
+  width: 44px;
+  height: 44px;
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: 0;
+  display: none;
+}
 
- .custom-menu-toggle .bar {
-   background-color: white;
-   display: block;
-   width: 20px;
-   height: 2px;
-   border-radius: 100px;
-   position: absolute;
-   top: 22px;
-   right: 12px;
-   -webkit-transition: all 0.5s;
-   -moz-transition: all 0.5s;
-   -ms-transition: all 0.5s;
-   transition: all 0.5s;
- }
+.custom-menu-toggle .bar {
+  background-color: white;
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 100px;
+  position: absolute;
+  top: 22px;
+  right: 12px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
 
- .custom-menu-toggle .bar:first-child {
-   -webkit-transform: translateY(-6px);
-   -moz-transform: translateY(-6px);
-   -ms-transform: translateY(-6px);
-   transform: translateY(-6px);
- }
+.custom-menu-toggle .bar:first-child {
+  -webkit-transform: translateY(-6px);
+  -moz-transform: translateY(-6px);
+  -ms-transform: translateY(-6px);
+  transform: translateY(-6px);
+}
 
- .custom-menu-toggle.x .bar {
-   -webkit-transform: rotate(45deg);
-   -moz-transform: rotate(45deg);
-   -ms-transform: rotate(45deg);
-   transform: rotate(45deg);
- }
+.custom-menu-toggle.x .bar {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
 
- .custom-menu-toggle.x .bar:first-child {
-   -webkit-transform: rotate(-45deg);
-   -moz-transform: rotate(-45deg);
-   -ms-transform: rotate(-45deg);
-   transform: rotate(-45deg);
- }
+.custom-menu-toggle.x .bar:first-child {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
 
- .custom-menu-screen {
-   background-color: rgba(0, 0, 0, 0.5);
-   -webkit-transition: all 0.5s;
-   -moz-transition: all 0.5s;
-   -ms-transition: all 0.5s;
-   transition: all 0.5s;
-   height: 3em;
-   width: 70em;
-   position: absolute;
-   top: 0;
-   z-index: -1;
- }
+.custom-menu-screen {
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  height: 3em;
+  width: 70em;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
 
- .custom-menu-tucked .custom-menu-screen {
-   -webkit-transform: translateY(-44px);
-   -moz-transform: translateY(-44px);
-   -ms-transform: translateY(-44px);
-   transform: translateY(-44px);
- }
+.custom-menu-tucked .custom-menu-screen {
+  -webkit-transform: translateY(-44px);
+  -moz-transform: translateY(-44px);
+  -ms-transform: translateY(-44px);
+  transform: translateY(-44px);
+}
 
- @media (max-width: 62em) {
-   .custom-menu {
-     display: block;
-   }
-   .custom-menu-toggle {
-     display: block;
-     display: none\9;
-   }
-   .custom-menu-bottom {
-     position: absolute;
-     width: 100%;
-     border-top: 1px solid #eee;
-     /* background-color: #808080; */
-     z-index: 100;
-   }
-   .custom-menu-bottom .pure-menu-link {
-     opacity: 1;
-     -webkit-transform: translateX(0);
-     -moz-transform: translateX(0);
-     -ms-transform: translateX(0);
-     transform: translateX(0);
-     -webkit-transition: all 0.5s;
-     -moz-transition: all 0.5s;
-     -ms-transition: all 0.5s;
-     transition: all 0.5s;
-   }
-   .custom-menu-bottom.custom-menu-tucked .pure-menu-link {
-     -webkit-transform: translateX(-140px);
-     -moz-transform: translateX(-140px);
-     -ms-transform: translateX(-140px);
-     transform: translateX(-140px);
-     opacity: 0;
-     opacity: 1\9;
-   }
-   .pure-menu-horizontal.custom-menu-tucked {
-     z-index: -1;
-     top: 45px;
-     position: absolute;
-     overflow: hidden;
-   }
- }
+@media (max-width: 62em) {
+  .custom-menu {
+    display: block;
+  }
+  .custom-menu-toggle {
+    display: block;
+    display: none\9;
+  }
+  .custom-menu-bottom {
+    position: absolute;
+    width: 100%;
+    border-top: 1px solid #eee;
+    /* background-color: #808080; */
+    z-index: 100;
+  }
+  .custom-menu-bottom .pure-menu-link {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+  .custom-menu-bottom.custom-menu-tucked .pure-menu-link {
+    -webkit-transform: translateX(-140px);
+    -moz-transform: translateX(-140px);
+    -ms-transform: translateX(-140px);
+    transform: translateX(-140px);
+    opacity: 0;
+    opacity: 1\9;
+  }
+  .pure-menu-horizontal.custom-menu-tucked {
+    z-index: -1;
+    top: 45px;
+    position: absolute;
+    overflow: hidden;
+  }
+}
 
- .main {
-   padding: 2em;
-   color: black;
- }
+.main {
+  padding: 2em;
+  color: black;
+}
 
- /* Non-CSS library stylings */
+/* Non-CSS library stylings */
 
- /* .notification.is-info {
+/* .notification.is-info {
    background-color: #376996;
  } */
 
- h1 {
-   text-align: center;
- }
+h1 {
+  text-align: center;
+}
 
- .logo, .logo-text {
-   display: block;
-   margin: auto;
- }
+.logo, .logo-text {
+  display: block;
+  margin: auto;
+}
 
- .logo-text {
-   margin-top: 5px;
- }
+.logo-text {
+  margin-top: 5px;
+}
 
- .header {
-   padding-top: 0;
- }
+.header {
+  padding-top: 0;
+}
 
- .footer {
-   background-color: #191818;
- }
+.footer {
+  background-color: #191818;
+}
 
- .button {
-   background-color: #6290C8;
- }
+.button {
+  background-color: #6290C8;
+}
 
- .footer-text, strong {
-   color: #F5F5F5;
- }
+.footer-text, strong {
+  color: #F5F5F5;
+}
 
- .footer-link {
-   color: #add8e6;
-   text-decoration: underline;
- }
+.footer-link {
+  color: #add8e6;
+  text-decoration: underline;
+}
 
- .footer {
-   width: 100%;
-   bottom: 0;
-   padding: 1rem 0rem 1rem;
- }
+.footer {
+  width: 100%;
+  bottom: 0;
+  padding: 1rem 0rem 1rem;
+}
 
- .footer-text {
-   margin: auto;
-   padding: 0 25px;
- }
+.footer-text {
+  margin: auto;
+  padding: 0 25px;
+}
 
- .pure-menu {
-   word-wrap: break-word;
-   position: relative;
- }
+.pure-menu {
+  word-wrap: break-word;
+  position: relative;
+}
 
- .pure-button {
-   width: 100%;
- }
+.pure-button {
+  width: 100%;
+}
 
 /* Category link stylings */
+
 .category {
   width: 100%;
   height: 100%;
 }
 
-.category:hover { 
-  box-shadow: 2px 2px;
+.category:hover, .category:active {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hover-active {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Category tile images */
- #furniture {
-   background: url(../images/stock-images/furniture.jpg);
-   background-size: 100% 100%;
- }
 
- #kitchenware {
-   background: url(../images/stock-images/kitchenware.jpg);
-   background-size: 100% 100%;
- }
-
- #electronics {
-   background: url(../images/stock-images/electronics.jpg);
-   background-size: 100% 100%;
- }
-
- #clothes {
-   background: url(../images/stock-images/clothes.jpg);
-   background-size: 100% 100%;
- }
-
- #food {
-   background: url(../images/stock-images/food.jpg);
-   background-size: 100% 100%;
- }
-
- #toys {
-   background: url(../images/stock-images/toys.jpg);
-   background-size: 100% 100%;
- }
-
- #miscellaneous {
-   background: url(../images/stock-images/miscellaneous.jpg);
-   background-size: 100% 100%;
- }
-
- .tile-text {
-   width: 100%;
-   background-color: #376996;
-   padding: 10px 20px;
-   text-align: center
- }
-
- .notification {
-   padding: 0 0 20px 0;
- }
-
- #login-button {
-   background: #909090;
- }
-
- .signup-login {
-   margin-top: 50px;
- }
-
- .section {
-   padding: 0 1.5rem 3rem;
- }
-
- .pure-menu-item {
-   z-index: 10
- }
-
- #dropdown-link {
-   color: black;
- }
-
- .custom-menu-screen {
-   width: 100%;
- }
-
- /* Add Item Modal */
-
-hr{
- background-color:black;
- height:1px;
+#furniture {
+  background: url(../images/stock-images/furniture.jpg);
+  background-size: 100% 100%;
 }
 
- .page-modal {
-   margin-right: 10%;
-   background-color: white;
-   border-radius: 8px;
-   -webkit-border-radius: 8px;
-   -moz-border-radius: 8px;
-   -ms-border-radius: 8px;
-   -o-border-radius: 8px;
- }
+#kitchenware {
+  background: url(../images/stock-images/kitchenware.jpg);
+  background-size: 100% 100%;
+}
 
- hr {
-   background-color: black;
-   height: 1px;
- }
+#electronics {
+  background: url(../images/stock-images/electronics.jpg);
+  background-size: 100% 100%;
+}
 
- .logo_home {
-   width: 100px;
-   height: 100px;
-   align-content: center;
-   margin-top: 10%;
- }
+#clothes {
+  background: url(../images/stock-images/clothes.jpg);
+  background-size: 100% 100%;
+}
 
- #login_background {
-   background-color: #333;
-   text-align: center;
- }
+#food {
+  background: url(../images/stock-images/food.jpg);
+  background-size: 100% 100%;
+}
 
- .label_color {
-   color: white;
-   text-align: left;
-   margin-left: 25%;
- }
+#toys {
+  background: url(../images/stock-images/toys.jpg);
+  background-size: 100% 100%;
+}
 
- .inputbox {
-   margin-left: 5%;
-   width: 90%;
- }
+#miscellaneous {
+  background: url(../images/stock-images/miscellaneous.jpg);
+  background-size: 100% 100%;
+}
 
- .sectionLogin {
-   padding: 0;
- }
+.tile-text {
+  width: 100%;
+  background-color: #376996;
+  padding: 10px 20px;
+  text-align: center
+}
 
- .buttonStyle {
-   margin: 10px;
- }
+.notification {
+  padding: 0 0 20px 0;
+}
 
- .tagLogin {
-   margin-left: 5%;
-   width: 10%;
-   background-color: #333;
- }
+#login-button {
+  background: #909090;
+}
 
- .fieldStyle {
-   margin: 5%;
-   border: solid grey;
- }
+.signup-login {
+  margin-top: 50px;
+}
 
- .selectStyle {
-   display: inline-block;
- }
+.section {
+  padding: 0 1.5rem 3rem;
+}
 
- .genderLabel {
-   display: inline-block;
-   margin: 5%;
- }
+.pure-menu-item {
+  z-index: 10
+}
 
+#dropdown-link {
+  color: black;
+}
+
+.custom-menu-screen {
+  width: 100%;
+}
+
+/* Add Item Modal */
+
+hr {
+  background-color: black;
+  height: 1px;
+}
+
+.page-modal {
+  margin-right: 10%;
+  background-color: white;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+hr {
+  background-color: black;
+  height: 1px;
+}
+
+.logo_home {
+  width: 100px;
+  height: 100px;
+  align-content: center;
+  margin-top: 10%;
+}
+
+#login_background {
+  background-color: #333;
+  text-align: center;
+}
+
+.label_color {
+  color: white;
+  text-align: left;
+  margin-left: 25%;
+}
+
+.inputbox {
+  margin-left: 5%;
+  width: 90%;
+}
+
+.sectionLogin {
+  padding: 0;
+}
+
+.buttonStyle {
+  margin: 10px;
+}
+
+.tagLogin {
+  margin-left: 5%;
+  width: 10%;
+  background-color: #333;
+}
+
+.fieldStyle {
+  margin: 5%;
+  border: solid grey;
+}
+
+.selectStyle {
+  display: inline-block;
+}
+
+.genderLabel {
+  display: inline-block;
+  margin: 5%;
+}
