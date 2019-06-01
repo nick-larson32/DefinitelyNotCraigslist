@@ -23,6 +23,8 @@
 
 .custom-menu .pure-menu-link:hover, .custom-menu .pure-menu-heading:hover {
   background-color: transparent;
+  text-decoration-color: #376996;
+  -moz-text-decoration-color: #376996;
 }
 
 .custom-menu-top {
@@ -205,6 +207,12 @@ h1 {
   text-decoration: underline;
 }
 
+.footer-link:hover {
+  color: #376996;
+  text-decoration-color: #376996;
+  -moz-text-decoration-color: #376996;
+}
+
 .footer-text {
   margin: auto;
   padding: 0 25px;
@@ -264,6 +272,13 @@ h1 {
 .genderLabel {
   display: inline-block;
   margin: 5%;
+}
+
+/* Menu link styling */
+.menu-text:hover {
+  color: #376996;
+  text-decoration-color: #376996;
+  -moz-text-decoration-color: #376996;
 }
 
 /* Category link stylings */
