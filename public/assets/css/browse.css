@@ -92,7 +92,7 @@
   -ms-transition: all 0.5s;
   transition: all 0.5s;
   height: 3em;
-  width: 70em;
+  /* width: 70em; */
   position: absolute;
   top: 0;
   z-index: -1;
