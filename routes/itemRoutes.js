@@ -8,16 +8,18 @@ module.exports = app => {
   // GET all
   app.get('/items', (req, res) => {
     Item.findAll({ include: [Category, { model: User, include: Location }] })
-      .then(items => {res.json(items)
-        console.log(items)})
+      .then(items => {
+        res.json(items)
+        console.log(items)
+      })
 
-      .catch(e => console.log(e))
+    .catch(e => console.log(e))
   })
 
   // GET one
   app.get('/items/:id', (req, res) => {
     console.log('ping')
-    Item.findOne({ where: { id: req.params.id }, include: [Category, { include: [{ model: User, include: Location }] }] })
+    Item.findOne({ where: { id: req.params.id }, include: Category, include: [{ model: User, include: Location }] })
       .then(item => res.json(item))
       .catch(e => console.log(e))
   })

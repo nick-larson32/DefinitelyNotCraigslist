@@ -1,5 +1,8 @@
+require('dotenv').config()
+
+console.log(process.env.MAP_KEY)
 window.onload = function() {
-  L.mapquest.key = "unhtsta6Q2zNmOUxHGw2VK1eiDTwNWvY";
+  L.mapquest.key = process.env.MAP_KEY;
 
   const addressTest = "350 5th Ave, New York, NY 10118";
 
