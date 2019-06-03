@@ -2,7 +2,8 @@
 
 // using a placement user for demo purposes
 // will need to dynamically integrate user
-let currUser = sessionStorage.getItem('id')
+let currUser = 3
+// sessionStorage.getItem('id')
 const getUserItems = _ => {
   fetch('/items')
     .then(items => items.json())
