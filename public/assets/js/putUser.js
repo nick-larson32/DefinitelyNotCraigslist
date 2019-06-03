@@ -5,7 +5,7 @@ let choice
 let userId = 1
 
 document.addEventListener('click', e => {
-  e.preventDefault()
+ // e.preventDefault()
   if (e.target.id === 'infoUpdate') {
     document.querySelector('#infoUpdate').style.display = 'none'
     document.querySelector('#updateUser').style.display = 'inline'

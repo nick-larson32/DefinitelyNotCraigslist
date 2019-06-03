@@ -3,6 +3,8 @@
 // using a placement user for demo purposes
 // will need to dynamically integrate user
 let currUser = 3
+// sessionStorage.getItem('id')
+
 const getUserItems = _ =>{
     fetch('/items')
     .then(items => items.json())
@@ -16,8 +18,9 @@ const getUserItems = _ =>{
             let userItemDiv = document.createElement('div')
              userItemDiv.innerHTML = `
              <div class="card">
+             <a href="./items/${id}" target="_blank">
              <header class="card-harder">
-\                    <a href="./users"><p class="card-header-title"> ${itemName}</p></a>
+                    <p class="card-header-title"> ${itemName}</p>
              </header>
              <div class="card-content">
              <div class="media">
@@ -32,14 +35,13 @@ const getUserItems = _ =>{
             <div class="content">
                 <p>Quantity: ${quantity}</p>
                 <p>Available:${available}</p>
-                <p>Bought (buyer):${bought}</p>
                 <p>Price: $${price}</p>
                 <p>Condition: ${condition}</p>
                 <p>Description: ${description}</p>
-                <p>User it belongs to: ${user.name}</p>
                 <p>Location: ${user.location.county}</p>
             </div>
              </div>
+            </a>
              <footer class="card-footer">
                  <a class="card-footer-item itemEdit" data-id="${id}">Edit</a>
                  <a class="card-footer-item itemDel" data-id="${id}">Delete</a>

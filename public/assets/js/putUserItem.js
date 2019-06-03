@@ -3,7 +3,7 @@ let choice
 let itemId = 15
 
 document.addEventListener('click', e => {
-    e.preventDefault()
+    //e.preventDefault()
     if (e.target.id === 'infoUpdate') {
       document.querySelector('#infoUpdate').style.display = 'none'
       document.querySelector('#updateItem').style.display = 'block'
@@ -56,7 +56,7 @@ const putUserItem = choice => {
 console.log(`choice: ${choice}`)
 console.log(`changingInfo: ${changingInfo}`)
 
-  fetch(`/items/${document.querySelector('.itemEdit').dataset}`, {
+  fetch(`/items/${itemId}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
@@ -67,8 +67,8 @@ console.log(`changingInfo: ${changingInfo}`)
     })
     .then(_ => {
       getUserItems()
-      console.log('success!')
       modalUp.style.display = 'none'
+      console.log('success!')
     })
     .catch(e => console.log(e))
     }
