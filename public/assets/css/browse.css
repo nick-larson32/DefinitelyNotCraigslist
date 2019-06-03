@@ -88,6 +88,7 @@
 }
 
 .custom-menu-screen {
+<<<<<<< HEAD
     background-color: #191818;
     -webkit-transition: all 0.5s;
     -moz-transition: all 0.5s;
@@ -98,6 +99,18 @@
     position: absolute;
     top: 0;
     z-index: -1;
+=======
+  background-color: #191818;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  height: 3em;
+  /* width: 70em; */
+  position: absolute;
+  top: 0;
+  z-index: -1;
+>>>>>>> 35661116899642243e3a4de98583b5d8456427ff
 }
 
 .custom-menu-tucked .custom-menu-screen {
