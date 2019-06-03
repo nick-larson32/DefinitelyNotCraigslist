@@ -7,26 +7,20 @@ console.log(localStorage.getItem('CraiglistLogin'))
    `
    <nav class="navbar" role="navigation" aria-label="main navigation">
   <div class="navbar-brand">
-  <i class="material-icons medium" style="display:inline;">account_box</i>
+  <i class=" material-icons" style="font-size: 50px" >account_box</i>
   <div class="navbar-item has-dropdown is-hoverable">
   <a class="navbar-link">
-    More
+    Welcome!
   </a>
 
   <div class="navbar-dropdown">
-    <a class="navbar-item">
-      About
-    </a>
-    <a class="navbar-item">
-      Jobs
-    </a>
-    <a class="navbar-item">
-      Contact
-    </a>
-    <hr class="navbar-divider">
-    <a class="navbar-item">
-      Report an issue
-    </a>
+  <a class="navbar-item">
+  Edit yout Profile
+  </a>
+  <a class="navbar-item">
+  Log out
+  </a>
+  </div>
   </div>
   </div>
   </nav>
