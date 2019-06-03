@@ -1,4 +1,4 @@
-#clothesTiles {
+#furnitureTiles, #kitchenwareTiles, #electronicsTiles, #clothesTiles, #foodTiles, #toysTiles, #miscTiles {
   margin: auto;
   width: 80%;
 }
