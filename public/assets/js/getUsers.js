@@ -10,7 +10,7 @@ const { fetch } = window
 
 // this needs to change to be reflective of the current user logged in
 // for now, hardcoded as 1 for demo purposes
-let userId = 1
+let userId = sessionStorage.getItem('id')
 
 const users = _ => {
   fetch(`/users/${userId}`)
