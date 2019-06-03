@@ -16,26 +16,34 @@ const getUserItems = _ => {
           let userItemDiv = document.createElement('div')
           userItemDiv.innerHTML = `
              <div class="card">
+             <a href="./items/${id}" target="_blank">
              <header class="card-harder">
-\                     <p class="card-header-title"> ${itemName}</p>
+                    <p class="card-header-title"> ${itemName}</p>
              </header>
              <div class="card-content">
+             <div class="media">
+             <div class="media-left">
                 <figure class="image is-128x128">
                     <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
                 </figure>
-                     <h4>Quantity: ${quantity}</h4>
-                     <h4>Available:${available}</h4>
-                     <h4>Bought (buyer):${bought}</h4>
-                     <h4>Price: $${price}</h4>
-                     <h4>Condition: ${condition}</h4>
-                     <h4>Description: ${description}</h4>
-                     <h4>User it belongs to: ${user.name}</h4>
-                     <h4>Location: ${user.location.county}</h4>
              </div>
+             <div class="media-content">
+             </div>
+            </div>
+            <div class="content">
+                <p>Quantity: ${quantity}</p>
+                <p>Available:${available}</p>
+                <p>Price: $${price}</p>
+                <p>Condition: ${condition}</p>
+                <p>Description: ${description}</p>
+                <p>Location: ${user.location.county}</p>
+            </div>
+             </div>
+            </a>
              <footer class="card-footer">
-                 <a class="card-footer-item itemEdit">Edit</a>
-                 <a class="card-footer-item" data-id="${id}">Delete</a>
-                 <a class="card-footer-item soldButton">Mark Sold</a>
+                 <a class="card-footer-item itemEdit" data-id="${id}">Edit</a>
+                 <a class="card-footer-item itemDel" data-id="${id}">Delete</a>
+                 <a class="card-footer-item soldButton" data-available="${available}">Mark Sold</a>
              </footer>
          </div>
                 `
