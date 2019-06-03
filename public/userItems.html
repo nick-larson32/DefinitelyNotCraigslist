@@ -7,9 +7,13 @@
     <title>User's Item Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/browse.css">
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/item.css">
+
 </head>
 
 <body>
@@ -68,6 +72,12 @@
                                 </div>
                             </div>
                             <div class="field">
+                                    <label class="label">Quantity</label>
+                                <div class="control">
+                                        <input class="input" type="number" id="quantity" placeholder="i.e 2">
+                                </div>
+                            </div>
+                            <div class="field">
                                 <div class="control">
                                     <div class="select">
                                         <select name="Categories" id="category">
@@ -107,7 +117,6 @@
                 </div>
             </div>
         </div>
-        <div class="section">
             <div class="container modalContainer">
                 <div class="modal" id="modalUpdate">
                     <div class="modal-background"></div>
@@ -117,16 +126,15 @@
                             <form>
                                 <div class="field">
                                     <div class="control">
+                                        <label class="label" for="change">Select the information you want to change:</label>
                                         <div class="select">
-                                            <label class="label" for="change">Select the information you want to
-                                                change:</label>
-                                            <select name="changed" id="change">
-                                                <option value="itemName">Item Name</option>
-                                                <option value="price">Price</option>
-                                                <option value="category">Category</option>
-                                                <option value="condition">Condition</option>
-                                                <option value="description">Description</option>
-                                            </select>
+                                            <select name="change" id="change">
+                                            <option value="itemName">Item Name</option>
+                                            <option value="price">Price</option>
+                                            <option value="category">Category</option>
+                                            <option value="condition">Condition</option>
+                                            <option value="description">Description</option>
+                                        </select>
                                         </div>
                                     </div>
                                 </div>
@@ -142,41 +150,25 @@
                                     <div class="control" id="priceDiv">
                                         <input class="input" type="number" id="priceUpdate" placeholder="i.e 10">
                                     </div>
-                                    <div class="select">
-                                        <label for="change">Select the information you want to change:</label>
-                                        <select name="changed" id="itemUpdate">
-                                            <option value="itemName">Item Name</option>
-                                            <option value="price">Price</option>
-                                            <option value="category">Category</option>
-                                            <option value="condition">Condition</option>
-                                            <option value="description">Description</option>
-                                        </select>
-                                    </div>
                                 </div>
-                        </div>
-                        <div class="field">
-                            <label class="label">Item Name</label>
-                            <div class="control" id="itemDiv">
-                                <input class="input" type="text" id="itemUpdate" placeholder="i.e Victorian Table">
-                            </div>
                         </div>
                         <div class="field">
                             <label class="label">Price</label>
                             <div class="control" id="priceDiv">
-                                <input class="input" type="number" id="priceUpdate" placeholder="i.e 10"> >>>>>>> master
+                                <input class="input" type="number" id="priceUpdate" placeholder="i.e 10">
                             </div>
                         </div>
                         <div class="field">
                             <div class="control">
                                 <div class="select" id="categoryDiv">
                                     <select name="Categories" id="categoryUpdate">
-                                        <option value="4">Furniture</option>
-                                        <option value="5">Toys</option>
-                                        <option value="6">Kitchenware</option>
-                                        <option value="2">Electronics</option>
-                                        <option value="3">Food</option>
-                                        <option value="1">Clothing</option>
-                                        <option value="7">Miscellaneous</option>
+                                                <option value="4">Furniture</option>
+                                                <option value="5">Toys</option>
+                                                <option value="6">Kitchenware</option>
+                                                <option value="2">Electronics</option>
+                                                <option value="3">Food</option>
+                                                <option value="1">Clothing</option>
+                                                <option value="7">Miscellaneous</option>
                                     </select>
                                 </div>
                             </div>
@@ -185,53 +177,35 @@
                             <div class="control">
                                 <div class="select" id="conditionDiv">
                                     <select name="condition" id="conditionUpdate">
-                                        <option value="new">Like New</option>
-                                        <option value="like new">New</option>
-                                        <option value="Used">Used</option>
-                                        <option value="Poor">Poor</option>
+                                                <option value="new">Like New</option>
+                                                <option value="like new">New</option>
+                                                <option value="Used">Used</option>
+                                                <option value="Poor">Poor</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                         <div class="field">
                             <div class="control" id="descriptionDiv">
-                                <textarea class="textarea" id="descriptionUpdate"
-                                    placeholder="Enter Description"></textarea> =======
+                                <textarea class="textarea" id="descriptionUpdate" placeholder="Enter Description"></textarea>
                                 </select>
                             </div>
                         </div>
+                        <button type="submit" class="button is-success" id="updateItem">Update Listing</button>
                     </div>
-                    <div class="field">
-                        <div class="control" id="decriptionDiv">
-                            <textarea class="textarea" id="descriptionUpdate"
-                                placeholder="Enter Description"></textarea>
-                        </div>
-                    </div>
-                    <button type="submit" class="button is-success" id="updateItem">Update Listing</button>
                     </form>
                 </div>
-            </div>
-            <button class="modal-close is-large" aria-label="close"></button>
+            <!-- <button class="modal-close is-large" aria-label="close"></button> -->
         </div>
     </div>
     <div class="section">
         <div id="userItemView"></div>
     </div>
+    </div>
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="./assets/js/viewUserItems.js"></script>
     <script src="./assets/js/addItem.js"></script>
-    <!-- Pure js -->
-    <script src="./assets/js/puremenu.js"></script>
-    <script src="./assets/js/putUserItem.js"></script>
     <script src="./assets/js/deleteUserItem.js"></script>
-
-    </div>
-    <div class="section">
-        <div id="userItemView"></div>
-    </div>
-    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script src="./assets/js/viewUserItems.js"></script>
-    <script src="./assets/js/addItem.js"></script>
     <!-- Pure js -->
     <script src="./assets/js/puremenu.js"></script>
     <script src="./assets/js/putUserItem.js"></script>

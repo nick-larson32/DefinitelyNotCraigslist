@@ -12,11 +12,19 @@ document.querySelector('#submit').addEventListener('click', e => {
           window.location.href = 'browse.html'
         } else {
           console.log('LOL no.')
+
         }
       })
+      if (!sessionStorage.getItem('id')) {
+        let errorDiv = document.createElement('div')
+        errorDiv.innerHTML = `
+          <p style="color: red">Incorrect Username or Password!<p>
+          `
+        document.querySelector('#error').append(errorDiv)
+      }
       document.querySelector('#loginEmail').value = ''
       document.querySelector('#loginPassword').value = ''
-      //   console.log(users)
+        //   console.log(users)
     })
     .catch(e => console.log(e))
 })
