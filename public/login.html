@@ -15,56 +15,64 @@
 <body>
     <div class="section sectionLogin">
 
-    <div class="containeris is-fullhd">
-      <!-- Menu -->
-      <div class="custom-menu-wrapper" id="custom-menu-id">
-        <div class="pure-menu custom-menu custom-menu-top">
-          <a class="pure-menu-heading" href="./index.html">
-            <img class="logo" src="./assets/images/app-logo/logo_transparent2.png">
-            <img class="logo-text" src="./assets/images/app-logo/logo-text.png">
-          </a>
-          <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
-        </div>
-        <div
-          class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
-          id="tuckedMenu">
-          <div class="custom-menu-screen"></div>
-          <ul class="pure-menu-list">
-            <li class="pure-menu-item"><a href="./browse.html" class="pure-menu-link">
-                <p class="menu-text">Browse By Category</p>
-              </a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">
-                <p class="menu-text">Donate</p>
-              </a></li>
-            <li class="pure-menu-item"><a href="#" class="pure-menu-link">
-                <p class="menu-text">Report a Problem</p>
-              </a></li>
-            <li class="pure-menu-item"><a href="./safety.html" class="pure-menu-link">
-                <p class="menu-text">Safety Tips</p>
-              </a></li>
-            <li class="pure-menu-item"><a href="./about.html" class="pure-menu-link">
-                <p class="menu-text">About Us</p>
-              </a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="container is-fullhd " id="login_background">
-        <div class="field fieldStyle">
-          <div class="tags are-medium">
-            <span class="tag has-background-grey-darker has-text-grey tagLogin">Login</span>
+        <div class="containeris is-fullhd">
+            <!-- Menu -->
+            <div class="custom-menu-wrapper" id="custom-menu-id">
+                <div class="pure-menu custom-menu custom-menu-top">
+                    <a class="pure-menu-heading" href="./index.html">
+                        <img class="logo" src="./assets/images/app-logo/logo_transparent2.png">
+                        <img class="logo-text" src="./assets/images/app-logo/logo-text.png">
+                    </a>
+                    <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+                </div>
+                <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+                    <div class="custom-menu-screen"></div>
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-item">
+                            <a href="./browse.html" class="pure-menu-link">
+                                <p class="menu-text">Browse By Category</p>
+                            </a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="pure-menu-link">
+                                <p class="menu-text">Donate</p>
+                            </a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="pure-menu-link">
+                                <p class="menu-text">Report a Problem</p>
+                            </a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="./safety.html" class="pure-menu-link">
+                                <p class="menu-text">Safety Tips</p>
+                            </a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="./about.html" class="pure-menu-link">
+                                <p class="menu-text">About Us</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container is-fullhd " id="login_background">
+                <div class="field fieldStyle">
+                    <div class="tags are-medium">
+                        <span class="tag has-background-grey-darker has-text-grey tagLogin">Login</span>
 
           </div>
           <label class="label label_color">Email</label>
           <div class="control">
-            <input class="input inputbox" id="loginemail" type="text" placeholder="Text input">
+            <input class="input inputbox" id="loginEmail" type="text" placeholder="Text input">
           </div>
           <label class="label label_color">Password</label>
           <div class="control">
             <input class="input inputbox" id="loginPassword" type="text" placeholder="Text input">
           </div>
           <br></br>
-          <button class="button buttonStyle">Submit</button>
-          <button class="button buttonStyle">Cancel</button>
+          <button id="submit" class="button buttonStyle" id="submit">Submit</button>
+          <button id="cancel" class="button buttonStyle">Cancel</button>
         </div>
 
             </div>
