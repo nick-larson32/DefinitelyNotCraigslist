@@ -20,6 +20,7 @@ const getCurrentUser = _ => {
       <label class="label label_color">Location</label>
           <p>${user.locationId}</p>
       <button id="editProfileBtn">Edit profile</button>
+      <button id="logout">Logout</button>
       `
     })
     .catch(e => console.log(e))
