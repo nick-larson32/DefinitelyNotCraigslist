@@ -36,6 +36,12 @@ document.addEventListener('click', e => {
     updateData()
   } else if (e.target.id === 'updateUser') {
     putUser(choice)
+  } else if (e.target.id === 'logout') {
+    sessionStorage.setItem('id', '')
+    sessionStorage.setItem('address', '')
+    sessionStorage.setItem('name', '')
+    window.location.href = './index.html'
+    
   }
 })
 
