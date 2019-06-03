@@ -7,8 +7,10 @@
     <title>User's Item Page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/item.css">
 
@@ -24,17 +26,30 @@
             </a>
             <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
         </div>
-        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
+            id="tuckedMenu">
             <div class="custom-menu-screen"></div>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">Browse By Category</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">My Listings</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">Report a Problem</a></li>
                 <li class="pure-menu-item"><a href="#" class="pure-menu-link">Safety Tips</a></li>
-                <li class="pure-menu-item"><a href="#" class="pure-menu-link">About Us</a></li>
+                <li class="pure-menu-item"><a href="#" class="pure-menu-link">About Us</a>
+                </li>
             </ul>
         </div>
     </div>
+
+    <div id="userLoggedIn">
+        <div class="inlineInsteadOfBlock" id="hello">Hello</div>
+        <div class="inlineInsteadOfBlock" id="profile"><a href="./profile.html">Profile</a></div>
+        <div class="inlineInsteadOfBlock" id="logout"><a href="./index.html">Logout</a></div>
+    </div>
+
+    <div id="userLogIn">
+        <a href="./login.html">Login</a>
+    </div>
+
     <div class="section">
         <div class="container modalContainer">
             <a class="button is-primary" id="modalButton">Add Listing</a>
@@ -91,7 +106,8 @@
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <textarea class="textarea" id="description" placeholder="Enter Description"></textarea>
+                                    <textarea class="textarea" id="description"
+                                        placeholder="Enter Description"></textarea>
                                 </div>
                             </div>
                             <button type="submit" class="button is-success" id="addDonation">Add Listing</button>
@@ -126,7 +142,8 @@
                                 <br>
                                 <div class="field">
                                     <div class="control" id="itemDiv">
-                                        Item Name : <input class="input" type="text" id="itemUpdate" placeholder="i.e Victorian Table">
+                                        Item Name : <input class="input" type="text" id="itemUpdate"
+                                            placeholder="i.e Victorian Table">
                                     </div>
                                 </div>
                                 <div class="field">
@@ -192,6 +209,7 @@
     <!-- Pure js -->
     <script src="./assets/js/puremenu.js"></script>
     <script src="./assets/js/putUserItem.js"></script>
+    <script src="./assets/js/loginoutbar.js"></script>
 </body>
 
 </html>

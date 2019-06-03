@@ -17,7 +17,7 @@
 
         <div class="containeris is-fullhd">
             <!-- Menu -->
-            <div class="custom-menu-wrapper">
+            <div class="custom-menu-wrapper" id="custom-menu-id">
                 <div class="pure-menu custom-menu custom-menu-top">
                     <a class="pure-menu-heading" href="./index.html">
                         <img class="logo" src="./assets/images/app-logo/logo_transparent2.png">
@@ -57,27 +57,23 @@
                 </div>
             </div>
             <div class="container is-fullhd " id="login_background">
-                <img src="./assets/images/app-logo/logo_transparent2.png" class="logo_home" alt="logo_image">
-                <img src="./assets/images/app-logo/logo-text.png" class="logo_text" alt="logo-text">
-                <br></br>
                 <div class="field fieldStyle">
                     <div class="tags are-medium">
                         <span class="tag has-background-grey-darker has-text-grey tagLogin">Login</span>
 
-                    </div>
-                    <label class="label label_color">Email</label>
-                    <div class="control">
-                        <input class="input inputbox" id="loginEmail" type="text" placeholder="Email">
-                    </div>
-                    <label class="label label_color">Password</label>
-                    <div class="control">
-                        <input class="input inputbox" id="loginPassword" type="password" placeholder="Password">
-                    </div>
-                    <br></br>
-                    <button id="submit" class="button buttonStyle">Submit</button>
-                    <button id="cancel" class="button buttonStyle">Cancel</button>
-                </div>
-                <br></br>
+          </div>
+          <label class="label label_color">Email</label>
+          <div class="control">
+            <input class="input inputbox" id="loginEmail" type="text" placeholder="Text input">
+          </div>
+          <label class="label label_color">Password</label>
+          <div class="control">
+            <input class="input inputbox" id="loginPassword" type="text" placeholder="Text input">
+          </div>
+          <br></br>
+          <button id="submit" class="button buttonStyle" id="submit">Submit</button>
+          <button id="cancel" class="button buttonStyle">Cancel</button>
+        </div>
 
             </div>
         </div>
@@ -93,7 +89,7 @@
             </div>
         </footer>
 
-        <script src="./assets/js/app.js"></script>
+        <!-- <script src="./assets/js/app.js"></script> -->
         <!-- Link to use icons w/ Bulma: -->
         <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
         <!-- Pure js -->

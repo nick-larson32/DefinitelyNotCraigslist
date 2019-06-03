@@ -10,7 +10,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
         integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/browse.css">
     <title>Signup</title>
 </head>
 
@@ -18,7 +18,7 @@
     <div class="section sectionLogin">
         <div class="containeris is-fullhd">
             <!-- Menu -->
-            <div class="custom-menu-wrapper">
+            <div class="custom-menu-wrapper" id="custom-menu-id">
                 <div class="pure-menu custom-menu custom-menu-top">
                     <a class="pure-menu-heading" href="./index.html">
                         <img class="logo" src="./assets/images/app-logo/logo_transparent2.png">
@@ -59,9 +59,7 @@
                 </div>
             </div>
             <div class="container is-fullhd " id="login_background">
-                <img src="./assets/images/app-logo/logo_transparent2.png" class="logo_home" alt="logo_image">
-                <img src="./assets/images/app-logo/logo-text.png" class="logo_text" alt="logo-text">
-                <br></br>
+               
                 <div class="field fieldStyle">
                     <div class="tags are-medium">
                         <span class="tag has-background-grey-darker has-text-grey tagLogin">Sign Up</span>
@@ -79,7 +77,7 @@
                     <div class="control">
                         <input class="input inputbox" id="signupPassword" type="password">
                     </div>
-                    <label class="label label_color">Address</label>
+                    <label class="label label_color">Address (Street, City, Satate Zip)</label>
                     <div class="control">
                         <input class="input inputbox" id="signupAddress" type="text">
                     </div>
@@ -197,8 +195,7 @@
                         </select>
                     </div>
 
-                    <button class="button buttonStyle" id="submitButton"
-                        onclick="window.location.href='/browse.html'">Submit</button>
+                    <button class="button buttonStyle" id="submitButton">Submit</button>
                     <button class="button buttonStyle">Cancel</button>
                 </div>
                 <br></br>
@@ -206,6 +203,18 @@
             </div>
         </div>
 
+                        <button class="button buttonStyle" id="submitButton">Submit</button>
+                            <button class="button buttonStyle">Cancel</button>
+                         <br></br>
+                         
+                  </div>   
+               
+      </div>
+    </div>
+   
+  
+                   
+       
         <!-- Footer -->
         <footer class="footer">
             <div class="content has-text-centered">
