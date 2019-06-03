@@ -20,6 +20,7 @@ const getCurrentUser = _ => {
       <label class="label label_color">Location</label>
           <p>${user.locationId}</p>
       <button id="editProfileBtn">Edit profile</button>
+      <button id="logout">Logout</button>
       `
     })
     .catch(e => console.log(e))
@@ -35,6 +36,12 @@ document.addEventListener('click', e => {
     updateData()
   } else if (e.target.id === 'updateUser') {
     putUser(choice)
+  } else if (e.target.id === 'logout') {
+    sessionStorage.setItem('id', '')
+    sessionStorage.setItem('address', '')
+    sessionStorage.setItem('name', '')
+    window.location.href = './index.html'
+    
   }
 })
 
