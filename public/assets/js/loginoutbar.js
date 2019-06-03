@@ -6,7 +6,7 @@ if (loggedInUser) {
   document.querySelector('#hello').innerHTML = `
   Hello ${sessionStorage.getItem('name')}!
   `
-} else if (loggedInUser === '') {
+} else if (loggedInUser === '' || !loggedInUser) {
   // display log in link
   document.querySelector('#userLogIn').style.display = 'block'
 }
