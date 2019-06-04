@@ -2,7 +2,7 @@
 
 .custom-menu-wrapper {
     background-color: #191818;
-    margin-bottom: 2.5em;
+    /* margin-bottom: 2.5em; */
     white-space: nowrap;
     position: relative;
 }

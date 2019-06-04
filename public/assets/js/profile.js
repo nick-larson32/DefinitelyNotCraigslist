@@ -6,6 +6,7 @@ const getCurrentUser = _ => {
   fetch(`/users/${userID}`)
     .then(r => r.json())
     .then(user => {
+      console.log(user)
       document.querySelector('.profileInfo').innerHTML = ''
 
       document.querySelector('.profileInfo').innerHTML = `
@@ -18,7 +19,7 @@ const getCurrentUser = _ => {
       <label class="label label_color">Date of Birth</label>
           <p>${user.DOB}</p>
       <label class="label label_color">Location</label>
-          <p>${user.locationId}</p>
+          <p>${user.location.county}</p>
       <button id="editProfileBtn">Edit profile</button>
       <button id="logout">Logout</button>
       `
