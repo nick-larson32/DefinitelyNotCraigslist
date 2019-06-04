@@ -17,9 +17,9 @@ const getUserItems = _ => {
           let userItemDiv = document.createElement('div')
           userItemDiv.innerHTML = `
              <div class="card">
-             <a href="./items/${id}" target="_blank">
              <header class="card-harder">
-                    <p class="card-header-title"> ${itemName}</p>
+             <a href="#" data-itemid=${id}>
+             <p class="card-header-title" data-itemid=${id}> ${itemName}</p></a>
              </header>
              <div class="card-content">
              <div class="media">
@@ -32,18 +32,17 @@ const getUserItems = _ => {
              </div>
             </div>
             <div class="content">
-                <p>Quantity: ${quantity}</p>
-                <p>Available:${available}</p>
-                <p>Price: $${price}</p>
-                <p>Condition: ${condition}</p>
-                <p>Description: ${description}</p>
-                <p>Location: ${user.location.county}</p>
+                <p data-itemid=${id}>Quantity: ${quantity}</p>
+                <p data-itemid=${id}>Available:${available}</p>
+                <p data-itemid=${id}>Price: $${price}</p>
+                <p data-itemid=${id}>Condition: ${condition}</p>
+                <p data-itemid=${id}>Description: ${description}</p>
+                <p data-itemid=${id}>Location: ${user.location.county}</p>
             </div>
              </div>
-            </a>
              <footer class="card-footer">
-                 <a class="card-footer-item itemEdit" data-id="${id}">Edit</a>
-                 <a class="card-footer-item itemDel" data-id="${id}">Delete</a>
+                 <a class="card-footer-item itemEdit" data-itemid=${id}>Edit</a>
+                 <a class="card-footer-item itemDel" data-itemid=${id}>Delete</a>
                  <a class="card-footer-item soldButton" data-available="${available}">Mark Sold</a>
              </footer>
          </div>
