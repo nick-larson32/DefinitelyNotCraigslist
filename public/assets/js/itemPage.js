@@ -52,6 +52,7 @@ const getOneItem = clickedItemId => {
         .then(r => r.json())
         .then(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
             document.querySelector('#itemPageDiv').innerHTML = ''
+            document.querySelector('#modalSection').style.display = 'none'
             if (available && !bought && quantity > 0) {
                 let itemDiv = document.createElement('div')
                 // assign each div a data-itemid property of the item's id for future fetch requests

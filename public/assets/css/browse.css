@@ -14,14 +14,16 @@
     -webkit-font-smoothing: antialiased;
 }
 
-.custom-menu .pure-menu-link, .custom-menu .pure-menu-heading {
+.custom-menu .pure-menu-link,
+.custom-menu .pure-menu-heading {
     color: white;
     text-decoration: underline;
     text-decoration-color: white;
     -moz-text-decoration-color: white;
 }
 
-.custom-menu .pure-menu-link:hover, .custom-menu .pure-menu-heading:hover {
+.custom-menu .pure-menu-link:hover,
+.custom-menu .pure-menu-heading:hover {
     background-color: transparent;
     text-decoration-color: #376996;
     -moz-text-decoration-color: #376996;
@@ -159,6 +161,7 @@
     color: black;
 }
 
+
 /* Non-CSS library stylings */
 
 #tuckedMenu {
@@ -184,7 +187,8 @@ h1 {
     height: 51.05px;
 }
 
-.logo, .logo-text {
+.logo,
+.logo-text {
     display: block;
     margin: auto;
 }
@@ -308,6 +312,7 @@ strong {
     margin: 5%;
 }
 
+
 /* Menu link styling */
 
 .menu-text:hover {
@@ -316,6 +321,7 @@ strong {
     -moz-text-decoration-color: #376996;
 }
 
+
 /* Category link stylings */
 
 .category {
@@ -323,13 +329,15 @@ strong {
     height: 100%;
 }
 
-.category:hover, .category:active {
+.category:hover,
+.category:active {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .hover-active {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+
 
 /* Category tile images */
 
@@ -386,12 +394,11 @@ strong {
 .logo_text {
     align-content: center;
     width: 50%;
-<<<<<<< HEAD
-=======
 }
 
 
 /* Safety tips styling */
+
 .safety {
     margin: auto;
     width: 80%;
@@ -404,7 +411,9 @@ ul {
     padding: 0px 20px;
 }
 
-.message, .is-info, .message-header {
+.message,
+.is-info,
+.message-header {
     background-color: #376996;
 }
 
@@ -418,5 +427,4 @@ ul {
 
 .section {
     padding: 1rem 1.5rem 3rem;
->>>>>>> ffeb176b8b1422ab58c6e8f8d1c14930aa6ae3a3
 }
