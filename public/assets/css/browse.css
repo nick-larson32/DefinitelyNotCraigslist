@@ -360,3 +360,15 @@ strong {
   align-content: center;
   width: 50%;
 }
+
+.safety {
+  margin: auto;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: square;
+  margin-top: 20px;
+  padding: 0px 20px;
+}
