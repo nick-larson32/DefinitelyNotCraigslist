@@ -3,7 +3,7 @@ let choice
 let itemId = 15
 
 document.addEventListener('click', e => {
-    e.preventDefault()
+    //e.preventDefault()
     if (e.target.id === 'infoUpdate') {
       document.querySelector('#infoUpdate').style.display = 'none'
       document.querySelector('#updateItem').style.display = 'block'
@@ -56,22 +56,29 @@ const putUserItem = choice => {
 console.log(`choice: ${choice}`)
 console.log(`changingInfo: ${changingInfo}`)
 
-            fetch(`/items/${itemId}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                choice: changingInfo
-            })
-            })
-            .then(_ => {
-                getUserItems()
-                console.log('success!')
-                modalUp.style.display = 'none'
-            })
-            .catch(e => console.log(e))
-            }
+  fetch(`/items/${itemId}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+      },
+    body: JSON.stringify({
+      choice: changingInfo
+      })
+    })
+    .then(_ => {
+      getUserItems()
+      modalUp.style.display = 'none'
+      console.log('success!')
+    })
+    .catch(e => console.log(e))
+    }
+
+
+// document.addEventListener('click', e =>{
+//   if(e.target.className === 'card-footer-item soldButton' && e.target.value === true){
+//     console.log('true!')
+//   }
+// })
 // Toggle Modal for update
 
   let modalUp = document.querySelector('#modalUpdate')

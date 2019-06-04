@@ -19,7 +19,7 @@ module.exports = app => {
   // GET one
   app.get('/items/:id', (req, res) => {
     console.log('ping')
-    Item.findOne({ where: { id: req.params.id }, include: Category, include: [{ model: User, include: Location }] })
+    Item.findOne({ where: { id: req.params.id }, include: [Category, { model: User, include: Location }] })
       .then(item => res.json(item))
       .catch(e => console.log(e))
   })
