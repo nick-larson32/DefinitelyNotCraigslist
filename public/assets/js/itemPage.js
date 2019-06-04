@@ -1,4 +1,4 @@
-const { fetch } = window
+// const { fetch } = window
 let clickedItemId
 
 const getAllItems = _ => {
@@ -6,9 +6,10 @@ const getAllItems = _ => {
     fetch('/items')
         .then(r => r.json())
         .then(items => {
+            console.log(items)
             document.querySelector('#itemPageDiv').innerHTML = ''
             items.forEach(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
-                if (available && !bought && quantity > 0) {
+                if (quantity > 0) {
                     let itemDiv = document.createElement('div')
                     // assign each div a data-itemid property of the item's id for future fetch requests
                     itemDiv.dataset.itemid = `${id}`
@@ -16,17 +17,7 @@ const getAllItems = _ => {
                 <div id="itemName" data-itemid=${id}>
                 <h1 data-itemid=${id}>${itemName}</h1>
                 </div>
-                <div id="itemImage" data-itemid=${id}>
-                    <figure class="image is-square" data-itemid=${id}>
-                        <img data-itemid=${id} src="https://bulma.io/images/placeholders/256x256.png">
-                    </figure>
-                </div>
-                <div class="column is-centered" id="userItem" data-itemid=${id}>
-                <p data-itemid=${id}>Sold By: ${user.name}<p>
-                </div>
-                <div class="column is-centered" id="quantity" data-itemid=${id}>
-                <p data-itemid=${id}>QTY: ${quantity}</p>
-                </div>
+              
                 `
                     document.querySelector('#itemPageDiv').append(itemDiv)
                 }
@@ -35,12 +26,13 @@ const getAllItems = _ => {
         .catch(e => console.log(e))
 }
 
-getAllItems()
+// getAllItems()
 
 document.addEventListener('click', e => {
     if (e.target.dataset.itemid) {
         clickedItemId = e.target.dataset.itemid
         getOneItem(clickedItemId)
+        console.log(clickedItemId)
     }
 })
 
@@ -51,14 +43,15 @@ const getOneItem = clickedItemId => {
     fetch(`/items/${clickedItemId}`)
         .then(r => r.json())
         .then(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
-            document.querySelector('#itemPageDiv').innerHTML = ''
+            document.querySelector('#userItemView').innerHTML = ''
+            document.querySelector('#modalSection').style.display = 'none'
             if (available && !bought && quantity > 0) {
                 let itemDiv = document.createElement('div')
                 // assign each div a data-itemid property of the item's id for future fetch requests
                 itemDiv.dataset.itemid = `${id}`
                 itemDiv.innerHTML = `
                 <div id="itemName" data-itemid=${id}>
-                <h1 data-itemid=${id}>${itemName}</h1>
+                <h1 data-itemid="${id}>${itemName}</h1>
                 </div>
                 <div id="itemImage" data-itemid=${id}>
                     <figure class="image is-square" data-itemid=${id}>
@@ -72,7 +65,8 @@ const getOneItem = clickedItemId => {
                 <p data-itemid=${id}>QTY: ${quantity}</p>
                 </div>
                 `
-                document.querySelector('#itemPageDiv').append(itemDiv)
+                document.querySelector('#userItemView').append(itemDiv)
+                console.log(clickedItemId + ' it worked')
             }
         })
         .catch(e => console.log(e))
