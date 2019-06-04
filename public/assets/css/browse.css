@@ -14,16 +14,14 @@
     -webkit-font-smoothing: antialiased;
 }
 
-.custom-menu .pure-menu-link,
-.custom-menu .pure-menu-heading {
+.custom-menu .pure-menu-link, .custom-menu .pure-menu-heading {
     color: white;
     text-decoration: underline;
     text-decoration-color: white;
     -moz-text-decoration-color: white;
 }
 
-.custom-menu .pure-menu-link:hover,
-.custom-menu .pure-menu-heading:hover {
+.custom-menu .pure-menu-link:hover, .custom-menu .pure-menu-heading:hover {
     background-color: transparent;
     text-decoration-color: #376996;
     -moz-text-decoration-color: #376996;
@@ -88,16 +86,16 @@
 }
 
 .custom-menu-screen {
-  background-color: #191818;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s;
-  height: 3em;
-  /* width: 70em; */
-  position: absolute;
-  top: 0;
-  z-index: -1;
+    background-color: #191818;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    transition: all 0.5s;
+    height: 3em;
+    /* width: 70em; */
+    position: absolute;
+    top: 0;
+    z-index: -1;
 }
 
 .custom-menu-tucked .custom-menu-screen {
@@ -161,7 +159,6 @@
     color: black;
 }
 
-
 /* Non-CSS library stylings */
 
 #tuckedMenu {
@@ -170,7 +167,7 @@
 
 h1 {
     text-align: center;
-    margin: 0 0 50px 0;
+    margin: 0 0 25px 0;
 }
 
 .pure-menu {
@@ -187,8 +184,7 @@ h1 {
     height: 51.05px;
 }
 
-.logo,
-.logo-text {
+.logo, .logo-text {
     display: block;
     margin: auto;
 }
@@ -208,6 +204,7 @@ h1 {
     bottom: 0;
     padding: 1rem 0rem 1rem;
     background-color: #191818;
+    position: fixed;
 }
 
 .button {
@@ -311,7 +308,6 @@ strong {
     margin: 5%;
 }
 
-
 /* Menu link styling */
 
 .menu-text:hover {
@@ -320,7 +316,6 @@ strong {
     -moz-text-decoration-color: #376996;
 }
 
-
 /* Category link stylings */
 
 .category {
@@ -328,15 +323,13 @@ strong {
     height: 100%;
 }
 
-.category:hover,
-.category:active {
+.category:hover, .category:active {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .hover-active {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 
 /* Category tile images */
 
@@ -393,4 +386,37 @@ strong {
 .logo_text {
     align-content: center;
     width: 50%;
+<<<<<<< HEAD
+=======
+}
+
+
+/* Safety tips styling */
+.safety {
+    margin: auto;
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: square;
+    margin-top: 20px;
+    padding: 0px 20px;
+}
+
+.message, .is-info, .message-header {
+    background-color: #376996;
+}
+
+.message-body {
+    color: #000;
+}
+
+.pure-button {
+    width: 50%;
+}
+
+.section {
+    padding: 1rem 1.5rem 3rem;
+>>>>>>> ffeb176b8b1422ab58c6e8f8d1c14930aa6ae3a3
 }
