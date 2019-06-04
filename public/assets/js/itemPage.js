@@ -75,11 +75,11 @@ const getOneItem = clickedItemId => {
                 </div>
                 </div>
                 <div class="columns">
-                <div class="column">
+                <div class="column is-centered">
                 <p data-itemid=${id}>${description}</p>
                 </div>
+                <a class="button is-medium is-fullwidth is-info">Contact Seller</a>
                 </div>
-                <button class="button is-info">Contact Seller</button>
                 `
                 document.querySelector('#userItemView').append(itemDiv)
                 console.log(clickedItemId + ' it worked')

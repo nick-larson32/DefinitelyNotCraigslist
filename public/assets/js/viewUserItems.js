@@ -33,17 +33,14 @@ const getUserItems = _ => {
              </div>
             </div>
             <div class="content">
-                <p data-itemid=${id}>Quantity: ${quantity}</p>
-                <p data-itemid=${id}>Available:${available}</p>
-                <p data-itemid=${id}>Price: $${price}</p>
+                <p data-itemid=${id}>Available: ${available}</p>
+                <p data-itemid=${id}>$${price}</p>
                 <p data-itemid=${id}>Condition: ${condition}</p>
-                <p data-itemid=${id}>Description: ${description}</p>
-                <p data-itemid=${id}>Location: ${user.location.county}</p>
             </div>
              </div>
              <footer class="card-footer">
                  <a class="card-footer-item itemEdit">Edit</a>
-                 <a class="card-footer-item itemDel" data-id=${id}>Delete</a>
+                 <a class="card-footer-item itemDel" id="modalDelete" data-id=${id}>Delete</a>
                  <a class="card-footer-item soldButton" data-available="${available}">Mark Sold</a>
              </footer>
          </div>
