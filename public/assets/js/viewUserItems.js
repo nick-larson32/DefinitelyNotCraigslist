@@ -1,13 +1,14 @@
-// const { fetch} = window
+const { fetch} = window
 
 // using a placement user for demo purposes
 // will need to dynamically integrate user
-let currUser = 3
-// sessionStorage.getItem('id')
+let currUser = parseInt(sessionStorage.getItem('id'))
+
 const getUserItems = _ => {
   fetch('/items')
     .then(items => items.json())
     .then(items => {
+      console.log(items)
       document.querySelector('#userItemView').innerHTML = ''
       const userItem = items.filter(data =>
         data.userId === currUser)
@@ -41,8 +42,8 @@ const getUserItems = _ => {
             </div>
              </div>
              <footer class="card-footer">
-                 <a class="card-footer-item itemEdit" data-itemid=${id}>Edit</a>
-                 <a class="card-footer-item itemDel" data-itemid=${id}>Delete</a>
+                 <a class="card-footer-item itemEdit">Edit</a>
+                 <a class="card-footer-item itemDel" data-id=${id}>Delete</a>
                  <a class="card-footer-item soldButton" data-available="${available}">Mark Sold</a>
              </footer>
          </div>
@@ -50,7 +51,7 @@ const getUserItems = _ => {
           document.querySelector('#userItemView').append(userItemDiv)
         })
       } else {
-        console.log('add listing')
+        console.log('Please add listing')
       }
     })
     .catch(e => console.error(e))
