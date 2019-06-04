@@ -88,16 +88,16 @@
 }
 
 .custom-menu-screen {
-    background-color: #191818;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    transition: all 0.5s;
-    height: 3em;
-    width: 70em;
-    position: absolute;
-    top: 0;
-    z-index: -1;
+  background-color: #191818;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+  height: 3em;
+  /* width: 70em; */
+  position: absolute;
+  top: 0;
+  z-index: -1;
 }
 
 .custom-menu-tucked .custom-menu-screen {
@@ -391,6 +391,18 @@ strong {
 }
 
 .logo_text {
-    align-content: center;
-    width: 50%;
+  align-content: center;
+  width: 50%;
+}
+
+.safety {
+  margin: auto;
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: square;
+  margin-top: 20px;
+  padding: 0px 20px;
 }

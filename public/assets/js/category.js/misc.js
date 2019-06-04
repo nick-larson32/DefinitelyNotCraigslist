@@ -1,16 +1,16 @@
 const { fetch } = window
 
-const getFurniture = _ => {
+const getMisc = _ => {
   fetch('/items')
     .then(items => items.json())
     .then(items => {
-      document.querySelector('#furnitureTiles').innerHTML = ``
-      const furnitureItems = items.filter(data =>
-        data.category.category === 'furniture')
-      furnitureItems.forEach(({ itemName, quantity, available, bought, price, condition, description, user, category }) => {
-        let furnitureDiv = document.createElement('div')
+      document.querySelector('#miscTiles').innerHTML = ``
+      const miscItems = items.filter(data =>
+        data.category.category === 'miscellaneous')
+      miscItems.forEach(({ itemName, quantity, available, bought, price, condition, description, user, category }) => {
+        let miscDiv = document.createElement('div')
         if (available && !bought && quantity > 0) {
-          furnitureDiv.innerHTML = `
+          miscDiv.innerHTML = `
             <div class="card">
               <div class="card-content">
                 <p class="title">
@@ -35,11 +35,11 @@ const getFurniture = _ => {
               </footer>
             </div>
           `
-          document.querySelector('#furnitureTiles').append(furnitureDiv)
+          document.querySelector('#miscTiles').append(miscDiv)
         }
       })
     })
     .catch(e => console.error(e))
 }
 
-getFurniture()
+getMisc()

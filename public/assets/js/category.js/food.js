@@ -1,16 +1,16 @@
 const { fetch } = window
 
-const getFurniture = _ => {
+const getFood = _ => {
   fetch('/items')
     .then(items => items.json())
     .then(items => {
-      document.querySelector('#furnitureTiles').innerHTML = ``
-      const furnitureItems = items.filter(data =>
-        data.category.category === 'furniture')
-      furnitureItems.forEach(({ itemName, quantity, available, bought, price, condition, description, user, category }) => {
-        let furnitureDiv = document.createElement('div')
+      document.querySelector('#foodTiles').innerHTML = ``
+      const foodItems = items.filter(data =>
+        data.category.category === 'food')
+      foodItems.forEach(({ itemName, quantity, available, bought, price, condition, description, user, category }) => {
+        let foodDiv = document.createElement('div')
         if (available && !bought && quantity > 0) {
-          furnitureDiv.innerHTML = `
+          foodDiv.innerHTML = `
             <div class="card">
               <div class="card-content">
                 <p class="title">
@@ -35,11 +35,11 @@ const getFurniture = _ => {
               </footer>
             </div>
           `
-          document.querySelector('#furnitureTiles').append(furnitureDiv)
+          document.querySelector('#foodTiles').append(foodDiv)
         }
       })
     })
     .catch(e => console.error(e))
 }
 
-getFurniture()
+getFood()
