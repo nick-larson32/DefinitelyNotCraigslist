@@ -2,7 +2,7 @@
 
 .custom-menu-wrapper {
     background-color: #191818;
-    /* margin-bottom: 2.5em; */
+    margin-bottom: 2.5em;
     white-space: nowrap;
     position: relative;
 }
@@ -88,21 +88,6 @@
 }
 
 .custom-menu-screen {
-<<<<<<< HEAD
-<<<<<<< HEAD
-    background-color: #191818;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    -ms-transition: all 0.5s;
-    transition: all 0.5s;
-    height: 3em;
-    width: 70em;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-=======
-=======
->>>>>>> 77a361338bdd3c0f07e337d3bff33f25d15f7c53
   background-color: #191818;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
@@ -113,10 +98,6 @@
   position: absolute;
   top: 0;
   z-index: -1;
-<<<<<<< HEAD
->>>>>>> 35661116899642243e3a4de98583b5d8456427ff
-=======
->>>>>>> 77a361338bdd3c0f07e337d3bff33f25d15f7c53
 }
 
 .custom-menu-tucked .custom-menu-screen {
@@ -410,18 +391,6 @@ strong {
 }
 
 .logo_text {
-  align-content: center;
-  width: 50%;
-}
-
-.safety {
-  margin: auto;
-  width: 80%;
-  margin-bottom: 20px;
-}
-
-ul {
-  list-style-type: square;
-  margin-top: 20px;
-  padding: 0px 20px;
+    align-content: center;
+    width: 50%;
 }
