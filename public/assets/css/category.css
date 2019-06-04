@@ -5,4 +5,12 @@
 
 .card {
   margin-bottom: 25px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 500px) {
+  #furnitureTiles, #kitchenwareTiles, #electronicsTiles, #clothesTiles, #foodTiles, #toysTiles, #miscTiles {
+    margin: auto;
+    width: 80%;
+  }
 }

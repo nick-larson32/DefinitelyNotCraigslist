@@ -6,6 +6,7 @@ const getCurrentUser = _ => {
   fetch(`/users/${userID}`)
     .then(r => r.json())
     .then(user => {
+      console.log(user)
       document.querySelector('.profileInfo').innerHTML = ''
 
       document.querySelector('.profileInfo').innerHTML = `
@@ -18,7 +19,7 @@ const getCurrentUser = _ => {
       <label class="label label_color">Date of Birth</label>
           <p>${user.DOB}</p>
       <label class="label label_color">Location</label>
-          <p>${user.locationId}</p>
+          <p>${user.location.county}</p>
       <button id="editProfileBtn">Edit profile</button>
       <button id="logout">Logout</button>
       `
@@ -41,7 +42,21 @@ document.addEventListener('click', e => {
     sessionStorage.setItem('address', '')
     sessionStorage.setItem('name', '')
     window.location.href = './index.html'
-    
+  } else if (e.target.id === 'browse') {
+    window.location.href = './browse.html'
+
+  } else if (e.target.id === 'donate') {
+    window.location.href = './login.html'
+
+  } else if (e.target.id === 'problem') {
+    window.location.href = './index.html'
+
+  } else if (e.target.id === 'tips') {
+    window.location.href = './safety.html'
+
+  } else if (e.target.id === 'about') {
+    window.location.href = './about.html'
+
   }
 })
 
@@ -92,14 +107,14 @@ const putUser = choice => {
   console.log(`changingInfo: ${changingInfo}`)
 
   fetch(`/users/${userID}`, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      [choice]: changingInfo
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        [choice]: changingInfo
+      })
     })
-  })
     .then(_ => {
       // getCurrentUser()
       location.reload()

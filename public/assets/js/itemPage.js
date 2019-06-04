@@ -1,13 +1,81 @@
+const { fetch } = window
+let clickedItemId
 
+const getAllItems = _ => {
+    // Get all items from the DB and put them on the page
+    fetch('/items')
+        .then(r => r.json())
+        .then(items => {
+            document.querySelector('#itemPageDiv').innerHTML = ''
+            items.forEach(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
+                if (available && !bought && quantity > 0) {
+                    let itemDiv = document.createElement('div')
+                    // assign each div a data-itemid property of the item's id for future fetch requests
+                    itemDiv.dataset.itemid = `${id}`
+                    itemDiv.innerHTML = `
+                <div id="itemName" data-itemid=${id}>
+                <h1 data-itemid=${id}>${itemName}</h1>
+                </div>
+                <div id="itemImage" data-itemid=${id}>
+                    <figure class="image is-square" data-itemid=${id}>
+                        <img data-itemid=${id} src="https://bulma.io/images/placeholders/256x256.png">
+                    </figure>
+                </div>
+                <div class="column is-centered" id="userItem" data-itemid=${id}>
+                <p data-itemid=${id}>Sold By: ${user.name}<p>
+                </div>
+                <div class="column is-centered" id="quantity" data-itemid=${id}>
+                <p data-itemid=${id}>QTY: ${quantity}</p>
+                </div>
+                `
+                    document.querySelector('#itemPageDiv').append(itemDiv)
+                }
+            })
+        })
+        .catch(e => console.log(e))
+}
 
-// document.querySelector('#itemPageOne').addEventListener('click', e =>{
-    
-//     console.log('test')
-// })
+getAllItems()
 
+document.addEventListener('click', e => {
+    if (e.target.dataset.itemid) {
+        clickedItemId = e.target.dataset.itemid
+        getOneItem(clickedItemId)
+    }
+})
 
-fetch('/items/15')
-    .then(r => r.json())
-    .then( data =>{
-        console.log(data)
-    })
+// get one item from the DB if it's clicked from the list of all items
+// puts the item into the same div as all the items were in
+const getOneItem = clickedItemId => {
+    // Get one from the DB and put it on the page
+    fetch(`/items/${clickedItemId}`)
+        .then(r => r.json())
+        .then(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
+            document.querySelector('#itemPageDiv').innerHTML = ''
+            if (available && !bought && quantity > 0) {
+                let itemDiv = document.createElement('div')
+                // assign each div a data-itemid property of the item's id for future fetch requests
+                itemDiv.dataset.itemid = `${id}`
+                itemDiv.innerHTML = `
+                <div id="itemName" data-itemid=${id}>
+                <h1 data-itemid=${id}>${itemName}</h1>
+                </div>
+                <div id="itemImage" data-itemid=${id}>
+                    <figure class="image is-square" data-itemid=${id}>
+                        <img data-itemid=${id} src="https://bulma.io/images/placeholders/256x256.png">
+                    </figure>
+                </div>
+                <div class="column is-centered" id="userItem" data-itemid=${id}>
+                <p data-itemid=${id}>Sold By: ${user.name}<p>
+                </div>
+                <div class="column is-centered" id="quantity" data-itemid=${id}>
+                <p data-itemid=${id}>QTY: ${quantity}</p>
+                </div>
+                `
+                document.querySelector('#itemPageDiv').append(itemDiv)
+            }
+        })
+        .catch(e => console.log(e))
+}
+
+// getOneItem()

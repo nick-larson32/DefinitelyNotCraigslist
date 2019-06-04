@@ -28,6 +28,9 @@ document.querySelector('#submit').addEventListener('click', e => {
     })
     .catch(e => console.log(e))
 })
+document.querySelector('#signup').addEventListener('click', e => {
+  window.load('./signup.html')
+})
 
 // cfrankiewicz4@nbcnews.com
 // Tkm2XxzPSl
