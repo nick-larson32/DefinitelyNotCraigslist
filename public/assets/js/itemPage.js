@@ -68,7 +68,7 @@ const getOneItem = clickedItemId => {
                 </div>
                 <div class="columns is-mobile">
                 <div class="column" id="userItem" data-itemid=${id}>
-                <p data-itemid=${id}>Near ${user.location.county}<p>
+                <p data-itemid=${id}>${user.location.county}<p>
                 </div>
                 <div class="column" id="quantity" data-itemid=${id}>
                 <p data-itemid=${id}>Condition: ${condition}</p>
@@ -78,8 +78,10 @@ const getOneItem = clickedItemId => {
                 <div class="column is-centered">
                 <p data-itemid=${id}>${description}</p>
                 </div>
+                </div>
                 <a class="button is-medium is-fullwidth is-info">Contact Seller</a>
                 </div>
+
                 `
                 document.querySelector('#userItemView').append(itemDiv)
                 console.log(clickedItemId + ' it worked')

@@ -3,7 +3,7 @@ const { fetch} = window
 // using a placement user for demo purposes
 // will need to dynamically integrate user
 let currUser = parseInt(sessionStorage.getItem('id'))
-
+console.log(currUser)
 const getUserItems = _ => {
   fetch('/items')
     .then(items => items.json())
