@@ -3,6 +3,15 @@ console.log(craiglistLogin)
 console.log(localStorage.getItem('CraiglistLogin'))
  if(craiglistLogin.logedin)
  {console.log(craiglistLogin.logedin)
+  document.querySelector("#userLogInPar").textContent="Log out"
+  document.querySelector("#profileMenutag").innerHTML=
+  `
+  <a href="./profile.html" class="pure-menu-link">
+                        <div id="userProfile">
+                            <p class="menu-text">Profile</p>
+                        </div>
+   </a>
+  `
    document.querySelector('.sectionMain').innerHTML=
    `
    <nav class="navbar" role="navigation" aria-label="main navigation">
