@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .inlineInsteadOfBlock {
     display: inline
 }
@@ -32,3 +33,17 @@
 #profile {
     margin-right: 3%;
 }
+=======
+#userLoggedIn {
+  display: none;
+  color: white
+}
+
+#userLoggingIn {
+  display: none
+}
+
+#profileLink {
+  display: none
+}
+>>>>>>> 9d2ce62ca05dc2bbc70d006efd625468b7d06f82

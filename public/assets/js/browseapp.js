@@ -21,17 +21,17 @@ console.log(craiglistLogin.json())
     Welcome!
   </a>
 
-  <div class="navbar-dropdown">
-  <a class="navbar-item">
-  Edit yout Profile
-  </a>
-  <a class="navbar-item">
-  Log out
-  </a>
-  </div>
-  </div>
-  </div>
-  </nav>
-   `
-   +document.querySelector('.sectionMain').innerHTML}
-//    `<i class="material-icons tiny iconStyle" style="margin:5%;">ac_unit</i><p>Welcome ${craiglistLogin.name}</p>`+document.querySelector('.sectionMain').innerHTML}
+//   <div class="navbar-dropdown">
+//   <a class="navbar-item">
+//   Edit yout Profile
+//   </a>
+//   <a class="navbar-item">
+//   Log out
+//   </a>
+//   </div>
+//   </div>
+//   </div>
+//   </nav>
+//    `
+//    +document.querySelector('.sectionMain').innerHTML}
+// //    `<i class="material-icons tiny iconStyle" style="margin:5%;">ac_unit</i><p>Welcome ${craiglistLogin.name}</p>`+document.querySelector('.sectionMain').innerHTML}

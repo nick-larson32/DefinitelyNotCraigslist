@@ -14,7 +14,11 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/browse.css">
+<<<<<<< HEAD
   <link rel="shortcut icon" href="./assets/images/app-logo/logo_transparent2.png" type="image/x-icon">
+=======
+  <link rel="stylesheet" href="./assets/css/userLoggedIn.css">
+>>>>>>> 9d2ce62ca05dc2bbc70d006efd625468b7d06f82
 </head>
 
 <body>
@@ -31,6 +35,19 @@
       id="tuckedMenu">
       <div class="custom-menu-screen"></div>
       <ul class="pure-menu-list">
+        <li class="pure-menu-item" id="userLoggedIn">
+          <div class="menu-text" id="hello"></div>
+        </li>
+        <li class="pure-menu-item" id="userLoggingIn">
+          <a href="./login.html" class="pure-menu-link">
+            <p class="menu-text">Login</p>
+          </a>
+        </li>
+        <li class="pure-menu-item" id="profileLink">
+          <a href="./profile.html" class="pure-menu-link">
+            <p class="menu-text">Profile</p>
+          </a>
+        </li>
         <li class="pure-menu-item">
           <a href="./browse.html" class="pure-menu-link">
             <p class="menu-text">Browse By Category</p>
@@ -58,6 +75,16 @@
         </li>
       </ul>
     </div>
+  </div>
+
+  <div id="userLoggedIn">
+    <div class="inlineInsteadOfBlock" id="hello">Hello</div>
+    <div class="inlineInsteadOfBlock" id="profile"><a href="./profile.html">Profile</a></div>
+    <div class="inlineInsteadOfBlock" id="logout"><a href="./index.html">Logout</a></div>
+  </div>
+
+  <div id="userLoggingIn">
+    <a href="./login.html">Login</a>
   </div>
 
   <div class="safety">
@@ -104,6 +131,8 @@
   <!-- Pure js -->
   <script src="./assets/js/puremenu.js"></script>
   <script src="./assets/js/getCategory.js"></script>
+  <script src="./assets/js/loginoutbar.js"></script>
+  <script src="./assets/js/logout.js"></script>
 </body>
 
 </html>

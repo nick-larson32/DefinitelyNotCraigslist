@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
     integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
   <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/userLoggedIn.css">
   <title>Document</title>
 </head>
 
@@ -31,6 +32,19 @@
           id="tuckedMenu">
           <div class="custom-menu-screen"></div>
           <ul class="pure-menu-list">
+            <li class="pure-menu-item" id="userLoggedIn">
+              <div class="menu-text" id="hello"></div>
+            </li>
+            <li class="pure-menu-item" id="userLoggingIn">
+              <a href="./login.html" class="pure-menu-link">
+                <p class="menu-text">Login</p>
+              </a>
+            </li>
+            <li class="pure-menu-item" id="profileLink">
+              <a href="./profile.html" class="pure-menu-link">
+                <p class="menu-text">Profile</p>
+              </a>
+            </li>
             <li class="pure-menu-item"><a href="./browse.html" class="pure-menu-link">
                 <p class="menu-text">Browse By Category</p>
               </a></li>
@@ -76,6 +90,8 @@
       <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
       <!-- Pure js -->
       <script src="./assets/js/puremenu.js"></script>
+      <script src="./assets/js/loginoutbar.js"></script>
+      <script src="./assets/js/logout.js"></script>
 </body>
 
 </html>

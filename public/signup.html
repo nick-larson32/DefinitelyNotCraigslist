@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
         integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/browse.css">
-    <link rel="shortcut icon" href="./assets/images/app-logo/logo_transparent2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/userLoggedIn.css">
     <title>Signup</title>
 </head>
 
@@ -31,6 +31,19 @@
                     id="tuckedMenu">
                     <div class="custom-menu-screen"></div>
                     <ul class="pure-menu-list">
+                        <li class="pure-menu-item" id="userLoggedIn">
+                            <div class="menu-text" id="hello"></div>
+                        </li>
+                        <li class="pure-menu-item" id="userLoggingIn">
+                            <a href="./login.html" class="pure-menu-link">
+                                <p class="menu-text">Login</p>
+                            </a>
+                        </li>
+                        <li class="pure-menu-item" id="profileLink">
+                            <a href="./profile.html" class="pure-menu-link">
+                                <p class="menu-text">Profile</p>
+                            </a>
+                        </li>
                         <li class="pure-menu-item">
                             <a href="./browse.html" class="pure-menu-link">
                                 <p class="menu-text">Browse By Category</p>
@@ -60,7 +73,7 @@
                 </div>
             </div>
             <div class="container is-fullhd " id="login_background">
-               
+
                 <div class="field fieldStyle">
                     <div class="tags are-medium">
                         <span class="tag has-background-grey-darker has-text-grey tagLogin">Sign Up</span>
@@ -204,38 +217,40 @@
             </div>
         </div>
 
-                        <button class="button buttonStyle" id="submitButton">Submit</button>
-                            <button class="button buttonStyle">Cancel</button>
-                         <br></br>
-                         
-                  </div>   
-               
-      </div>
+        <button class="button buttonStyle" id="submitButton">Submit</button>
+        <button class="button buttonStyle">Cancel</button>
+        <br></br>
+
     </div>
-   
-  
-                   
-       
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="content has-text-centered">
-                <p class="footer-text">
-                    <strong>DefinitelyNotCraigslist</strong> created by <a class="footer-link"
-                        href="https://github.com/SPFlores">Samantha Flores</a>, <a class="footer-link"
-                        href="https://github.com/Pandapoc">Nick Larson</a>, <a class="footer-link"
-                        href="https://github.com/safavis">Mahya Safavi</a>,
-                    <a class="footer-link" href="https://github.com/aminehdhd">Amine Haddouch</a>, <a
-                        class="footer-link" href="https://github.com/diennguyen90">Dien Nguyen</a>, <a
-                        class="footer-link" href="https://github.com/cdkedits">Connor Nguyen</a>.
-                    Coffee donations appreciated!
-                </p>
-            </div>
-        </footer>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
-        <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-        <script src="./assets/js/puremenu.js"></script>
-        <script src="./assets/js/signupapp.js"></script>
-        <!-- Link to use icons w/ Bulma: -->
+
+    </div>
+    </div>
+
+
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="content has-text-centered">
+            <p class="footer-text">
+                <strong>DefinitelyNotCraigslist</strong> created by <a class="footer-link"
+                    href="https://github.com/SPFlores">Samantha Flores</a>, <a class="footer-link"
+                    href="https://github.com/Pandapoc">Nick Larson</a>, <a class="footer-link"
+                    href="https://github.com/safavis">Mahya Safavi</a>,
+                <a class="footer-link" href="https://github.com/aminehdhd">Amine Haddouch</a>, <a class="footer-link"
+                    href="https://github.com/diennguyen90">Dien Nguyen</a>, <a class="footer-link"
+                    href="https://github.com/cdkedits">Connor Nguyen</a>.
+                Coffee donations appreciated!
+            </p>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+    <script src="./assets/js/puremenu.js"></script>
+    <script src="./assets/js/signupapp.js"></script>
+    <script src="./assets/js/loginoutbar.js"></script>
+    <script src="./assets/js/logout.js"></script>
+    <!-- Link to use icons w/ Bulma: -->
 
 
 </body>
