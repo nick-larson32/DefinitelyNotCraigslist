@@ -1,34 +1,12 @@
-.inlineInsteadOfBlock {
-  display: inline
-}
-
 #userLoggedIn {
   display: none;
-  /* background-color: #333; */
-  background-color: #191818;
-  width: 100%;
-  padding-right: 3%;
   color: white
 }
 
-#userLogIn {
-  display: none;
-  /* background-color: #333; */
-  background-color: #191818
-  width: 100%;
-  text-align: right;
-  padding-right: 3%
+#userLoggingIn {
+  display: none
 }
 
-#rightAlign {
-  align-self: right;
-}
-
-#hello {
-  margin-right: 28%;
-  margin-left: 5%
-}
-
-#profile {
-  margin-right: 3%;
+#profileLink {
+  display: none
 }

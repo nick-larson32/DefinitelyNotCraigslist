@@ -6,12 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/browse.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/editUser.css">
-    <link rel="shortcut icon" href="./assets/images/app-logo/logo_transparent2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/userLoggedIn.css">
+
     <title>Profile</title>
 </head>
 
@@ -27,9 +30,23 @@
                     </a>
                     <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
                 </div>
-                <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+                <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
+                    id="tuckedMenu">
                     <div class="custom-menu-screen"></div>
                     <ul class="pure-menu-list">
+                        <li class="pure-menu-item" id="userLoggedIn">
+                            <div class="menu-text" id="hello"></div>
+                        </li>
+                        <li class="pure-menu-item" id="userLoggingIn">
+                            <a href="./login.html" class="pure-menu-link">
+                                <p class="menu-text">Login</p>
+                            </a>
+                        </li>
+                        <li class="pure-menu-item" id="profileLink">
+                            <a href="./profile.html" class="pure-menu-link">
+                                <p class="menu-text">Profile</p>
+                            </a>
+                        </li>
                         <li class="pure-menu-item">
                             <a href="./browse.html" class="pure-menu-link">
                                 <p id="browse" class="menu-text">Browse By Category</p>
@@ -65,7 +82,8 @@
                         <span class="tag has-background-grey-darker has-text-grey tagLogin">Profile</span>
                     </div>
                     <!-- <i class="large material-icons">account_circle</i> -->
-                    <img src="https://t4.ftcdn.net/jpg/02/46/60/61/500_F_246606148_LQmg22XGehD2MzCSCNylBxkxUNYzPmOb.jpg" alt="profile">
+                    <img src="https://t4.ftcdn.net/jpg/02/46/60/61/500_F_246606148_LQmg22XGehD2MzCSCNylBxkxUNYzPmOb.jpg"
+                        alt="profile">
                     <div class="profileInfo">
                     </div>
                 </div>
@@ -120,8 +138,13 @@
     <footer class="footer">
         <div class="content has-text-centered">
             <p class="footer-text">
-                <strong>DefinitelyNotCraigslist</strong> created by <a class="footer-link" href="https://github.com/SPFlores">Samantha Flores</a>, <a class="footer-link" href="https://github.com/Pandapoc">Nick Larson</a>, <a class="footer-link" href="https://github.com/safavis">Mahya Safavi</a>,
-                <a class="footer-link" href="https://github.com/aminehdhd">Amine Haddouch</a>, <a class="footer-link" href="https://github.com/diennguyen90">Dien Nguyen</a>, <a class="footer-link" href="https://github.com/cdkedits">Connor Nguyen</a>.
+                <strong>DefinitelyNotCraigslist</strong> created by <a class="footer-link"
+                    href="https://github.com/SPFlores">Samantha Flores</a>, <a class="footer-link"
+                    href="https://github.com/Pandapoc">Nick Larson</a>, <a class="footer-link"
+                    href="https://github.com/safavis">Mahya Safavi</a>,
+                <a class="footer-link" href="https://github.com/aminehdhd">Amine Haddouch</a>, <a class="footer-link"
+                    href="https://github.com/diennguyen90">Dien Nguyen</a>, <a class="footer-link"
+                    href="https://github.com/cdkedits">Connor Nguyen</a>.
                 Powered by caffeine!
             </p>
         </div>
@@ -130,6 +153,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="./assets/js/puremenu.js"></script>
     <script src="./assets/js/profile.js"></script>
+    <script src="./assets/js/loginoutbar.js"></script>
+    <script src="./assets/js/logout.js"></script>
     <!-- Link to use icons w/ Bulma: -->
 
 </body>

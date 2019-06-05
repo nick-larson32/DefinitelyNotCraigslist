@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
         integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/browse.css">
-    <link rel="shortcut icon" href="./assets/images/app-logo/logo_transparent2.png" type="image/x-icon">
+    <link rel="stylesheet" href="./assets/css/userLoggedIn.css">
     <title>Signup</title>
 </head>
 
@@ -29,6 +29,19 @@
             id="tuckedMenu">
             <div class="custom-menu-screen"></div>
             <ul class="pure-menu-list">
+                <li class="pure-menu-item" id="userLoggedIn">
+                    <div class="menu-text" id="hello"></div>
+                </li>
+                <li class="pure-menu-item" id="userLoggingIn">
+                    <a href="./login.html" class="pure-menu-link">
+                        <p class="menu-text">Login</p>
+                    </a>
+                </li>
+                <li class="pure-menu-item" id="profileLink">
+                    <a href="./profile.html" class="pure-menu-link">
+                        <p class="menu-text">Profile</p>
+                    </a>
+                </li>
                 <li class="pure-menu-item">
                     <a href="./browse.html" class="pure-menu-link">
                         <p class="menu-text">Browse By Category</p>
@@ -57,10 +70,13 @@
             </ul>
         </div>
     </div>
-    <div class="container is-fullhd ">
+    <div class="container is-fullhd " id="login_background">
 
-        <div class="field fieldStyle signupfield" id="login_background">
-            <p class="login-text" id="login-header">Sign Up</p>
+        <div class="field fieldStyle">
+            <div class="tags are-medium">
+                <span class="tag has-background-grey-darker has-text-grey tagLogin">Sign Up</span>
+
+            </div>
             <label class="label label_color">Name</label>
             <div class="control">
                 <input class="input inputbox" id="signupName" type="text" placeholder="Username">
@@ -73,7 +89,7 @@
             <div class="control">
                 <input class="input inputbox" id="signupPassword" type="password">
             </div>
-            <label class="label label_color">Address (Street, City, State, Zip)</label>
+            <label class="label label_color">Address (Street, City, Satate Zip)</label>
             <div class="control">
                 <input class="input inputbox" id="signupAddress" type="text">
             </div>
@@ -190,17 +206,11 @@
                     <option value="2">Los Angeles County</option>
                 </select>
             </div>
-            <div class="buttons">
-                <button class="button buttonStyle" id="submitButton">Submit</button>
-                <button class="button buttonStyle">Cancel</button>
-            </div>
+
+            <button class="button buttonStyle" id="submitButton">Submit</button>
+            <button class="button buttonStyle">Cancel</button>
         </div>
     </div>
-
-
-
-
-
 
     <!-- Footer -->
     <footer class="footer">
@@ -221,6 +231,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <script src="./assets/js/puremenu.js"></script>
     <script src="./assets/js/signupapp.js"></script>
+    <script src="./assets/js/loginoutbar.js"></script>
+    <script src="./assets/js/logout.js"></script>
     <!-- Link to use icons w/ Bulma: -->
 
 
