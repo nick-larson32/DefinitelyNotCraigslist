@@ -1,6 +1,6 @@
 let choice
 
-let itemId = 15
+let itemId = sessionStorage.getItem('itemid')
 
 document.querySelector('#infoUpdate').addEventListener('click', e => {
     e.preventDefault()
