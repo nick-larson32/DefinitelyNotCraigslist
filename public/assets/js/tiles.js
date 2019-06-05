@@ -13,9 +13,7 @@ document.addEventListener(`touchstart`, event => {
 })
 
 document.addEventListener(`touchend`, event => {
-  let parent = getParent(event)
   if (event.target.classList[0] === `hover`) {
-    let parentLink = document.querySelector(`a[data-id="${event.target.dataset.id}"]`)
     document.querySelector(`a[data-id="${event.target.dataset.id}"]`).classList.remove(`hover-active`)
     console.log(document.querySelector(`a[data-id="${event.target.dataset.id}"]`).classList)
   }

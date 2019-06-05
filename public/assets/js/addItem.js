@@ -11,7 +11,7 @@ const {fetch} = window
       },
       body: JSON.stringify({
         itemName: document.querySelector('#itemName').value,
-        quantity: 1,
+        quantity: document.querySelector('#quantity').value,
         available: true,
         bought: false,
         price: document.querySelector('#price').value,
