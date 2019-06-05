@@ -1,7 +1,6 @@
 let choice
 
-let itemId = sessionStorage.getItem('itemid')
-
+let itemid = sessionStorage.getItem('itemid')
 document.addEventListener('click', e => {
     //e.preventDefault()
     if (e.target.id === 'infoUpdate') {
@@ -56,7 +55,7 @@ const putUserItem = choice => {
 console.log(`choice: ${choice}`)
 console.log(`changingInfo: ${changingInfo}`)
 
-  fetch(`/items/${itemId}`, {
+  fetch(`/items/${itemid}`, {
     method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
@@ -65,10 +64,10 @@ console.log(`changingInfo: ${changingInfo}`)
       choice: changingInfo
       })
     })
-    .then(_ => {
-      getUserItems()
-      modalUp.style.display = 'none'
-      console.log('success!')
+    .then(_ =>{
+        getUserItems()
+        modalUp.style.display = 'none'
+        console.log('success')
     })
     .catch(e => console.log(e))
     }
