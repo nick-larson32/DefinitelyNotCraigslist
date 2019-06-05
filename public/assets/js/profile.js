@@ -6,7 +6,6 @@ const getCurrentUser = _ => {
   fetch(`/users/${userID}`)
     .then(r => r.json())
     .then(user => {
-      console.log(user)
       document.querySelector('.profileInfo').innerHTML = ''
 
       document.querySelector('.profileInfo').innerHTML = `
@@ -28,31 +27,18 @@ const getCurrentUser = _ => {
 }
 
 document.addEventListener('click', e => {
-  e.preventDefault()
   if (e.target.id === 'editProfileBtn') {
+    e.preventDefault()
     document.querySelector('.editInfo').style.display = 'block'
   } else if (e.target.id === 'infoUpdate') {
+    e.preventDefault()
     document.querySelector('#infoUpdate').style.display = 'none'
     document.querySelector('#updateUser').style.display = 'inline'
     updateData()
   } else if (e.target.id === 'updateUser') {
+    e.preventDefault()
     putUser(choice)
-  } else if (e.target.id === 'logout') {
-    sessionStorage.setItem('id', '')
-    sessionStorage.setItem('address', '')
-    sessionStorage.setItem('name', '')
-    window.location.href = './index.html'
-  } else if (e.target.id === 'browse') {
-    window.location.href = './browse.html'
-  } else if (e.target.id === 'donate') {
-    window.location.href = './login.html'
-  } else if (e.target.id === 'problem') {
-    window.location.href = './index.html'
-  } else if (e.target.id === 'tips') {
-    window.location.href = './safety.html'
-  } else if (e.target.id === 'about') {
-    window.location.href = './about.html'
-  }
+  } 
 })
 
 const updateData = _ => {
@@ -102,14 +88,14 @@ const putUser = choice => {
   console.log(`changingInfo: ${changingInfo}`)
 
   fetch(`/users/${userID}`, {
-      method: 'PUT',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        [choice]: changingInfo
-      })
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      [choice]: changingInfo
     })
+  })
     .then(_ => {
       // getCurrentUser()
       location.reload()

@@ -2,7 +2,12 @@
 
 // using a placement user for demo purposes
 // will need to dynamically integrate user
+<<<<<<< HEAD
 let currUser = parseInt(sessionStorage.getItem('id'))
+=======
+let currUser = sessionStorage.getItem('id')
+// sessionStorage.getItem('id')
+>>>>>>> master
 const getUserItems = _ => {
   fetch('/items')
     .then(items => items.json())
