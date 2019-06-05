@@ -1,9 +1,8 @@
-// const {fetch} = window
+const {fetch} = window
 
 // giving default categoryId and userId for demo purposes
 
   document.querySelector('#addDonation').addEventListener('click', e => {
-    console.log('adding new stuff')
     e.preventDefault()
     fetch('/items', {
       method: 'POST',
@@ -16,14 +15,15 @@
         available: true,
         bought: false,
         price: document.querySelector('#price').value,
-        categoryId: document.querySelector('#category').value,
+        categoryId: 3,
+        // categoryId: parseInt(document.querySelector('#category').value)
         condition: document.querySelector('#condition').value,
         description: document.querySelector('#description').value,
-        userId: currUser
+        userId: 3
       })
     })
       .then(_ => {
-        console.log(itemName + 'successfully added')
+        console.log('successful')
         // closes modal once added
         modal.style.display = 'none';
         // need to call repopulate userItems

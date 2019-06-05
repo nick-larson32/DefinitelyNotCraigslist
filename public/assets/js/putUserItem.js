@@ -2,8 +2,8 @@ let choice
 
 let itemId = sessionStorage.getItem('itemid')
 
-document.querySelector('#infoUpdate').addEventListener('click', e => {
-    e.preventDefault()
+document.addEventListener('click', e => {
+    //e.preventDefault()
     if (e.target.id === 'infoUpdate') {
       document.querySelector('#infoUpdate').style.display = 'none'
       document.querySelector('#updateItem').style.display = 'block'
