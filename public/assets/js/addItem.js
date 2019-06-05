@@ -1,4 +1,4 @@
-const {fetch} = window
+// const {fetch} = window
 
 // giving default categoryId and userId for demo purposes
 

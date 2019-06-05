@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 // const { fetch } = window
-=======
-const { fetch } = window
->>>>>>> cac4e79010e6247320a6e0fc33d08a6677dbb991
 let clickedItemId
 
 const getAllItems = _ => {
@@ -39,7 +35,7 @@ const getAllItems = _ => {
         .catch(e => console.log(e))
 }
 
-getAllItems()
+// getAllItems()
 
 document.addEventListener('click', e => {
     if (e.target.dataset.itemid) {
@@ -63,11 +59,7 @@ const getOneItem = clickedItemId => {
                 itemDiv.dataset.itemid = `${id}`
                 itemDiv.innerHTML = `
                 <div id="itemName" data-itemid=${id}>
-<<<<<<< HEAD
                 <h1 class="title"data-itemid=${id}>${itemName}</h1>
-=======
-                <h1 data-itemid=${id}>${itemName}</h1>
->>>>>>> cac4e79010e6247320a6e0fc33d08a6677dbb991
                 </div>
                 <div id="itemImage" data-itemid=${id}>
                     <figure class="image is-square" data-itemid=${id}>
