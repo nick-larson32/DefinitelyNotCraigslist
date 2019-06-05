@@ -1,5 +1,4 @@
 let loggedInUser = sessionStorage.getItem('id')
-
 if (loggedInUser) {
   // make div/bar across visbile
   document.querySelector('#userLoggedIn').style.display = 'inline-block'
@@ -11,3 +10,9 @@ if (loggedInUser) {
   document.querySelector('#userSigningUp').style.display = 'inline-block'
   document.querySelector('#logout').style.display = 'none'
 }
+document.querySelector("#logout").addEventListener('click',_=>{
+  sessionStorage.setItem('id', '')
+    sessionStorage.setItem('address', '')
+    sessionStorage.setItem('name', '')
+    location.reload()
+})
