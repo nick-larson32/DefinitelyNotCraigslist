@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let craiglistLogin=localStorage.getItem('CraiglistLogin')
 console.log(craiglistLogin.json())
  if(craiglistLogin.logedin)
@@ -21,7 +20,6 @@ console.log(craiglistLogin.json())
   <a class="navbar-link">
     Welcome!
   </a>
-=======
 // let craiglistLogin=JSON.parse(localStorage.getItem('CraiglistLogin'))
 // console.log(craiglistLogin)
 // console.log(localStorage.getItem('CraiglistLogin'))
@@ -36,7 +34,6 @@ console.log(craiglistLogin.json())
 //   <a class="navbar-link">
 //     Welcome!
 //   </a>
->>>>>>> 9aaba611660a55214b2f7fef3d9c0aa2c8d9b097
 
 //   <div class="navbar-dropdown">
 //   <a class="navbar-item">
@@ -51,8 +48,6 @@ console.log(craiglistLogin.json())
 //   </nav>
 //    `
 //    +document.querySelector('.sectionMain').innerHTML}
-<<<<<<< HEAD
 // //    `<i class="material-icons tiny iconStyle" style="margin:5%;">ac_unit</i><p>Welcome ${craiglistLogin.name}</p>`+document.querySelector('.sectionMain').innerHTML}
-=======
 // //    `<i class="material-icons tiny iconStyle" style="margin:5%;">ac_unit</i><p>Welcome ${craiglistLogin.name}</p>`+document.querySelector('.sectionMain').innerHTML}
->>>>>>> 9aaba611660a55214b2f7fef3d9c0aa2c8d9b097
+// //    `<i class="material-icons tiny iconStyle" style="margin:5%;">ac_unit</i><p>Welcome ${craiglistLogin.name}</p>`+document.querySelector('.sectionMain').innerHTML}
