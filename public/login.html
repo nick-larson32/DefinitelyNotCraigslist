@@ -14,18 +14,16 @@
 </head>
 
 <body>
-
     <!-- Menu -->
-    <div class="custom-menu-wrapper">
+    <div class="custom-menu-wrapper" id="custom-menu-id">
         <div class="pure-menu custom-menu custom-menu-top">
             <a class="pure-menu-heading" href="./index.html">
                 <img class="logo" src="./assets/images/app-logo/logo_transparent2.png">
-                <img class="logo-text" src="./assets/images/app-logo/logo-text.png">
+                <img style="display:block" class="logo-text" src="./assets/images/app-logo/logo-text.png">
             </a>
             <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
         </div>
-        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
-            id="tuckedMenu">
+        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
             <div class="custom-menu-screen"></div>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item" id="userLoggedIn">
@@ -34,11 +32,6 @@
                 <li class="pure-menu-item" id="userLoggingIn">
                     <a href="./login.html" class="pure-menu-link">
                         <p class="menu-text">Login</p>
-                    </a>
-                </li>
-                <li class="pure-menu-item" id="userSigningUp">
-                    <a href="./signup.html" class="pure-menu-link">
-                        <p class="menu-text">Signup</p>
                     </a>
                 </li>
                 <li class="pure-menu-item" id="profileLink">
@@ -82,45 +75,34 @@
             </ul>
         </div>
     </div>
-
-
-    <div class="container is-fullhd " id="login_background">
-        <div class="field fieldStyle">
-            <div class="tags are-medium">
-                <span class="tag has-background-grey-darker has-text-grey tagLogin">Login</span>
-
+    <div class="container is-fullhd ">
+        <div class="field fieldStyle" id="login_background">
+            <div id="login-header">
+                <p class="login-text">Login</p>
             </div>
+            <label class="label label_color">Email</label>
+            <div class="control">
+                <input class="input inputbox" id="loginEmail" type="text" placeholder="Email">
+            </div>
+            <label class="label label_color">Password</label>
+            <div class="control">
+                <input class="input inputbox" id="loginPassword" type="password" placeholder="Password">
+            </div>
+            <div id="error"></div>
+            <br></br>
+            <button id="submit" class="button buttonStyle" id="submit">Submit</button>
+            <button id="cancel" class="button buttonStyle">Cancel</button>
+            <p id="signup" class="login-text">Don't Have an account? <a href="./signup.html">Sign up!</a></p>
         </div>
 
-    </div>
-    <label class="label label_color">Email</label>
-    <div class="control">
-        <input class="input inputbox" id="loginEmail" type="text" placeholder="Email">
-    </div>
-    <label class="label label_color">Password</label>
-    <div class="control">
-        <input class="input inputbox" id="loginPassword" type="password" placeholder="Password">
-    </div>
-    <div id="error"></div>
-    <br></br>
-    <button id="submit" class="button buttonStyle" id="submit">Submit</button>
-    <button id="cancel" class="button buttonStyle">Cancel</button>
-    <p>Don't Have an account? <a href="./signup.html">Sign up!</a></p>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="content has-text-centered">
             <p class="footer-text">
-
-                <strong>DefinitelyNotCraigslist</strong> created by <a class="footer-link"
-                    href="https://github.com/SPFlores">Samantha Flores</a>, <a class="footer-link"
-                    href="https://github.com/Pandapoc">Nick Larson</a>, <a class="footer-link"
-                    href="https://github.com/safavis">Mahya Safavi</a>,
-                <a class="footer-link" href="https://github.com/aminehdhd">Amine Haddouch</a>, <a class="footer-link"
-                    href="https://github.com/diennguyen90">Dien Nguyen</a>, <a class="footer-link"
-                    href="https://github.com/cdkedits">Connor Nguyen</a>.
-
+                <strong>DefinitelyNotCraigslist</strong> created by <a class="footer-link" href="https://github.com/SPFlores">Samantha Flores</a>, <a class="footer-link" href="https://github.com/Pandapoc">Nick Larson</a>, <a class="footer-link" href="https://github.com/safavis">Mahya Safavi</a>,
+                <a class="footer-link" href="https://github.com/aminehdhd">Amine Haddouch</a>, <a class="footer-link" href="https://github.com/diennguyen90">Dien Nguyen</a>, <a class="footer-link" href="https://github.com/cdkedits">Connor Nguyen</a>.
                 Coffee donations appreciated!
             </p>
         </div>

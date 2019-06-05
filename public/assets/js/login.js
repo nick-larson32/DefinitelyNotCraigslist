@@ -16,6 +16,7 @@ document.querySelector('#submit').addEventListener('click', e => {
         }
       })
       if (!sessionStorage.getItem('id')) {
+        document.querySelector('#error').innerHTML = ''
         let errorDiv = document.createElement('div')
         errorDiv.innerHTML = `
           <p style="color: red">Incorrect Username or Password!<p>

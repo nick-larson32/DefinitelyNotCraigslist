@@ -14,16 +14,14 @@
     -webkit-font-smoothing: antialiased;
 }
 
-.custom-menu .pure-menu-link,
-.custom-menu .pure-menu-heading {
+.custom-menu .pure-menu-link, .custom-menu .pure-menu-heading {
     color: white;
     text-decoration: underline;
     text-decoration-color: white;
     -moz-text-decoration-color: white;
 }
 
-.custom-menu .pure-menu-link:hover,
-.custom-menu .pure-menu-heading:hover {
+.custom-menu .pure-menu-link:hover, .custom-menu .pure-menu-heading:hover {
     background-color: transparent;
     text-decoration-color: #376996;
     -moz-text-decoration-color: #376996;
@@ -161,7 +159,6 @@
     color: black;
 }
 
-
 /* Non-CSS library stylings */
 
 #tuckedMenu {
@@ -187,8 +184,7 @@ h1 {
     height: 51.05px;
 }
 
-.logo,
-.logo-text {
+.logo, .logo-text {
     display: block;
     margin: auto;
 }
@@ -212,7 +208,8 @@ h1 {
 }
 
 .button {
-    background-color: #6290C8;
+    background-color: #376996;
+    color: white;
 }
 
 .footer-text {
@@ -252,12 +249,15 @@ strong {
     background-color: #333;
     text-align: center;
     margin: 0%;
+    margin-bottom: 150px;
 }
 
 .label_color {
     color: white;
     text-align: left;
-    margin-left: 25%;
+    margin-left: 5%;
+    margin-top: 2%;
+    margin-bottom: 2%;
 }
 
 .inputbox {
@@ -281,6 +281,8 @@ strong {
 
 .fieldStyle {
     border: solid grey;
+    margin: auto;
+    width: 100%;
 }
 
 .selectStyle {
@@ -312,7 +314,6 @@ strong {
     margin: 5%;
 }
 
-
 /* Menu link styling */
 
 .menu-text:hover {
@@ -321,7 +322,6 @@ strong {
     -moz-text-decoration-color: #376996;
 }
 
-
 /* Category link stylings */
 
 .category {
@@ -329,15 +329,13 @@ strong {
     height: 100%;
 }
 
-.category:hover,
-.category:active {
+.category:hover, .category:active {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .hover-active {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
 
 /* Category tile images */
 
@@ -396,7 +394,6 @@ strong {
     width: 50%;
 }
 
-
 /* Safety tips styling */
 
 .safety {
@@ -411,9 +408,7 @@ ul {
     padding: 0px 20px;
 }
 
-.message,
-.is-info,
-.message-header {
+.message, .is-info, .message-header {
     background-color: #376996;
 }
 
@@ -427,6 +422,30 @@ ul {
 
 .section {
     padding: 1rem 1.5rem 3rem;
+}
+
+.container {
+    margin: auto;
+    margin-top: 50px;
+    width: 80%;
+}
+
+.login-text {
+    color: white;
+}
+
+#login-header {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 2%;
+}
+
+.buttons {
+    margin: 10px 0 0 15px;
+}
+
+.signupfield {
+    padding-bottom: 15px;
 }
 
 #signup {
