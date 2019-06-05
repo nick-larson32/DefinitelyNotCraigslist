@@ -15,11 +15,10 @@
         available: true,
         bought: false,
         price: document.querySelector('#price').value,
-        categoryId: 3,
-        // categoryId: parseInt(document.querySelector('#category').value)
+        categoryId: parseInt(document.querySelector('#category').value),
         condition: document.querySelector('#condition').value,
         description: document.querySelector('#description').value,
-        userId: 3
+        userId: currUser
       })
     })
       .then(_ => {
