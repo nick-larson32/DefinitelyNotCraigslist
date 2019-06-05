@@ -28,9 +28,12 @@ document.querySelector('#submit').addEventListener('click', e => {
     })
     .catch(e => console.log(e))
 })
-document.querySelector('#signup').addEventListener('click', e => {
-  window.load('./signup.html')
+console.log(document.querySelector('#cancelButton'))
+document.querySelector('#cancelButton').addEventListener('click', e => {
+  console.log('cancel')
+  window.location.href = 'browse.html'
 })
+
 
 // cfrankiewicz4@nbcnews.com
 // Tkm2XxzPSl
