@@ -12,7 +12,7 @@ const getClothes = _ => {
         if (available && !bought && quantity > 0) {
           clothesDiv.innerHTML = `
             <div class="card">
-              <div class="card-content">
+              <div class="card-content" data-id="${id}">
                 <p class="title">
                   ${itemName}
                 </p>
@@ -46,32 +46,20 @@ document.addEventListener(`click`, event => {
     parent.style.display = "none"
   } else {
     if (event.target.classList[0] === `contact`) {
-      document.querySelector(`#clothesTiles`).innerHTML = ``
-      fetch(`/items/${event.target.dataset.id}`)
-        .then(item => item.json())
-        .then(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
-          let chosenDiv = document.createElement(`div`)
-          chosenDiv.innerHTML = `
-            <div class="card">
-              <div class="card-content">
-                <p class="title">
-                  ${itemName}
-                </p>
-                <p class="subtitle">
-                  Number available: ${quantity}
-                  Category: ${category.category}
-                  Contact email: ${user.email}
-                </p>
-              </div>
-              <footer class="card-footer">
-                <a class="contact pure-button pure-button-primary" href="#" data-id="${id}">Contact Owner</a>
-                <a class="hide pure-button" href="#">Not Interested</a>
-              </footer>
-            </div>
+      if (!document.querySelector(`p[data-id="${event.target.dataset.id}"]`)) {
+        fetch(`/items/${event.target.dataset.id}`)
+          .then(item => item.json())
+          .then(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
+            let chosenEmail = document.createElement(`p`)
+            chosenEmail.classList = `email subtitle`
+            chosenEmail.setAttribute(`data-id`, `${event.target.dataset.id}`)
+            chosenEmail.innerHTML = `
+          Donor email: ${user.email}
           `
-          document.querySelector('#clothesTiles').append(chosenDiv)
-        })
-        .catch(e => console.error(e))
+            document.querySelector(`div[data-id="${event.target.dataset.id}"]`).append(chosenEmail)
+          })
+          .catch(e => console.error(e))
+      }
     }
   }
 })
