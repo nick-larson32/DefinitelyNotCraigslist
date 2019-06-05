@@ -12,8 +12,6 @@
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
     integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
   <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <link rel="stylesheet" href="../assets/css/userLoggedIn.css">
   <link rel="stylesheet" href="../assets/css/browse.css">
   <link rel="stylesheet" href="../assets/css/category.css">
 </head>
@@ -47,17 +45,26 @@
         <li class="pure-menu-item"><a href="../about.html" class="pure-menu-link">
             <p class="menu-text">About Us</p>
           </a></li>
+        <li class="pure-menu-item">
+          <div class="inlineInsteadOfBlock" id="profile"><a href="./profile.html" class="pure-menu-link">
+              <p class="menu-text">Profile</p>
+            </a></div>
+        </li>
+        <li class="pure-menu-item">
+          <div class="inlineInsteadOfBlock" id="logout"><a href="./index.html" class="pure-menu-link">
+              <p class="menu-text">Logout</p>
+            </a></div>
+        </li>
       </ul>
     </div>
   </div>
-  
-<div id="clothesTiles"></div>
-  
 
   <div id="userLoggedIn">
     <div class="inlineInsteadOfBlock" id="hello">Hello</div>
-    <div class="inlineInsteadOfBlock" id="profile"><a href="./profile.html">Profile</a></div>
-    <div class="inlineInsteadOfBlock" id="logout"><a href="./index.html">Logout</a></div>
+    <!-- <div class="inlineInsteadOfBlock" id="profile"><a href="./profile.html" class="pure-menu-link">
+        <p class="menu-text">Profile</p>
+      </a></div>
+    <div class="inlineInsteadOfBlock" id="logout"><a href="./index.html">Logout</a></div> -->
   </div>
 
   <div id="userLogIn">
@@ -85,8 +92,8 @@
   <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
   <!-- Pure js -->
   <script src="../assets/js/puremenu.js"></script>
-  <script src="../assets/js/category.js/clothes.js"></script>
   <script src="../assets/js/loginoutbar.js"></script>
+  <script src="../assets/js/category.js/clothes.js"></script>
 </body>
 
 </html>

@@ -1,6 +1,7 @@
 #furnitureTiles, #kitchenwareTiles, #electronicsTiles, #clothesTiles, #foodTiles, #toysTiles, #miscTiles {
   margin: auto;
   width: 80%;
+  margin-bottom: 150px;
 }
 
 .card {

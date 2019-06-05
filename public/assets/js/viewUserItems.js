@@ -19,8 +19,7 @@ const getUserItems = _ => {
           userItemDiv.innerHTML = `
              <div class="card">
              <header class="card-harder">
-             <a href="#" data-itemid=${id}>
-             <p class="card-header-title" data-itemid=${id}> ${itemName}</p></a>
+                    <p class="card-header-title"> ${itemName}</p>
              </header>
              <div class="card-content">
              <div class="media">

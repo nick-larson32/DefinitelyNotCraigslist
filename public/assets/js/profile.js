@@ -42,7 +42,21 @@ document.addEventListener('click', e => {
     sessionStorage.setItem('address', '')
     sessionStorage.setItem('name', '')
     window.location.href = './index.html'
-    
+  } else if (e.target.id === 'browse') {
+    window.location.href = './browse.html'
+
+  } else if (e.target.id === 'donate') {
+    window.location.href = './login.html'
+
+  } else if (e.target.id === 'problem') {
+    window.location.href = './index.html'
+
+  } else if (e.target.id === 'tips') {
+    window.location.href = './safety.html'
+
+  } else if (e.target.id === 'about') {
+    window.location.href = './about.html'
+
   }
 })
 
@@ -93,14 +107,14 @@ const putUser = choice => {
   console.log(`changingInfo: ${changingInfo}`)
 
   fetch(`/users/${userID}`, {
-    method: 'PUT',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      [choice]: changingInfo
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        [choice]: changingInfo
+      })
     })
-  })
     .then(_ => {
       // getCurrentUser()
       location.reload()
