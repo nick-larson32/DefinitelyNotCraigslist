@@ -9,7 +9,7 @@ app.use(express.json())
 
 require('./routes')(app)
 
-require('./config').sync({force:true})
+require('./config').sync()
   .then(_ => app.listen(PORT))
   // process.env.PORT ||
   .catch(e => console.log(e))

@@ -3,6 +3,7 @@ let choice
 let itemId
 
 document.addEventListener('click', e => {
+
   //e.preventDefault()
   if (e.target.id === 'infoUpdate') {
     document.querySelector('#infoUpdate').style.display = 'none'
@@ -14,6 +15,7 @@ document.addEventListener('click', e => {
     putUserItem(choice)
   }
 })
+
 
 const updateUserItem = _ => {
   choice = document.querySelector('#change').value
