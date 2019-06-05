@@ -23,7 +23,6 @@ const getClothes = _ => {
               </div>
               <footer class="card-footer">
                 <a class="contact pure-button pure-button-primary" href="#" data-id="${id}">Contact Owner</a>
-                <a class="hide pure-button" href="#">Not Interested</a>
               </footer>
             </div>
           `

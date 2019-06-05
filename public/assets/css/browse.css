@@ -476,3 +476,7 @@ li {
 #hello {
     margin-left: 16px;
 }
+
+.about {
+    text-align: center;
+}
