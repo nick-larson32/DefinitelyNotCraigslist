@@ -18,6 +18,7 @@ module.exports = app => {
 
   // POST one
   app.post('/users', (req, res) => {
+    console.log(req.body)
     User.create(req.body)
       .then(_ => {
         console.log(req.body)

@@ -1,7 +1,7 @@
 
 
 document.addEventListener('click', e =>{
-    if(e.target.className === 'delete'){
+    if(e.target.className === 'card-footer-item itemDel'){
         fetch(`/items/${e.target.dataset.id}`, {
             method: 'DELETE',
         })
