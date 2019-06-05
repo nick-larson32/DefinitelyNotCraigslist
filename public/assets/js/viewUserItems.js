@@ -2,7 +2,7 @@ const { fetch } = window
 
 // using a placement user for demo purposes
 // will need to dynamically integrate user
-let currUser = 3
+let currUser = sessionStorage.getItem('id')
 // sessionStorage.getItem('id')
 const getUserItems = _ => {
   fetch('/items')
