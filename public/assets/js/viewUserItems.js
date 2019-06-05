@@ -12,18 +12,16 @@ const getUserItems = _ => {
       document.querySelector('#userItemView').innerHTML = ''
       const userItem = items.filter(data =>
         data.userId === currUser)
-      console.log(userItem)
-      if (userItem.length > 0) {
-        userItem.forEach(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
-          let userItemDiv = document.createElement('div')
-          userItemDiv.innerHTML = `
+        console.log(userItem)
+        if(userItem.length >0){
+        userItem.forEach(({ id, itemName, quantity, available, bought, price, condition, description, user, category}) =>{
+            let userItemDiv = document.createElement('div')
+             userItemDiv.innerHTML = `
              <div class="card">
              <header class="card-harder">
-                    <p class="card-header-title"> ${itemName}</p>
+             <p class="card-header-title"> ${itemName}</p>
              </header>
              <div class="card-content">
-             <div class="media">
-             <div class="media-left">
                 <figure class="image is-128x128">
                     <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
                 </figure>
@@ -51,5 +49,6 @@ const getUserItems = _ => {
       }
     })
     .catch(e => console.error(e))
-}
-getUserItems()
+    }
+    getUserItems()
+

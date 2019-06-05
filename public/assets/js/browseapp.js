@@ -1,6 +1,5 @@
-let craiglistLogin=JSON.parse(localStorage.getItem('CraiglistLogin'))
-console.log(craiglistLogin)
-console.log(localStorage.getItem('CraiglistLogin'))
+let craiglistLogin=localStorage.getItem('CraiglistLogin')
+console.log(craiglistLogin.json())
  if(craiglistLogin.logedin)
  {console.log(craiglistLogin.logedin)
   document.querySelector("#userLogInPar").textContent="Log out"
