@@ -10,3 +10,12 @@ if (loggedInUser) {
   document.querySelector('#userLoggingIn').style.display = 'inline-block'
   document.querySelector('#logout').style.display = 'none'
 }
+
+document.addEventListener('click', e => {
+  if (e.target.id === 'logout') {
+    sessionStorage.setItem('id', '')
+    sessionStorage.setItem('address', '')
+    sessionStorage.setItem('name', '')
+    location.reload()
+  }
+})

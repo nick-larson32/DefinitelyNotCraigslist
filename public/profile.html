@@ -12,126 +12,125 @@
         integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/browse.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/css/editUser.css">
     <link rel="stylesheet" href="./assets/css/userLoggedIn.css">
+    <link rel="stylesheet" href="./assets/css/editUser.css">
 
     <title>Profile</title>
 </head>
 
 <body>
-    <div class="section sectionLogin">
-        <div class="containeris is-fullhd">
-            <!-- Menu -->
-            <div class="custom-menu-wrapper" id="custom-menu-id">
-                <div class="pure-menu custom-menu custom-menu-top">
-                    <a class="pure-menu-heading" href="./index.html">
-                        <img class="logo" src="./assets/images/app-logo/logo_transparent2.png">
-                        <img class="logo-text" src="./assets/images/app-logo/logo-text.png">
+    <!-- Menu -->
+    <div class="custom-menu-wrapper" id="custom-menu-id">
+        <div class="pure-menu custom-menu custom-menu-top">
+            <a class="pure-menu-heading" href="./index.html">
+                <img class="logo" src="./assets/images/app-logo/logo_transparent2.png">
+                <img class="logo-text" src="./assets/images/app-logo/logo-text.png">
+            </a>
+            <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+        </div>
+        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
+            id="tuckedMenu">
+            <div class="custom-menu-screen"></div>
+            <ul class="pure-menu-list">
+                <li class="pure-menu-item" id="userLoggedIn">
+                    <div class="menu-text" id="hello"></div>
+                </li>
+                <li class="pure-menu-item" id="userLoggingIn">
+                    <a href="./login.html" class="pure-menu-link">
+                        <p class="menu-text">Login</p>
                     </a>
-                    <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
-                </div>
-                <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
-                    id="tuckedMenu">
-                    <div class="custom-menu-screen"></div>
-                    <ul class="pure-menu-list">
-                        <li class="pure-menu-item" id="userLoggedIn">
-                            <div class="menu-text" id="hello"></div>
-                        </li>
-                        <li class="pure-menu-item" id="userLoggingIn">
-                            <a href="./login.html" class="pure-menu-link">
-                                <p class="menu-text">Login</p>
-                            </a>
-                        </li>
-                        <li class="pure-menu-item" id="profileLink">
-                            <a href="./profile.html" class="pure-menu-link">
-                                <p class="menu-text">Profile</p>
-                            </a>
-                        </li>
-                        <li class="pure-menu-item">
-                            <a href="./browse.html" class="pure-menu-link">
-                                <p id="browse" class="menu-text">Browse By Category</p>
-                            </a>
-                        </li>
-                        <li class="pure-menu-item">
-                            <a href="#" class="pure-menu-link">
-                                <p id="donate" class="menu-text">Donate</p>
-                            </a>
-                        </li>
-                        <li class="pure-menu-item">
-                            <a href="#" class="pure-menu-link">
-                                <p class="menu-text">Report a Problem</p>
-                            </a>
-                        </li>
-                        <li class="pure-menu-item">
-                            <a href="./safety.html" class="pure-menu-link">
-                                <p class="menu-text">Safety Tips</p>
-                            </a>
-                        </li>
-                        <li class="pure-menu-item">
-                            <a href="./about.html" class="pure-menu-link">
-                                <p class="menu-text">About Us</p>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="container is-fullhd " id="login_background">
-                <div class="field fieldStyle">
-                    <div class="tags are-medium">
-                        <span class="tag has-background-grey-darker has-text-grey tagLogin">Profile</span>
-                    </div>
-                    <!-- <i class="large material-icons">account_circle</i> -->
-                    <img src="https://t4.ftcdn.net/jpg/02/46/60/61/500_F_246606148_LQmg22XGehD2MzCSCNylBxkxUNYzPmOb.jpg"
-                        alt="profile">
-                    <div class="profileInfo">
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="container is-fullhd section field fieldStyle editInfo" id="login_background">
-                <form>
-                    <label for="changed">Select the information you want to change:</label>
-                    <select name="change" id="change">
-                        <option disabled selected>Choose Which Info to Update</option>
-                        <option value="name">Name</option>
-                        <option value="email">Email</option>
-                        <option value="password">Password</option>
-                        <option value="address">Address</option>
-                        <option value="DOB">Date of Birth</option>
-                        <option value="gender">Gender</option>
-                        <option value="location">Location</option>
-                    </select>
-                    <br>
-                    <button id="infoUpdate">Submit</button>
-                    <br>
-                    <div id="textInputDiv">
-                        <label for="changedInfo">Enter new info:</label>
-                        <input type="text" name="newInfo" id="newInfo">
-                    </div>
-                    <div id="passwordInputDiv">
-                        <label for="newPassword">Enter new password:</label>
-                        <input type="password" name="newPassword" id="newPassword">
-                    </div>
-                    <div id="dateInputDiv">
-                        <label for="newDate">Enter new date:</label>
-                        <input type="date" name="newDate" id="newDate">
-                    </div>
-                    <div id="newLocationDiv">
-                        <label for="location">Location:</label>
-                        <select name="location" id="location">
-                            <option disabled selected>Choose Your Location</option>
-                            <option value="1">Orange County</option>
-                            <option value="2">Los Angeles County</option>
-                        </select>
-                    </div>
-                    <button id="updateUser">Submit</button>
-                </form>
-            </div>
+                </li>
+                <li class="pure-menu-item" id="userSigningUp">
+                    <a href="./signup.html" class="pure-menu-link">
+                        <p class="menu-text">Signup</p>
+                    </a>
+                </li>
+                <li class="pure-menu-item" id="profileLink">
+                    <a href="./profile.html" class="pure-menu-link">
+                        <p class="menu-text">Profile</p>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="./browse.html" class="pure-menu-link">
+                        <p id="browse" class="menu-text">Browse By Category</p>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="#" class="pure-menu-link">
+                        <p id="donate" class="menu-text">Donate</p>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="#" class="pure-menu-link">
+                        <p class="menu-text">Report a Problem</p>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="./safety.html" class="pure-menu-link">
+                        <p class="menu-text">Safety Tips</p>
+                    </a>
+                </li>
+                <li class="pure-menu-item">
+                    <a href="./about.html" class="pure-menu-link">
+                        <p class="menu-text">About Us</p>
+                    </a>
+                </li>
+            </ul>
         </div>
     </div>
 
+    <div class="container is-fullhd " id="login_background">
+        <div class="field fieldStyle">
+            <div class="tags are-medium">
+                <span class="tag has-background-grey-darker has-text-grey tagLogin">Profile</span>
+            </div>
+            <!-- <i class="large material-icons">account_circle</i> -->
+            <img src="https://t4.ftcdn.net/jpg/02/46/60/61/500_F_246606148_LQmg22XGehD2MzCSCNylBxkxUNYzPmOb.jpg"
+                alt="profile">
+            <div class="profileInfo">
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container is-fullhd section field fieldStyle editInfo" id="login_background">
+        <form>
+            <label for="changed">Select the information you want to change:</label>
+            <select name="change" id="change">
+                <option disabled selected>Choose Which Info to Update</option>
+                <option value="name">Name</option>
+                <option value="email">Email</option>
+                <option value="password">Password</option>
+                <option value="address">Address</option>
+                <option value="DOB">Date of Birth</option>
+                <option value="gender">Gender</option>
+                <option value="location">Location</option>
+            </select>
+            <br>
+            <button id="infoUpdate">Submit</button>
+            <br>
+            <div id="textInputDiv">
+                <label for="changedInfo">Enter new info:</label>
+                <input type="text" name="newInfo" id="newInfo">
+            </div>
+            <div id="passwordInputDiv">
+                <label for="newPassword">Enter new password:</label>
+                <input type="password" name="newPassword" id="newPassword">
+            </div>
+            <div id="dateInputDiv">
+                <label for="newDate">Enter new date:</label>
+                <input type="date" name="newDate" id="newDate">
+            </div>
+            <div id="newLocationDiv">
+                <label for="location">Location:</label>
+                <select name="location" id="location">
+                    <option disabled selected>Choose Your Location</option>
+                    <option value="1">Orange County</option>
+                    <option value="2">Los Angeles County</option>
+                </select>
+            </div>
+            <button id="updateUser">Submit</button>
+        </form>
     </div>
 
     <!-- Footer -->
@@ -154,7 +153,6 @@
     <script src="./assets/js/puremenu.js"></script>
     <script src="./assets/js/profile.js"></script>
     <script src="./assets/js/loginoutbar.js"></script>
-    <script src="./assets/js/logout.js"></script>
     <!-- Link to use icons w/ Bulma: -->
 
 </body>
