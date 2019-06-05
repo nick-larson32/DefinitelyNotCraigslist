@@ -1,7 +1,11 @@
 let choice
 
+<<<<<<< HEAD
+let itemid = sessionStorage.getItem('itemid')
+=======
 let itemId
 
+>>>>>>> master
 document.addEventListener('click', e => {
 
   //e.preventDefault()
@@ -60,19 +64,26 @@ const putUserItem = choice => {
   console.log(`choice: ${choice}`)
   console.log(`changingInfo: ${changingInfo}`)
 
+<<<<<<< HEAD
+  fetch(`/items/${itemid}`, {
+    method: 'PUT',
+    headers: {
+      'Content-Type': 'application/json'
+=======
   fetch(`/items/${itemId}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
+>>>>>>> master
       },
       body: JSON.stringify({
         choice: changingInfo
       })
     })
-    .then(_ => {
-      getUserItems()
-      modalUp.style.display = 'none'
-      console.log('success!')
+    .then(_ =>{
+        getUserItems()
+        modalUp.style.display = 'none'
+        console.log('success')
     })
     .catch(e => console.log(e))
 }
