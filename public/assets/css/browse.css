@@ -2,7 +2,7 @@
 
 .custom-menu-wrapper {
     background-color: #191818;
-    margin-bottom: 2.5em;
+    margin-bottom: 1em;
     white-space: nowrap;
     position: relative;
 }
@@ -450,4 +450,22 @@ ul {
 
 #signup {
     color: lightgray;
+}
+
+.sectionMain, #main {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 65px;
+}
+
+.title {
+    text-decoration: underline;
+    text-decoration-color: white;
+    -moz-text-decoration-color: white;
+}
+
+.title:hover {
+    color: #191818;
+    text-decoration-color: #191818;
+    -moz-text-decoration-color: #191818;
 }
