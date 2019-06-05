@@ -6,10 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" media="screen"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
-        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/browse.css">
     <link rel="stylesheet" href="./assets/css/userLoggedIn.css">
     <title>Document</title>
@@ -42,6 +40,11 @@
                         <p class="menu-text">Profile</p>
                     </a>
                 </li>
+              <li class="pure-menu-item" id="myListings">
+                            <a href="./userItems.html" class="pure-menu-link">
+                                <p class="menu-text">My Listings</p>
+                            </a>
+                        </li>
                 <li class="pure-menu-item">
                     <a href="./browse.html" class="pure-menu-link">
                         <p class="menu-text">Browse By Category</p>
@@ -66,6 +69,9 @@
                     <a href="./about.html" class="pure-menu-link">
                         <p class="menu-text">About Us</p>
                     </a>
+                </li>
+              <li class="pure-menu-item" id="logout">
+                    <p class="pure-menu-link" id="logout">Logout</p>
                 </li>
             </ul>
         </div>
@@ -108,14 +114,13 @@
         </div>
     </footer>
 
-    <!-- <script src="./assets/js/app.js"></script> -->
     <!-- Link to use icons w/ Bulma: -->
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <!-- Pure js -->
     <script src="./assets/js/puremenu.js"></script>
     <script src="./assets/js/login.js"></script>
     <script src="./assets/js/loginoutbar.js"></script>
-    <script src="./assets/js/logout.js"></script>
+
 </body>
 
 </html>

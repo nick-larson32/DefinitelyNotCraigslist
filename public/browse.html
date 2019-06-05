@@ -7,10 +7,8 @@
     <title>Browse</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" media="screen"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
-        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/browse.css">
@@ -27,8 +25,7 @@
             </a>
             <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
         </div>
-        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
-            id="tuckedMenu">
+        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
             <div class="custom-menu-screen"></div>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item" id="userLoggedIn">
@@ -39,9 +36,19 @@
                         <p class="menu-text">Login</p>
                     </a>
                 </li>
+                <li class="pure-menu-item" id="userSigningUp">
+                    <a href="./signup.html" class="pure-menu-link">
+                        <p class="menu-text">Signup</p>
+                    </a>
+                </li>
                 <li class="pure-menu-item" id="profileLink">
                     <a href="./profile.html" class="pure-menu-link">
                         <p class="menu-text">Profile</p>
+                    </a>
+                </li>
+                <li class="pure-menu-item" id="myListings">
+                    <a href="./userItems.html" class="pure-menu-link">
+                        <p class="menu-text">My Listings</p>
                     </a>
                 </li>
                 <li class="pure-menu-item">
@@ -185,6 +192,7 @@
                                     </div>
                                 </a>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -196,6 +204,7 @@
     <footer class="footer">
         <div class="content has-text-centered">
             <p class="footer-text">
+
                 <strong>DefinitelyNotCraigslist</strong> created by <a class="footer-link"
                     href="https://github.com/SPFlores">Samantha Flores</a>, <a class="footer-link"
                     href="https://github.com/Pandapoc">Nick Larson</a>, <a class="footer-link"
@@ -214,8 +223,6 @@
     <!-- Pure js -->
     <script src="./assets/js/puremenu.js"></script>
     <script src="./assets/js/loginoutbar.js"></script>
-    <script src="./assets/js/logout.js"></script>
-    <!-- <script src="./assets/js/getCategory.js"></script> -->
 </body>
 
 </html>
