@@ -60,6 +60,7 @@ const getOneItem = clickedItemId => {
                 itemDiv.innerHTML = `
                 <div id="itemName" data-itemid=${id}>
                 <h1 data-itemid=${id}>${itemName}</h1>
+                <h1 data-itemid=${id}>${itemName}</h1>
                 </div>
                 <div id="itemImage" data-itemid=${id}>
                     <figure class="image is-square" data-itemid=${id}>
