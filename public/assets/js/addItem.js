@@ -3,6 +3,7 @@
 // giving default categoryId and userId for demo purposes
 
   document.querySelector('#addDonation').addEventListener('click', e => {
+    console.log('adding new stuff')
     e.preventDefault()
     fetch('/items', {
       method: 'POST',
