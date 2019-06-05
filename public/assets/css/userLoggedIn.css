@@ -11,10 +11,10 @@
   color: white
 }
 
-#userLogIn {
+#userLoggingIn {
   display: none;
   /* background-color: #333; */
-  background-color: #191818
+  background-color: #191818;
   width: 100%;
   text-align: right;
   padding-right: 3%

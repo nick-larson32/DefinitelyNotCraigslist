@@ -8,5 +8,6 @@ if (loggedInUser) {
   `
 } else if (loggedInUser === '' || !loggedInUser) {
   // display log in link
+  document.querySelector('#userLoggingIn').style.display = 'block'
   document.querySelector('#userLogIn').style.display = 'block'
 }

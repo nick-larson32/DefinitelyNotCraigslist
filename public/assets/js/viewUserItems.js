@@ -1,4 +1,4 @@
-// const { fetch} = window
+const { fetch } = window
 
 // using a placement user for demo purposes
 // will need to dynamically integrate user
