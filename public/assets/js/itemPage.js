@@ -1,4 +1,4 @@
-const { fetch } = window
+// const { fetch } = window
 let clickedItemId
 
 const getAllItems = _ => {
@@ -35,7 +35,7 @@ const getAllItems = _ => {
         .catch(e => console.log(e))
 }
 
-getAllItems()
+// getAllItems()
 
 document.addEventListener('click', e => {
     if (e.target.dataset.itemid) {
@@ -51,7 +51,7 @@ const getOneItem = clickedItemId => {
     fetch(`/items/${clickedItemId}`)
         .then(r => r.json())
         .then(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
-            document.querySelector('#itemPageDiv').innerHTML = ''
+            document.querySelector('#userItemView').innerHTML = ''
             document.querySelector('#modalSection').style.display = 'none'
             if (available && !bought && quantity > 0) {
                 let itemDiv = document.createElement('div')
@@ -59,7 +59,7 @@ const getOneItem = clickedItemId => {
                 itemDiv.dataset.itemid = `${id}`
                 itemDiv.innerHTML = `
                 <div id="itemName" data-itemid=${id}>
-                <h1 data-itemid=${id}>${itemName}</h1>
+                <h1 class="title"data-itemid=${id}>${itemName}</h1>
                 </div>
                 <div id="itemImage" data-itemid=${id}>
                     <figure class="image is-square" data-itemid=${id}>
@@ -73,7 +73,7 @@ const getOneItem = clickedItemId => {
                 <p data-itemid=${id}>QTY: ${quantity}</p>
                 </div>
                 `
-                document.querySelector('#itemPageDiv').append(itemDiv)
+                document.querySelector('#userItemView').append(itemDiv)
             }
         })
         .catch(e => console.log(e))
