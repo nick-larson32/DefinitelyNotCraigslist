@@ -1,10 +1,11 @@
-const {fetch} = window
+// const {fetch} = window
 
 // giving default categoryId and userId for demo purposes
+let currUser = sessionStorage.getItem('id')
 
-  document.querySelector('#addDonation').addEventListener('click', e => {
-    e.preventDefault()
-    fetch('/items', {
+document.querySelector('#addDonation').addEventListener('click', e => {
+  e.preventDefault()
+  fetch('/items', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -15,38 +16,37 @@ const {fetch} = window
         available: true,
         bought: false,
         price: document.querySelector('#price').value,
-        categoryId: 3,
-        // categoryId: parseInt(document.querySelector('#category').value)
+        categoryId: parseInt(document.querySelector('#category').value),
         condition: document.querySelector('#condition').value,
         description: document.querySelector('#description').value,
-        userId: 3
+        userId: currUser
       })
     })
-      .then(_ => {
-        console.log('successful')
+    .then(_ => {
+      console.log('successful')
         // closes modal once added
-        modal.style.display = 'none';
-        // need to call repopulate userItems
-        getUserItems()
-      })
-      .catch(e => console.log(e))
-  })
+      modal.style.display = 'none';
+      // need to call repopulate userItems
+      getUserItems()
+    })
+    .catch(e => console.log(e))
+})
 
-  // Activate Modal
+// Activate Modal
 
-  let getModal = document.querySelector('#modalButton')
-  let modal = document.querySelector('#myModal')
-  let close = document.getElementsByClassName('modal-close')[0]
+let getModal = document.querySelector('#modalButton')
+let modal = document.querySelector('#myModal')
+let close = document.getElementsByClassName('modal-close')[0]
 
-  getModal.addEventListener('click', e =>{
-    modal.style.display = 'block'
-  })
-  close.addEventListener('click', e =>{
+getModal.addEventListener('click', e => {
+  modal.style.display = 'block'
+})
+close.addEventListener('click', e => {
+  modal.style.display = 'none'
+})
+
+window.addEventListener('click', e => {
+  if (e.target.className === 'modal-background') {
     modal.style.display = 'none'
-  })
-
-  window.addEventListener('click', e =>{
-    if(e.target.className === 'modal-background'){
-      modal.style.display = 'none'
-    }
-  })
+  }
+})

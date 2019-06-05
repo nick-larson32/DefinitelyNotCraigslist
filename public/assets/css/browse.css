@@ -447,3 +447,7 @@ ul {
 .signupfield {
     padding-bottom: 15px;
 }
+
+#signup {
+    color: lightgray;
+}
