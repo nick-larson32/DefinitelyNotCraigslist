@@ -12,10 +12,13 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/browse.css">
-    <<<<<<< HEAD <link rel="stylesheet" href="./assets/css/userLoggedIn.css">
+    <<<<<<< HEAD <<<<<<< HEAD <link rel="stylesheet" href="./assets/css/userLoggedIn.css">
         =======
         <link rel="shortcut icon" href="./assets/images/app-logo/logo_transparent2.png" type="image/x-icon">
-        <link rel="stylesheet" href="./assets/css/style.css"> >>>>>>> 5aa2e5a2a66470e8daf35c3c9e112a042f648083
+        <link rel="stylesheet" href="./assets/css/style.css"> >>>>>>> 5aa2e5a2a66470e8daf35c3c9e112a042f648083 =======
+        <link rel="stylesheet" href="./assets/css/userLoggedIn.css">
+        <link rel="shortcut icon" href="./assets/images/app-logo/logo_transparent2.png" type="image/x-icon">
+        <link rel="stylesheet" href="./assets/css/style.css"> >>>>>>> 63201ef1800b141fab4a7402171296117a115037
 </head>
 
 <body>
@@ -31,6 +34,24 @@
         <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
             <div class="custom-menu-screen"></div>
             <ul class="pure-menu-list">
+                <li class="pure-menu-item" id="userLoggedIn">
+                    <div class="menu-text" id="hello"></div>
+                </li>
+                <li class="pure-menu-item" id="userLoggingIn">
+                    <a href="./login.html" class="pure-menu-link">
+                        <p class="menu-text">Login</p>
+                    </a>
+                </li>
+                <li class="pure-menu-item" id="userSigningUp">
+                    <a href="./signup.html" class="pure-menu-link">
+                        <p class="menu-text">Signup</p>
+                    </a>
+                </li>
+                <li class="pure-menu-item" id="profileLink">
+                    <a href="./profile.html" class="pure-menu-link">
+                        <p class="menu-text">Profile</p>
+                    </a>
+                </li>
                 <li class="pure-menu-item">
                     <a href="./browse.html" class="pure-menu-link">
                         <p class="menu-text">Browse By Category</p>
@@ -56,18 +77,14 @@
                         <p class="menu-text">About Us</p>
                     </a>
                 </li>
+                <li class="pure-menu-item" id="logout">
+                    <p class="pure-menu-link" id="logout">Logout</p>
+                </li>
             </ul>
         </div>
     </div>
-    <div id="userLoggedIn">
-        <div class="inlineInsteadOfBlock" id="hello">Hello</div>
-        <div class="inlineInsteadOfBlock" id="profile"><a href="./profile.html">Profile</a></div>
-        <div class="inlineInsteadOfBlock" id="listing"><a href="./userItems.html">Listing</a></div>
-        <div class="inlineInsteadOfBlock" id="logout"><a href="./index.html">Logout</a></div>
-    </div>
 
     <div class="section sectionMain">
-
         <div class="containeris is-fullhd">
             <div id="main" class="column">
                 <div class="header">

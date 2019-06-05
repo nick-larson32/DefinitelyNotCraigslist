@@ -44,19 +44,14 @@ document.addEventListener('click', e => {
     window.location.href = './index.html'
   } else if (e.target.id === 'browse') {
     window.location.href = './browse.html'
-
   } else if (e.target.id === 'donate') {
     window.location.href = './login.html'
-
   } else if (e.target.id === 'problem') {
     window.location.href = './index.html'
-
   } else if (e.target.id === 'tips') {
     window.location.href = './safety.html'
-
   } else if (e.target.id === 'about') {
     window.location.href = './about.html'
-
   }
 })
 
