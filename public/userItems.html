@@ -14,7 +14,7 @@
     <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
     <link rel="stylesheet" href="./assets/css/item.css">
     <link rel="stylesheet" href="./assets/css/browse.css">
-
+    <link rel="stylesheet" href="./assets/css/userLoggedIn.css">
 
 </head>
 
@@ -43,22 +43,23 @@
     </div>
 
     <div id="userLoggedIn">
-        <div class="inlineInsteadOfBlock" id="hello">Hello</div>
-        <div class="inlineInsteadOfBlock" id="profile"><a href="./profile.html">Profile</a></div>
-        <div class="inlineInsteadOfBlock" id="logout"><a href="./index.html">Logout</a></div>
+            <div class="inlineInsteadOfBlock" id="hello">Hello</div>
+            <div class="inlineInsteadOfBlock" id="profile"><a href="./profile.html">Profile</a></div>
+            <div class="inlineInsteadOfBlock" id="listing"><a href="./userItems.html">Listing</a></div>
+            <div class="inlineInsteadOfBlock" id="logout"><a href="./index.html">Logout</a></div>
     </div>
 
     <div id="userLogIn">
         <a href="./login.html">Login</a>
     </div>
 
-    <div class="section" id="modalSection">
+    <div class="" id="modalSection">
         <div class="container modalContainer">
-            <a class="button is-primary" id="modalButton">Add Listing</a>
+            <a class="button is-info" id="modalButton">Add Listing</a>
             <div class="modal" id="myModal">
                 <div class="modal-background"></div>
                 <div class="modal-content">
-                    <div class="section page-modal">
+                    <div class="page-modal">
                         <h1 class="title">Add Listing</h1>
                         <form>
                             <div class="field">
@@ -98,8 +99,8 @@
                                 <div class="control">
                                     <div class="select">
                                         <select name="condition" id="condition">
-                                            <option value="new">Like New</option>
                                             <option value="like new">New</option>
+                                            <option value="new">Like New</option>
                                             <option value="Used">Used</option>
                                             <option value="Poor">Poor</option>
                                         </select>
@@ -112,7 +113,7 @@
                                         placeholder="Enter Description"></textarea>
                                 </div>
                             </div>
-                            <button type="submit" class="button is-success" id="addDonation">Add Listing</button>
+                            <button type="submit" class="button is-info" id="addDonation">Add Listing</button>
                         </form>
                     </div>
                     <button class="modal-close is-large" aria-label="close"></button>
@@ -193,7 +194,7 @@
                                 </select>
                             </div>
                         </div>
-                        <button type="submit" class="button is-success" id="updateItem">Update Listing</button>
+                        <button type="submit" class="button is-info" id="updateItem">Update Listing</button>
                     </div>
                     </form>
                 </div>
@@ -213,6 +214,8 @@
     <script src="./assets/js/puremenu.js"></script>
     <script src="./assets/js/putUserItem.js"></script>
     <script src="./assets/js/loginoutbar.js"></script>
+    <!-- <script src="./assets/js/login.js"></script> -->
+
 </body>
 
 </html>
