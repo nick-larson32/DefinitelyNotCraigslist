@@ -1,4 +1,4 @@
-const {fetch} = window
+// const {fetch} = window
 
 // giving default categoryId and userId for demo purposes
 
@@ -15,15 +15,14 @@ const {fetch} = window
         available: true,
         bought: false,
         price: document.querySelector('#price').value,
-        categoryId: 3,
-        // categoryId: parseInt(document.querySelector('#category').value)
+        categoryId: document.querySelector('#category').value,
         condition: document.querySelector('#condition').value,
         description: document.querySelector('#description').value,
-        userId: 3
+        userId: currUser
       })
     })
       .then(_ => {
-        console.log('successful')
+        console.log(itemName + 'successfully added')
         // closes modal once added
         modal.style.display = 'none';
         // need to call repopulate userItems

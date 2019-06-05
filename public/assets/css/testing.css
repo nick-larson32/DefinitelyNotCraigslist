@@ -1,0 +1,19 @@
+#textInputDiv {
+  display: none;
+}
+
+#passwordInputDiv {
+  display: none;
+}
+
+#dateInputDiv {
+  display: none;
+}
+
+#newLocationDiv {
+  display: none;
+}
+
+#updateUser {
+  display: none;
+}
