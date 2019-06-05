@@ -41,3 +41,15 @@ document.querySelector('#submitButton').addEventListener('click', e => {
     })
     .catch(e => console.log(e))
 })
+
+document.querySelector(`#cancelButton`).addEventListener(`click`, e => {
+  document.querySelector('#signupName').value = ``
+  document.querySelector('#signupEmail').value = ``
+  document.querySelector('#signupPassword').value = ``
+  document.querySelector('#signupAddress').value = ``
+  document.querySelector('#selectYear').value = ``
+  document.querySelector('#selectMonth').value = ``
+  document.querySelector('#selectDay').value = ``
+  document.querySelector('#selectGender').value = ``
+  document.querySelector('#selectLocation').value = ``
+})
