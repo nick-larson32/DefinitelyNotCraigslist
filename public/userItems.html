@@ -83,11 +83,11 @@
 
     <div class="" id="modalSection">
         <div class="container modalContainer">
-            <a class="button is-info" id="modalButton">Add Listing</a>
+            <a class="button is-primary" id="modalButton">Add Listing</a>
             <div class="modal" id="myModal">
                 <div class="modal-background"></div>
                 <div class="modal-content">
-                    <div class="page-modal">
+                    <div class="section page-modal">
                         <h1 class="title">Add Listing</h1>
                         <form>
                             <div class="field">
@@ -127,8 +127,8 @@
                                 <div class="control">
                                     <div class="select">
                                         <select name="condition" id="condition">
-                                            <option value="like new">New</option>
                                             <option value="new">Like New</option>
+                                            <option value="like new">New</option>
                                             <option value="Used">Used</option>
                                             <option value="Poor">Poor</option>
                                         </select>
@@ -141,7 +141,7 @@
                                         placeholder="Enter Description"></textarea>
                                 </div>
                             </div>
-                            <button type="submit" class="button is-info" id="addDonation">Add Listing</button>
+                            <button type="submit" class="button is-success" id="addDonation">Add Listing</button>
                         </form>
                     </div>
                     <button class="modal-close is-large" aria-label="close"></button>
@@ -215,6 +215,7 @@
                                 </select>
                             </div>
                         </div>
+                        <button type="submit" class="button is-success" id="updateItem">Update Listing</button>
                     </div>
                     <div class="field">
                         <div class="control" id="descriptionDiv">
