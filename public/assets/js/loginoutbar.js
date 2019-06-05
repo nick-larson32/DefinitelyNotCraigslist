@@ -5,6 +5,8 @@ if (loggedInUser) {
   document.querySelector('#userLoggedIn').style.display = 'inline-block'
   document.querySelector('#hello').innerHTML = `Hello ${sessionStorage.getItem('name')}!`
   document.querySelector('#profileLink').style.display = 'inline-block'
+  document.querySelector('#logout').style.display = 'inline-block'
+  document.querySelector('#myListings').style.display = 'inline-block'
 } else if (loggedInUser === '' || !loggedInUser) {
   // display log in link
   document.querySelector('#userLoggingIn').style.display = 'inline-block'
