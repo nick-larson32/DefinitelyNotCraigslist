@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .inlineInsteadOfBlock {
     display: inline
 }
@@ -34,6 +35,8 @@
     margin-right: 3%;
 }
 =======
+=======
+>>>>>>> 9aaba611660a55214b2f7fef3d9c0aa2c8d9b097
 #userLoggedIn {
   display: none;
   color: white
@@ -46,4 +49,11 @@
 #profileLink {
   display: none
 }
+<<<<<<< HEAD
 >>>>>>> 9d2ce62ca05dc2bbc70d006efd625468b7d06f82
+=======
+
+#userSigningUp {
+  display: none
+}
+>>>>>>> 9aaba611660a55214b2f7fef3d9c0aa2c8d9b097
