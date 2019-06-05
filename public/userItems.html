@@ -6,10 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" media="screen"
-        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
-        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
     <link rel="stylesheet" href="./assets/css/item.css">
     <link rel="stylesheet" href="./assets/css/browse.css">
@@ -27,8 +25,7 @@
             </a>
             <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
         </div>
-        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
-            id="tuckedMenu">
+        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
             <div class="custom-menu-screen"></div>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item" id="userLoggedIn">
@@ -85,6 +82,7 @@
             </ul>
         </div>
     </div>
+    <div id="userItemView"></div>
 
     <div class="" id="modalSection">
         <div class="container modalContainer">
@@ -142,8 +140,7 @@
                             </div>
                             <div class="field">
                                 <div class="control">
-                                    <textarea class="textarea" id="description"
-                                        placeholder="Enter Description"></textarea>
+                                    <textarea class="textarea" id="description" placeholder="Enter Description"></textarea>
                                 </div>
                             </div>
                             <button type="submit" class="button is-success" id="addDonation">Add Listing</button>
@@ -171,76 +168,73 @@
                                             <option value="condition">Condition</option>
                                             <option value="description">Description</option>
                                         </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <button class ="button is-info"id="infoUpdate">Submit</button>
-                                <br>
-                                <div class="field">
-                                    <div class="control" id="itemDiv">
-                                        Item Name: <input class="input" type="text" id="itemUpdate"
-                                            placeholder="i.e Victorian Table">
                                     </div>
                                 </div>
                             </div>
-                            <button id="infoUpdate">Submit</button>
+                            <button class="button is-info" id="infoUpdate">Submit</button>
                             <br>
                             <div class="field">
                                 <div class="control" id="itemDiv">
-                                    Item Name : <input class="input" type="text" id="itemUpdate"
-                                        placeholder="i.e Victorian Table">
-                                </div>
-                            </div>
-                            <div class="field">
-                                <div class="control" id="priceDiv">
-                                    <input class="input" type="number" id="priceUpdate" placeholder="i.e 10">
+                                    Item Name: <input class="input" type="text" id="itemUpdate" placeholder="i.e Victorian Table">
                                 </div>
                             </div>
                     </div>
+                    <button id="infoUpdate">Submit</button>
+                    <br>
                     <div class="field">
-                        <label class="label">Price</label>
+                        <div class="control" id="itemDiv">
+                            Item Name : <input class="input" type="text" id="itemUpdate" placeholder="i.e Victorian Table">
+                        </div>
+                    </div>
+                    <div class="field">
                         <div class="control" id="priceDiv">
                             <input class="input" type="number" id="priceUpdate" placeholder="i.e 10">
                         </div>
-                        <div class="field">
-                            <div class="control">
-                                <div class="select" id="conditionDiv">
-                                    <select name="condition" id="conditionUpdate">
-                                            <option value="new">Like New</option>
-                                            <option value="like new">New</option>
-                                            <option value="Used">Used</option>
-                                            <option value="Poor">Poor</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Price</label>
+                    <div class="control" id="priceDiv">
+                        <input class="input" type="number" id="priceUpdate" placeholder="i.e 10">
                     </div>
                     <div class="field">
                         <div class="control">
                             <div class="select" id="conditionDiv">
                                 <select name="condition" id="conditionUpdate">
+                                            <option value="new">Like New</option>
+                                            <option value="like new">New</option>
+                                            <option value="Used">Used</option>
+                                            <option value="Poor">Poor</option>
+                                    </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <div class="select" id="conditionDiv">
+                            <select name="condition" id="conditionUpdate">
                                     <option value="new">Like New</option>
                                     <option value="like new">New</option>
                                     <option value="Used">Used</option>
                                     <option value="Poor">Poor</option>
                                 </select>
-                            </div>
-                        </div>
-                        <button type="submit" class="button is-success" id="updateItem">Update Listing</button>
-                    </div>
-                    <div class="field">
-                        <div class="control" id="descriptionDiv">
-                            <textarea class="textarea" id="descriptionUpdate"
-                                placeholder="Enter Description"></textarea>
-                            </select>
                         </div>
                     </div>
-                    <button type="submit" class="button is-info" id="updateItem">Update Listing</button>
+                    <button type="submit" class="button is-success" id="updateItem">Update Listing</button>
                 </div>
-                </form>
+                <div class="field">
+                    <div class="control" id="descriptionDiv">
+                        <textarea class="textarea" id="descriptionUpdate" placeholder="Enter Description"></textarea>
+                        </select>
+                    </div>
+                </div>
+                <button type="submit" class="button is-info" id="updateItem">Update Listing</button>
             </div>
-            <!-- <button class="modal-close is-large" aria-label="close"></button> -->
+            </form>
         </div>
+        <!-- <button class="modal-close is-large" aria-label="close"></button> -->
+    </div>
     </div>
     <div class="section">
         <div id="userItemView"></div>
