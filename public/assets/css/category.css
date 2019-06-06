@@ -47,11 +47,15 @@ h1 {
     margin-top: 50px;
     /* margin-bottom: 2000px; */
   }
-  #clothesTiles > div:last-child {
+  #furnitureTiles>div:last-child, #kitchenwareTiles>div:last-child, #electronicsTiles>div:last-child, #clothesTiles>div:last-child, #foodTiles>div:last-child, #toysTiles>div:last-child, #miscTiles>div:last-child {
     margin-bottom: 150px;
   }
 }
 
 img {
   margin: auto;
+}
+
+span, h1 {
+  text-transform: capitalize;
 }

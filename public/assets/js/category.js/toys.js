@@ -12,9 +12,9 @@ const getToys = _ => {
       toysItems.forEach(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
         let randImg = imgArr[Math.floor(Math.random() * imgArr.length)]
         let toysDiv = document.createElement('div')
+        toysDiv.className = `card`
         if (available && !bought && quantity > 0) {
           toysDiv.innerHTML = `
-            <div class="card">
               <div class="card-content" data-id="${id}">
                 <h1 class="name">
                   ${itemName}
@@ -27,13 +27,15 @@ const getToys = _ => {
                   Price: $${price}
                 </p>
                 <p class="subtitle">
-                  Condition: ${condition}
+                  <span>Condition: ${condition}</span>
+                </p>
+                <p class="subtitle">
+                  ${description}
                 </p>
               </div>
               <footer class="card-footer">
                 <a class="contact pure-button pure-button-primary" href="#" data-id="${id}">Contact Info</a>
               </footer>
-            </div>
           `
           document.querySelector('#toysTiles').append(toysDiv)
         }
