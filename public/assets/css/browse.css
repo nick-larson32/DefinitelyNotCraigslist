@@ -490,3 +490,7 @@ li {
     width: 25%;
     margin-top: 10px;
 }
+
+#about-body {
+    text-align: left;
+}

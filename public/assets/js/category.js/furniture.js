@@ -22,7 +22,7 @@ const getFurniture = _ => {
                 </p>
               </div>
               <footer class="card-footer">
-                <a class="contact pure-button pure-button-primary" href="#" data-id="${id}">Contact Owner</a>
+                <a class="contact pure-button pure-button-primary" href="#" data-id="${id}">Contact Info</a>
                 <a class="hide pure-button" href="#">Not Interested</a>
               </footer>
             </div>
