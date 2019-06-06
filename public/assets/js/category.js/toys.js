@@ -1,6 +1,6 @@
 const { fetch } = window
 
-const imgArr = [`burgerbed`, `butterstick`, `chair`, `clothes`, `dog`, `gaminggear`, `grill`, `grill2`, `pillow`, `remotes`, `spatulas`, `theroom`, `toaster`]
+const imgArr = [`burgerbed`, `butterstick`, `chair`, `clothes`, `dog`, `gaminggear`, `grill`, `grill2`, `pillow`, `remotes`, `spatulas`, `theroom`, `toaster`, `operation`, `legos`, `1989`, `hotdog`, `cap`, `thor`, `monopoly`, `ramen`, `beaks`, `shamwow`, `got`]
 
 const getToys = _ => {
   fetch('/items')
