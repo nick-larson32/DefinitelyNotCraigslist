@@ -6,7 +6,37 @@
 
 .card {
   margin-bottom: 25px;
-  text-align: center;
+  text-align: left;
+}
+
+.card-content {
+  padding: 0;
+}
+
+.card-footer {
+  margin-top: 20px;
+}
+
+.name {
+  background: #376996;
+  width: 100%;
+  color: white;
+}
+
+.subtitle {
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px
+}
+
+.contact {
+  margin: auto;
+  width: 100%;
+}
+
+h1 {
+  font-size: 20px;
 }
 
 @media only screen and (max-width: 500px) {

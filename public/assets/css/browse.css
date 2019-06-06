@@ -490,3 +490,32 @@ li {
     width: 25%;
     margin-top: 10px;
 }
+
+#about-body {
+    text-align: left;
+}
+
+#profile {
+    background-color: #333;
+}
+
+h2 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+.profile-text {
+    color: white;
+    margin-left: 30px;
+}
+
+#profile-head {
+    margin-bottom: 0;
+}
+
+.profile-container {
+    margin-bottom: 300px;
+}
