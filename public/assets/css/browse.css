@@ -494,3 +494,17 @@ li {
 #about-body {
     text-align: left;
 }
+
+#profile {
+    background-color: #333;
+}
+
+h2 {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+}
+
+.profile-container {
+    margin-bottom: 300px;
+}
