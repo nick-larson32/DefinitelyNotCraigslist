@@ -3,9 +3,8 @@ let choice
 let itemId
 
 document.addEventListener('click', e => {
-
-  e.preventDefault()
   if (e.target.id === 'infoUpdate') {
+    e.preventDefault()
     document.querySelector('#infoUpdate').style.display = 'none'
     document.querySelector('#updateItem').style.display = 'block'
     sessionStorage.setItem('itemId', document.querySelector('.itemEdit').dataset.upid)
