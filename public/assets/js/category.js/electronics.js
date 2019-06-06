@@ -1,6 +1,6 @@
 const { fetch } = window
 
-const imgArr = [`burgerbed`, `butterstick`, `chair`, `clothes`, `dog`, `gaminggear`, `grill`, `grill2`, `pillow`, `remotes`, `spatulas`, `theroom`, `toaster`]
+const imgArr = [`burgerbed`, `butterstick`, `chair`, `clothes`, `dog`, `gaminggear`, `grill`, `grill2`, `pillow`, `remotes`, `spatulas`, `theroom`, `toaster`, `operation`, `legos`, `1989`, `hotdog`, `cap`, `thor`, `monopoly`, `ramen`, `beaks`, `shamwow`, `got`, `coding`]
 
 const getElectronics = _ => {
   fetch('/items')
@@ -19,12 +19,14 @@ const getElectronics = _ => {
                 <h1 class="name">
                   ${itemName}
                 </h1>
-                <img src="../assets/images/placeholders/${randImg}.jpg">
+                <div class="img-div">
+                  <img src="../assets/images/placeholders/${randImg}.jpg">
+                </div>
                 <p class="subtitle">
                   Quantity: ${quantity}
                 </p>
                 <p class="subtitle">
-                  Price: $${price}
+                  Price: $${price} each
                 </p>
                 <p class="subtitle">
                   <span>Condition: ${condition}</span>
