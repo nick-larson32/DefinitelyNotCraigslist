@@ -1,5 +1,7 @@
 // const { fetch } = window
 
+const imgArr = [`burgerbed`, `butterstick`, `chair`, `clothes`, `dog`, `gaminggear`, `grill`, `grill2`, `pillow`, `remotes`, `spatulas`, `theroom`, `toaster`]
+
 // using a placement user for demo purposes
 // will need to dynamically integrate user
 let id = sessionStorage.getItem('id')
@@ -9,6 +11,7 @@ const getUserItems = _ => {
     .then(r => r.json())
     .then(user => {
       user.items.forEach(({ id, itemName, category, condition, price, quantity, bought, available, description }) => {
+        let randImg = imgArr[Math.floor(Math.random() * imgArr.length)]
         let userItemDiv = document.createElement('div')
         userItemDiv.innerHTML = `
                <div class="card">
@@ -16,9 +19,9 @@ const getUserItems = _ => {
                       <h2 class="card-header-title itemHeader"> ${itemName}</h2>
                </header>
                <div class="card-content">
-               <div class="media">
-                  <figure class="image is-square>
-                      <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
+               <div class="">
+                  <figure class="image is-5by4">
+                      <img src="../assets/images/placeholders/${randImg}.jpg" alt="Placeholder image">
                   </figure>
                <div class="media-content">
                </div>
