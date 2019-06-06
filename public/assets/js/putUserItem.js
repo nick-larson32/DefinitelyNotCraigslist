@@ -25,7 +25,6 @@ const updateUserItem = _ => {
       break
     case ('price'):
       document.querySelector('#priceDiv').style.display = 'block'
-      console.log('got price')
       break
     case ('quantity'):
       document.querySelector('#priceDiv').style.display = 'block'
@@ -67,7 +66,7 @@ const putUserItem = choice => {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        choice: changingInfo
+        [choice]: changingInfo
       })
     })
     .then(_ => {
