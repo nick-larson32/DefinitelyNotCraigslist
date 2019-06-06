@@ -16,7 +16,7 @@ const getUserItems = _ => {
         userItemDiv.innerHTML = `
                <div class="card">
                <header class="card-harder itemHeader">
-                      <h2 class="card-header-title itemHeader"> ${itemName}</h2>
+                      <h2 class="card-header-title name itemHeader"> ${itemName}</h2>
                </header>
                <div class="card-content">
                <div class="">
