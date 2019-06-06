@@ -1,50 +1,64 @@
-require('dotenv').config()
+var userLocation = sessionStorage.getItem('address');
+console.log(userLocation)
 
-console.log(process.env.MAP_KEY)
-window.onload = function() {
-  L.mapquest.key = process.env.MAP_KEY;
+let addressSplit = userLocation.split(",");
+let street = addressSplit[0];
+let city = addressSplit[1];
 
-  const addressTest = "350 5th Ave, New York, NY 10118";
+let stateZipSplit = addressSplit[2].split(" ");
 
-  addDirections();
+let state = stateZipSplit[0];
+let zip = stateZipSplit[2];
 
-  function addDirections() {
-    var directions = L.mapquest.directions();
-    directions.route({
-        start: addressTest,
-        end: "One Liberty Plaza, New York, NY 10006",
-        waypoints: [
-          "366 Columbus Ave, New York, NY 10024",
-          "881 7th Ave, New York, NY 10019"
-        ],
-        options: {
-          enhancedNarrative: true
+console.log(zip);
+
+
+document.addEventListener('click', e => {
+  if (e.target.classList[0] === 'contact') {
+    fetch(`/items/${e.target.dataset.id}`)
+      .then(r => r.json())
+      .then(item => {
+        let newAddressSplit = item.user.address.split(',')
+        let newStateZip = newAddressSplit[2].split(' ')
+        let newZip = newStateZip[2]
+
+
+        L.mapquest.key = "unhtsta6Q2zNmOUxHGw2VK1eiDTwNWvY";
+
+        const addressTest = "92626";
+
+        addDirections();
+
+        function addDirections() {
+          var directions = L.mapquest.directions();
+          directions.route({
+              start: userLocation,
+              end: newZip,
+
+              options: {
+                enhancedNarrative: true
+              }
+            },
+            createMap
+          );
         }
-      },
-      createMap
-    );
-  }
 
-  function createMap(err, response) {
-    var map = L.mapquest.map("map", {
-      center: [0, 0],
-      layers: L.mapquest.tileLayer("map"),
-      zoom: 7
-    });
+        function createMap(err, response) {
+          var map = L.mapquest.map("map", {
+            center: [0, 0],
+            layers: L.mapquest.tileLayer("map"),
+            zoom: 7
+          });
 
-    var directionsLayer = L.mapquest
-      .directionsLayer({
-        directionsResponse: response
+          var directionsLayer = L.mapquest
+            .directionsLayer({
+              directionsResponse: response
+            })
+            .addTo(map);
+          map.addControl(L.mapquest.trafficControl());
+          narrativeControl.setDirectionsLayer(directionsLayer);
+          narrativeControl.addTo(map);
+        }
       })
-      .addTo(map);
-
-    var narrativeControl = L.mapquest.narrativeControl({
-      directionsResponse: response,
-      compactResults: false,
-      interactive: true
-    });
-
-    narrativeControl.setDirectionsLayer(directionsLayer);
-    narrativeControl.addTo(map);
-  }
-};
+  };
+})
