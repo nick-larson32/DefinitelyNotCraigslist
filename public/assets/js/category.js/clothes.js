@@ -23,7 +23,6 @@ const getClothes = _ => {
               </div>
               <footer class="card-footer">
                 <a class="contact pure-button pure-button-primary" href="#" data-id="${id}">Contact Owner</a>
-                <a class="hide pure-button" href="#">Not Interested</a>
               </footer>
             </div>
           `
@@ -47,9 +46,9 @@ document.addEventListener(`click`, event => {
   } else {
     if (event.target.classList[0] === `contact`) {
       if (!document.querySelector(`p[data-id="${event.target.dataset.id}"]`)) {
-        fetch(`/items/${event.target.dataset.id}`)
-          .then(item => item.json())
-          .then(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
+      fetch(`/items/${event.target.dataset.id}`)
+        .then(item => item.json())
+        .then(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
             let chosenEmail = document.createElement(`p`)
             chosenEmail.classList = `email subtitle`
             chosenEmail.setAttribute(`data-id`, `${event.target.dataset.id}`)
@@ -57,9 +56,9 @@ document.addEventListener(`click`, event => {
           Donor email: ${user.email}
           `
             document.querySelector(`div[data-id="${event.target.dataset.id}"]`).append(chosenEmail)
-          })
-          .catch(e => console.error(e))
-      }
+        })
+        .catch(e => console.error(e))
     }
+  }
   }
 })
