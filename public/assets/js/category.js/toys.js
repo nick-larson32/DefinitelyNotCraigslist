@@ -27,7 +27,7 @@ const getToys = _ => {
                   Price: $${price}
                 </p>
                 <p class="subtitle">
-                  Condition: ${condition}
+                  <span>Condition: ${condition}</span>
                 </p>
                 <p class="subtitle">
                   ${description}

@@ -55,3 +55,7 @@ h1 {
 img {
   margin: auto;
 }
+
+span, h1 {
+  text-transform: capitalize;
+}
