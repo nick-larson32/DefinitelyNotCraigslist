@@ -35,3 +35,8 @@ document.querySelector('#signup').addEventListener('click', e => {
 
 // cfrankiewicz4@nbcnews.com
 // Tkm2XxzPSl
+
+document.querySelector(`#cancelButton`).addEventListener(`click`, e => {
+  document.querySelector('#loginEmail').value = ``
+  document.querySelector('#loginPassword').value = ``
+})

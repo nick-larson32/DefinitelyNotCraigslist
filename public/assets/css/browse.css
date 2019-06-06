@@ -249,6 +249,7 @@ strong {
     text-align: center;
     margin: 0%;
     margin-bottom: 200px;
+    padding-bottom: 20px;
 }
 
 .label_color {
@@ -435,6 +436,9 @@ li {
 
 .login-text {
     color: white;
+    margin: auto;
+    text-align: center;
+    margin-top: 5px;
 }
 
 #login-header {
@@ -479,4 +483,10 @@ li {
 
 .about {
     text-align: center;
+}
+
+#submitButton, #cancelButton, #submit {
+    margin: 5px;
+    width: 25%;
+    margin-top: 10px;
 }
