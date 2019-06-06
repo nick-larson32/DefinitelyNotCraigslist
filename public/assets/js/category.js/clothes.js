@@ -1,6 +1,6 @@
 const { fetch } = window
 
-
+const imgArr = [`burgerbed`, `butterstick`, `chair`, `clothes`, `dog`, `gaminggear`, `grill`, `grill2`, `pillow`, `remotes`, `spatulas`, `theroom`, `toaster`]
 
 const getClothes = _ => {
   fetch('/items')
@@ -10,28 +10,32 @@ const getClothes = _ => {
       const clothesItems = items.filter(data =>
         data.category.category === 'clothing')
       clothesItems.forEach(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
+        let randImg = imgArr[Math.floor(Math.random() * imgArr.length)]
         let clothesDiv = document.createElement('div')
+        clothesDiv.className = `card`
         if (available && !bought && quantity > 0) {
           clothesDiv.innerHTML = `
-            <div class="card">
               <div class="card-content" data-id="${id}">
                 <h1 class="name">
                   ${itemName}
                 </h1>
+                <img src="../assets/images/placeholders/${randImg}.jpg">
                 <p class="subtitle">
                   Quantity: ${quantity}
                 </p>
                 <p class="subtitle">
-                  Price: ${price}
+                  Price: $${price}
                 </p>
                 <p class="subtitle">
-                  Condition: ${condition}
+                  <span>Condition: ${condition}</span>
+                </p>
+                <p class="subtitle">
+                  ${description}
                 </p>
               </div>
               <footer class="card-footer">
                 <a class="contact pure-button pure-button-primary" href="#" data-id="${id}">Contact Info</a>
               </footer>
-            </div>
           `
           document.querySelector('#clothesTiles').append(clothesDiv)
         }

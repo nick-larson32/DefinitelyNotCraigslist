@@ -90,8 +90,9 @@
     <div class="profile-container">
         <div id="profile" class="container is-fullhd">
             <div class="field fieldStyle">
-                <div id="profile" class="tags are-medium">
-                    <h2 id="profile-head">Your Profile</h2>
+                <div id="profile-head" class="tags are-medium">
+                    <h2>Your Profile</h2>
+
                 </div>
                 <!-- <i class="large material-icons">account_circle</i> -->
                 <img src="https://t4.ftcdn.net/jpg/02/46/60/61/500_F_246606148_LQmg22XGehD2MzCSCNylBxkxUNYzPmOb.jpg"
@@ -101,8 +102,9 @@
             </div>
         </div>
 
-        <div class="container is-fullhd section field fieldStyle editInfo" id="login_background">
-            <form>
+
+        <div class="container is-fullhd section field fieldStyle editInfo" id="profile">
+            <form class="form-text">
                 <label for="changed">Select the information you want to change:</label>
                 <select name="change" id="change">
                     <option disabled selected>Choose Which Info to Update</option>
@@ -115,7 +117,7 @@
                     <option value="location">Location</option>
                 </select>
                 <br>
-                <button id="infoUpdate">Submit</button>
+                <button id="infoUpdate" class="pure-button pure-button-primary button buttonStyle">Next</button>
                 <br>
                 <div id="textInputDiv">
                     <label for="changedInfo">Enter new info:</label>
@@ -137,7 +139,7 @@
                         <option value="2">Los Angeles County</option>
                     </select>
                 </div>
-                <button id="updateUser">Submit</button>
+                <button id="updateUser" class="pure-button pure-button-primary button buttonStyle">Submit</button>
             </form>
         </div>
     </div>

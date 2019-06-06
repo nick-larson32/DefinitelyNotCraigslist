@@ -21,6 +21,7 @@
   background: #376996;
   width: 100%;
   color: white;
+  margin-bottom: 0;
 }
 
 .subtitle {
@@ -44,5 +45,17 @@ h1 {
     margin: auto;
     width: 80%;
     margin-top: 50px;
+    /* margin-bottom: 2000px; */
   }
+  #furnitureTiles>div:last-child, #kitchenwareTiles>div:last-child, #electronicsTiles>div:last-child, #clothesTiles>div:last-child, #foodTiles>div:last-child, #toysTiles>div:last-child, #miscTiles>div:last-child {
+    margin-bottom: 150px;
+  }
+}
+
+img {
+  margin: auto;
+}
+
+span, h1 {
+  text-transform: capitalize;
 }

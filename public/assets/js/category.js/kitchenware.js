@@ -1,5 +1,7 @@
 const { fetch } = window
 
+const imgArr = [`burgerbed`, `butterstick`, `chair`, `clothes`, `dog`, `gaminggear`, `grill`, `grill2`, `pillow`, `remotes`, `spatulas`, `theroom`, `toaster`]
+
 const getKitchenware = _ => {
   fetch('/items')
     .then(items => items.json())
@@ -8,24 +10,32 @@ const getKitchenware = _ => {
       const kitchenwareItems = items.filter(data =>
         data.category.category === 'kitchenware')
       kitchenwareItems.forEach(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
+        let randImg = imgArr[Math.floor(Math.random() * imgArr.length)]
         let kitchenwareDiv = document.createElement('div')
+        kitchenwareDiv.className = `card`
         if (available && !bought && quantity > 0) {
           kitchenwareDiv.innerHTML = `
-            <div class="card">
               <div class="card-content" data-id="${id}">
-                <p class="title">
+                <h1 class="name">
                   ${itemName}
+                </h1>
+                <img src="../assets/images/placeholders/${randImg}.jpg">
+                <p class="subtitle">
+                  Quantity: ${quantity}
                 </p>
                 <p class="subtitle">
-                  Number available: ${quantity}
-                  Category: ${category.category}
+                  Price: $${price}
+                </p>
+                <p class="subtitle">
+                  <span>Condition: ${condition}</span>
+                </p>
+                <p class="subtitle">
+                  ${description}
                 </p>
               </div>
               <footer class="card-footer">
                 <a class="contact pure-button pure-button-primary" href="#" data-id="${id}">Contact Info</a>
-                <a class="hide pure-button" href="#">Not Interested</a>
               </footer>
-            </div>
           `
           document.querySelector('#kitchenwareTiles').append(kitchenwareDiv)
         }
@@ -47,19 +57,19 @@ document.addEventListener(`click`, event => {
   } else {
     if (event.target.classList[0] === `contact`) {
       if (!document.querySelector(`p[data-id="${event.target.dataset.id}"]`)) {
-      fetch(`/items/${event.target.dataset.id}`)
-        .then(item => item.json())
-        .then(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
+        fetch(`/items/${event.target.dataset.id}`)
+          .then(item => item.json())
+          .then(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
             let chosenEmail = document.createElement(`p`)
             chosenEmail.classList = `email subtitle`
             chosenEmail.setAttribute(`data-id`, `${event.target.dataset.id}`)
             chosenEmail.innerHTML = `
-          Donor email: ${user.email}
+          Seller's email: ${user.email}
           `
             document.querySelector(`div[data-id="${event.target.dataset.id}"]`).append(chosenEmail)
-        })
-        .catch(e => console.error(e))
+          })
+          .catch(e => console.error(e))
+      }
     }
-  }
   }
 })
