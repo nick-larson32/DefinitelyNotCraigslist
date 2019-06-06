@@ -503,6 +503,13 @@ h2 {
     font-size: 20px;
     color: white;
     text-align: center;
+    margin: auto;
+    margin-bottom: 0;
+}
+
+.profile-text {
+    color: white;
+    margin-left: 30px;
 }
 
 .profile-container {
