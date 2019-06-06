@@ -13,22 +13,22 @@ const getUserItems = _ => {
         userItemDiv.innerHTML = `
                <div class="card">
                <header class="card-harder itemHeader">
-                      <p class="card-header-title itemHeader"> ${itemName}</p>
+                      <h2 class="card-header-title itemHeader"> ${itemName}</h2>
                </header>
                <div class="card-content">
                <div class="media">
-                  <figure class="image is-128x128 align="middle">
+                  <figure class="image is-square>
                       <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
                   </figure>
                <div class="media-content">
                </div>
               </div>
               <div class="content">
-                <p data-itemid=${id}>Category: ${category.category}</p>
-                  <p data-itemid=${id}>Quantity: ${quantity}</p>
-                  <p data-itemid=${id}>$${price}</p>
-                  <p data-itemid=${id}>Condition: ${condition}</p>
-                  <p data-itemid=${id}>${description}</p>
+                <p class="subtitle"data-itemid=${id}>Category: ${category.category}</p>
+                  <p class="subtitle" data-itemid=${id}>Quantity: ${quantity}</p>
+                  <p class="subtitle" data-itemid=${id}>$${price}</p>
+                  <p class="subtitle" data-itemid=${id}>Condition: ${condition}</p>
+                  <p class="subtitle" data-itemid=${id}>${description}</p>
               </div>
                </div>
                <footer class="card-footer">
