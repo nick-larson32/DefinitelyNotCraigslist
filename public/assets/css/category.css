@@ -21,6 +21,7 @@
   background: #376996;
   width: 100%;
   color: white;
+  margin-bottom: 0;
 }
 
 .subtitle {
@@ -44,5 +45,13 @@ h1 {
     margin: auto;
     width: 80%;
     margin-top: 50px;
+    /* margin-bottom: 2000px; */
   }
+  #clothesTiles > div:last-child {
+    margin-bottom: 150px;
+  }
+}
+
+img {
+  margin: auto;
 }

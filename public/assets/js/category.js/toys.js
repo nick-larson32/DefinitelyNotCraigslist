@@ -1,6 +1,6 @@
 const { fetch } = window
 
-
+const imgArr = [`burgerbed`, `butterstick`, `chair`, `clothes`, `dog`, `gaminggear`, `grill`, `grill2`, `pillow`, `remotes`, `spatulas`, `theroom`, `toaster`]
 
 const getToys = _ => {
   fetch('/items')
@@ -10,6 +10,7 @@ const getToys = _ => {
       const toysItems = items.filter(data =>
         data.category.category === 'toys')
       toysItems.forEach(({ id, itemName, quantity, available, bought, price, condition, description, user, category }) => {
+        let randImg = imgArr[Math.floor(Math.random() * imgArr.length)]
         let toysDiv = document.createElement('div')
         if (available && !bought && quantity > 0) {
           toysDiv.innerHTML = `
@@ -18,11 +19,12 @@ const getToys = _ => {
                 <h1 class="name">
                   ${itemName}
                 </h1>
+                <img src="../assets/images/placeholders/${randImg}.jpg">
                 <p class="subtitle">
                   Quantity: ${quantity}
                 </p>
                 <p class="subtitle">
-                  Price: ${price}
+                  Price: $${price}
                 </p>
                 <p class="subtitle">
                   Condition: ${condition}
