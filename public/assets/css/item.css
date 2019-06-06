@@ -40,3 +40,16 @@
   #descriptionDiv{
     display:none;
   }
+
+  .itemHeader{
+    background-color:#376996;
+    color:white;
+  }
+
+  .itemDel{
+    color:red;
+  }
+
+  .itemEdit{
+    color:teal;
+  }
