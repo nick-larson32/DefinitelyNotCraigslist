@@ -4,12 +4,12 @@ let itemId
 
 document.addEventListener('click', e => {
 
-  //e.preventDefault()
+  e.preventDefault()
   if (e.target.id === 'infoUpdate') {
     document.querySelector('#infoUpdate').style.display = 'none'
     document.querySelector('#updateItem').style.display = 'block'
-    sessionStorage.setItem('itemId', document.querySelector('#itemEdit').dataset.itemid)
-    let itemId = sessionStorage.getItem('itemId')
+    sessionStorage.setItem('itemId', document.querySelector('.itemEdit').dataset.upid)
+    itemId = sessionStorage.getItem('itemId')
     updateUserItem()
   } else if (e.target.id === 'updateItem') {
     putUserItem(choice)
@@ -26,6 +26,7 @@ const updateUserItem = _ => {
       break
     case ('price'):
       document.querySelector('#priceDiv').style.display = 'block'
+      console.log('got price')
       break
     case ('quantity'):
       document.querySelector('#priceDiv').style.display = 'block'

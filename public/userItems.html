@@ -145,83 +145,57 @@
                     <div class="section page-modal">
                         <h1 class="title">Update Listing</h1>
                         <form>
-                            <div class="field">
-                                <div class="control">
-                                    <label class="label" for="change">Select the information you want to change:</label>
-                                    <div class="select">
-                                        <select name="change" id="change">
-                                            <option value="itemName">Item Name</option>
-                                            <option value="price">Price</option>
-                                            <option value="category">Category</option>
-                                            <option value="condition">Condition</option>
-                                            <option value="description">Description</option>
-                                        </select>
+                                <div class="field">
+                                        <div class="control">
+                                            <label class="label" for="change">Select the information you want to change:</label>
+                                                <div class="select">
+                                                    <select name="change" id="change">
+                                                        <option value="itemName">Item Name</option>
+                                                        <option value="price">Price</option>
+                                                        <option value="category">Category</option>
+                                                        <option value="condition">Condition</option>
+                                                        <option value="description">Description</option>
+                                                    </select>
+                                                </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <button class="button is-info" id="infoUpdate">Submit</button>
-                            <br>
-                            <div class="field">
-                                <div class="control" id="itemDiv">
-                                    Item Name: <input class="input" type="text" id="itemUpdate" placeholder="i.e Victorian Table">
-                                </div>
-                            </div>
-                    </div>
-                    <button id="infoUpdate">Submit</button>
-                    <br>
-                    <div class="field">
-                        <div class="control" id="itemDiv">
-                            Item Name : <input class="input" type="text" id="itemUpdate" placeholder="i.e Victorian Table">
-                        </div>
-                    </div>
-                    <div class="field">
-                        <div class="control" id="priceDiv">
-                            <input class="input" type="number" id="priceUpdate" placeholder="i.e 10">
-                        </div>
-                    </div>
-                </div>
-                <div class="field">
-                    <label class="label">Price</label>
-                    <div class="control" id="priceDiv">
-                        <input class="input" type="number" id="priceUpdate" placeholder="i.e 10">
-                    </div>
-                    <div class="field">
-                        <div class="control">
-                            <div class="select" id="conditionDiv">
-                                <select name="condition" id="conditionUpdate">
-                                            <option value="new">Like New</option>
-                                            <option value="like new">New</option>
-                                            <option value="Used">Used</option>
-                                            <option value="Poor">Poor</option>
-                                    </select>
-                            </div>
-                        </div>
+                                        <button class="button is-info" id="infoUpdate">Select</button>
+                                    <br>
+                                    <div class="field">
+                                            <div class="control" id="itemDiv">
+                                                Item Name: <input class="input" type="text" id="itemUpdate" placeholder="i.e Victorian Table">
+                                            </div>
+                                    </div>
+                                    <br>
+                                    <div class="field">
+                                        <div class="control" id="priceDiv">
+                                            <input class="input" type="number" id="priceUpdate" placeholder="Enter Amount">
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control">
+                                        <div class="select" id="conditionDiv">
+                                            <select name="condition" id="conditionUpdate">
+                                                    <option value="new">New</option>
+                                                    <option value="like new">Like New</option>
+                                                    <option value="Used">Used</option>
+                                                    <option value="Poor">Poor</option>
+                                            </select>
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="field">
+                                        <div class="control" id="descriptionDiv">
+                                            <textarea class="textarea" id="descriptionUpdate" placeholder="Enter Description"></textarea>
+                                        </div>
+                                    </div>
+                                <button type="submit" class="button is-info" id="updateItem">Update Listing</button>   
+                        </form>
                     </div>
                 </div>
-                <div class="field">
-                    <div class="control">
-                        <div class="select" id="conditionDiv">
-                            <select name="condition" id="conditionUpdate">
-                                    <option value="new">New</option>
-                                    <option value="like new">Like New</option>
-                                    <option value="Used">Used</option>
-                                    <option value="Poor">Poor</option>
-                                </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="field">
-                    <div class="control" id="descriptionDiv">
-                        <textarea class="textarea" id="descriptionUpdate" placeholder="Enter Description"></textarea>
-                        </select>
-                    </div>
-                </div>
-                <button type="submit" class="button is-info" id="updateItem">Update Listing</button>
             </div>
-            </form>
         </div>
         <!-- <button class="modal-close is-large" aria-label="close"></button> -->
-    </div>
     </div>
     <div class="section">
         <div id="userItemView"></div>
