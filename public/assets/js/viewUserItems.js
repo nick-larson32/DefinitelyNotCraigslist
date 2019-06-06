@@ -21,7 +21,7 @@ const getUserItems = _ => {
                <div class="card-content">
                <div class="">
                   <figure class="image is-5by4">
-                      <img src="../assets/images/placeholders/${randImg}.jpg" alt="Placeholder image">
+                      <img src="./assets/images/placeholders/${randImg}.jpg" alt="Placeholder image">
                   </figure>
                <div class="media-content">
                </div>
