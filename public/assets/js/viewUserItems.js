@@ -26,12 +26,9 @@ const getUserItems = _ => {
               <div class="content">
                 <p data-itemid=${id}>Category: ${category.category}</p>
                   <p data-itemid=${id}>Quantity: ${quantity}</p>
-                  <p data-itemid=${id}>Available:${available}</p>
                   <p data-itemid=${id}>$${price}</p>
                   <p data-itemid=${id}>Condition: ${condition}</p>
                   <p data-itemid=${id}>${description}</p>
-                  <p data-itemid=${id}>Category: ${category.category}</p>
-                  <p data-itemid=${id}>Location: ${user.location.county}</p>
               </div>
                </div>
                <footer class="card-footer">
