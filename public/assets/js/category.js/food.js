@@ -19,12 +19,14 @@ const getFood = _ => {
                 <h1 class="name">
                   ${itemName}
                 </h1>
-                <img src="../assets/images/placeholders/${randImg}.jpg">
+                <div class="img-div">
+                  <img src="../assets/images/placeholders/${randImg}.jpg">
+                </div>
                 <p class="subtitle">
                   Quantity: ${quantity}
                 </p>
                 <p class="subtitle">
-                  Price: $${price}
+                  Price: $${price} each
                 </p>
                 <p class="subtitle">
                   <span>Condition: ${condition}</span>
@@ -65,6 +67,8 @@ document.addEventListener(`click`, event => {
             chosenEmail.setAttribute(`data-id`, `${event.target.dataset.id}`)
             chosenEmail.innerHTML = `
           Seller's email: ${user.email}
+          <div id="map" style="margin-top: 10%;margin-left: 10%;width: 80%;height: 400px;"></div>
+
           `
             document.querySelector(`div[data-id="${event.target.dataset.id}"]`).append(chosenEmail)
           })
