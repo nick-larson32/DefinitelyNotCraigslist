@@ -2,7 +2,7 @@
 
 .custom-menu-wrapper {
     background-color: #191818;
-    margin-bottom: 2.5em;
+    margin-bottom: 1em;
     white-space: nowrap;
     position: relative;
 }
@@ -92,7 +92,6 @@
     -ms-transition: all 0.5s;
     transition: all 0.5s;
     height: 3em;
-    /* width: 70em; */
     position: absolute;
     top: 0;
     z-index: -1;
@@ -249,7 +248,7 @@ strong {
     background-color: #333;
     text-align: center;
     margin: 0%;
-    margin-bottom: 150px;
+    margin-bottom: 200px;
 }
 
 .label_color {
@@ -399,13 +398,17 @@ strong {
 .safety {
     margin: auto;
     width: 80%;
-    margin-bottom: 20px;
+    margin-bottom: 200px;
 }
 
 ul {
     list-style-type: square;
     margin-top: 20px;
     padding: 0px 20px;
+}
+
+li {
+    margin-bottom: 4px;
 }
 
 .message, .is-info, .message-header {
@@ -450,4 +453,30 @@ ul {
 
 #signup {
     color: lightgray;
+}
+
+.sectionMain, #main {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 65px;
+}
+
+.title {
+    text-decoration: underline;
+    text-decoration-color: white;
+    -moz-text-decoration-color: white;
+}
+
+.title:hover {
+    color: #191818;
+    text-decoration-color: #191818;
+    -moz-text-decoration-color: #191818;
+}
+
+#hello {
+    margin-left: 16px;
+}
+
+.about {
+    text-align: center;
 }
