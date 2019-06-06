@@ -19,8 +19,8 @@ const getCurrentUser = _ => {
           <p class="profile-text">${user.DOB}</p>
       <label class="label label_color">Location</label>
           <p class="profile-text">${user.location.county}</p>
-      <button id="editProfileBtn">Edit profile</button>
-      <button id="logout">Logout</button>
+      <button id="editProfileBtn" class="pure-button pure-button-primary button buttonStyle">Edit profile</button>
+      <button id="logout" class="pure-button pure-button-active buttonStyle">Logout</button>
       `
     })
     .catch(e => console.log(e))
