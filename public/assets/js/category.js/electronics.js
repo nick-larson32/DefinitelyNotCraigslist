@@ -65,6 +65,8 @@ document.addEventListener(`click`, event => {
             chosenEmail.setAttribute(`data-id`, `${event.target.dataset.id}`)
             chosenEmail.innerHTML = `
           Seller's email: ${user.email}
+          <div id="map" style="margin-top: 10%;margin-left: 10%;width: 80%;height: 400px;"></div>
+
           `
             document.querySelector(`div[data-id="${event.target.dataset.id}"]`).append(chosenEmail)
           })
