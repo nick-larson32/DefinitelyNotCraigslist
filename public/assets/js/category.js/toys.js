@@ -29,6 +29,9 @@ const getToys = _ => {
                 <p class="subtitle">
                   Condition: ${condition}
                 </p>
+                <p class="subtitle">
+                  ${description}
+                </p>
               </div>
               <footer class="card-footer">
                 <a class="contact pure-button pure-button-primary" href="#" data-id="${id}">Contact Info</a>
