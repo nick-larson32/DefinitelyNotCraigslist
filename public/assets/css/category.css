@@ -52,10 +52,20 @@ h1 {
   }
 }
 
-img {
+.img-div, img {
   margin: auto;
+  width: 100%;
 }
+
 
 span, h1 {
   text-transform: capitalize;
+}
+
+.mapquest-logo, .logo-small, .leaflet-control, .leaflet-bottom, .leaflet-left {
+  display: none;
+}
+
+.footer {
+  z-index: 999;
 }

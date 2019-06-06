@@ -19,12 +19,14 @@ const getElectronics = _ => {
                 <h1 class="name">
                   ${itemName}
                 </h1>
-                <img src="../assets/images/placeholders/${randImg}.jpg">
+                <div class="img-div">
+                  <img src="../assets/images/placeholders/${randImg}.jpg">
+                </div>
                 <p class="subtitle">
                   Quantity: ${quantity}
                 </p>
                 <p class="subtitle">
-                  Price: $${price}
+                  Price: $${price} each
                 </p>
                 <p class="subtitle">
                   <span>Condition: ${condition}</span>
