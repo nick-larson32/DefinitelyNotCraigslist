@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
-    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css" integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" media="screen"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css" />
+    <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/pure-min.css"
+        integrity="sha384-nn4HPE8lTHyVtfCBi5yW9d20FjT8BJwUXyWZT9InLYax14RDjBj46LmSztkmNP9w" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/browse.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/userLoggedIn.css">
@@ -26,7 +28,8 @@
             </a>
             <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
         </div>
-        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+        <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked"
+            id="tuckedMenu">
             <div class="custom-menu-screen"></div>
             <ul class="pure-menu-list">
                 <li class="pure-menu-item" id="userLoggedIn">
@@ -34,7 +37,7 @@
                 </li>
                 <li class="pure-menu-item" id="userLoggingIn">
                     <a href="./login.html" class="pure-menu-link">
-                        <p class="menu-text">Login</p>
+                        <p class="menu-text">Login/Sign Up</p>
                     </a>
                 </li>
                 <li class="pure-menu-item" id="userSigningUp">
@@ -84,65 +87,72 @@
         </div>
     </div>
 
-    <div class="container is-fullhd " id="login_background">
-        <div class="field fieldStyle">
-            <div class="tags are-medium">
-                <span class="tag has-background-grey-darker has-text-grey tagLogin">Profile</span>
-            </div>
-            <!-- <i class="large material-icons">account_circle</i> -->
-            <img src="https://t4.ftcdn.net/jpg/02/46/60/61/500_F_246606148_LQmg22XGehD2MzCSCNylBxkxUNYzPmOb.jpg" alt="profile">
-            <div class="profileInfo">
+    <div class="profile-container">
+        <div id="profile" class="container is-fullhd">
+            <div class="field fieldStyle">
+                <div id="profile" class="tags are-medium">
+                    <h2 id="profile-head">Your Profile</h2>
+                </div>
+                <!-- <i class="large material-icons">account_circle</i> -->
+                <img src="https://t4.ftcdn.net/jpg/02/46/60/61/500_F_246606148_LQmg22XGehD2MzCSCNylBxkxUNYzPmOb.jpg"
+                    alt="profile">
+                <div class="profileInfo">
+                </div>
             </div>
         </div>
 
-    </div>
-
-    <div class="container is-fullhd section field fieldStyle editInfo" id="login_background">
-        <form>
-            <label for="changed">Select the information you want to change:</label>
-            <select name="change" id="change">
-                <option disabled selected>Choose Which Info to Update</option>
-                <option value="name">Name</option>
-                <option value="email">Email</option>
-                <option value="password">Password</option>
-                <option value="address">Address</option>
-                <option value="DOB">Date of Birth</option>
-                <option value="gender">Gender</option>
-                <option value="location">Location</option>
-            </select>
-            <br>
-            <button id="infoUpdate">Submit</button>
-            <br>
-            <div id="textInputDiv">
-                <label for="changedInfo">Enter new info:</label>
-                <input type="text" name="newInfo" id="newInfo">
-            </div>
-            <div id="passwordInputDiv">
-                <label for="newPassword">Enter new password:</label>
-                <input type="password" name="newPassword" id="newPassword">
-            </div>
-            <div id="dateInputDiv">
-                <label for="newDate">Enter new date:</label>
-                <input type="date" name="newDate" id="newDate">
-            </div>
-            <div id="newLocationDiv">
-                <label for="location">Location:</label>
-                <select name="location" id="location">
-                    <option disabled selected>Choose Your Location</option>
-                    <option value="1">Orange County</option>
-                    <option value="2">Los Angeles County</option>
+        <div class="container is-fullhd section field fieldStyle editInfo" id="login_background">
+            <form>
+                <label for="changed">Select the information you want to change:</label>
+                <select name="change" id="change">
+                    <option disabled selected>Choose Which Info to Update</option>
+                    <option value="name">Name</option>
+                    <option value="email">Email</option>
+                    <option value="password">Password</option>
+                    <option value="address">Address</option>
+                    <option value="DOB">Date of Birth</option>
+                    <option value="gender">Gender</option>
+                    <option value="location">Location</option>
                 </select>
-            </div>
-            <button id="updateUser">Submit</button>
-        </form>
+                <br>
+                <button id="infoUpdate">Submit</button>
+                <br>
+                <div id="textInputDiv">
+                    <label for="changedInfo">Enter new info:</label>
+                    <input type="text" name="newInfo" id="newInfo">
+                </div>
+                <div id="passwordInputDiv">
+                    <label for="newPassword">Enter new password:</label>
+                    <input type="password" name="newPassword" id="newPassword">
+                </div>
+                <div id="dateInputDiv">
+                    <label for="newDate">Enter new date:</label>
+                    <input type="date" name="newDate" id="newDate">
+                </div>
+                <div id="newLocationDiv">
+                    <label for="location">Location:</label>
+                    <select name="location" id="location">
+                        <option disabled selected>Choose Your Location</option>
+                        <option value="1">Orange County</option>
+                        <option value="2">Los Angeles County</option>
+                    </select>
+                </div>
+                <button id="updateUser">Submit</button>
+            </form>
+        </div>
     </div>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="content has-text-centered">
             <p class="footer-text">
-                <strong>DefinitelyNotCraigslist</strong> created by <a class="footer-link" href="https://github.com/SPFlores">Samantha Flores</a>, <a class="footer-link" href="https://github.com/Pandapoc">Nick Larson</a>, <a class="footer-link" href="https://github.com/safavis">Mahya Safavi</a>,
-                <a class="footer-link" href="https://github.com/aminehdhd">Amine Haddouch</a>, <a class="footer-link" href="https://github.com/diennguyen90">Dien Nguyen</a>, <a class="footer-link" href="https://github.com/cdkedits">Connor Nguyen</a>.
+                <strong>DefinitelyNotCraigslist</strong> created by <a class="footer-link"
+                    href="https://github.com/SPFlores">Samantha Flores</a>, <a class="footer-link"
+                    href="https://github.com/Pandapoc">Nick Larson</a>, <a class="footer-link"
+                    href="https://github.com/safavis">Mahya Safavi</a>,
+                <a class="footer-link" href="https://github.com/aminehdhd">Amine Haddouch</a>, <a class="footer-link"
+                    href="https://github.com/diennguyen90">Dien Nguyen</a>, <a class="footer-link"
+                    href="https://github.com/cdkedits">Connor Nguyen</a>.
                 Powered by caffeine!
             </p>
         </div>

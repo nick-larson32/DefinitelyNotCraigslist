@@ -18,6 +18,6 @@ document.addEventListener('click', e => {
     sessionStorage.setItem('id', '')
     sessionStorage.setItem('address', '')
     sessionStorage.setItem('name', '')
-    window.location.href = 'index.html'
+    window.location.href = 'browse.html'
   }
 })

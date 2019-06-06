@@ -10,15 +10,15 @@ const getCurrentUser = _ => {
 
       document.querySelector('.profileInfo').innerHTML = `
       <label class="label label_color">Name</label>
-        <p>${user.name}</p>
+        <p class="profile-text">${user.name}</p>
       <label class="label label_color">Password</label>
-        <p>${user.password}</p>
+        <p class="profile-text">${user.password}</p>
       <label class="label label_color">Email</label>
-          <p>${user.email}</p>
+          <p class="profile-text">${user.email}</p>
       <label class="label label_color">Date of Birth</label>
-          <p>${user.DOB}</p>
+          <p class="profile-text">${user.DOB}</p>
       <label class="label label_color">Location</label>
-          <p>${user.location.county}</p>
+          <p class="profile-text">${user.location.county}</p>
       <button id="editProfileBtn">Edit profile</button>
       <button id="logout">Logout</button>
       `

@@ -1,5 +1,7 @@
 const { fetch } = window
 
+
+
 const getToys = _ => {
   fetch('/items')
     .then(items => items.json())
@@ -13,17 +15,21 @@ const getToys = _ => {
           toysDiv.innerHTML = `
             <div class="card">
               <div class="card-content" data-id="${id}">
-                <p class="title">
+                <h1 class="name">
                   ${itemName}
+                </h1>
+                <p class="subtitle">
+                  Quantity: ${quantity}
                 </p>
                 <p class="subtitle">
-                  Number available: ${quantity}
-                  Category: ${category.category}
+                  Price: ${price}
+                </p>
+                <p class="subtitle">
+                  Condition: ${condition}
                 </p>
               </div>
               <footer class="card-footer">
-                <a class="contact pure-button pure-button-primary" href="#" data-id="${id}">Contact Owner</a>
-                <a class="hide pure-button" href="#">Not Interested</a>
+                <a class="contact pure-button pure-button-primary" href="#" data-id="${id}">Contact Info</a>
               </footer>
             </div>
           `
@@ -54,7 +60,7 @@ document.addEventListener(`click`, event => {
             chosenEmail.classList = `email subtitle`
             chosenEmail.setAttribute(`data-id`, `${event.target.dataset.id}`)
             chosenEmail.innerHTML = `
-          Donor email: ${user.email}
+          Seller's email: ${user.email}
           `
             document.querySelector(`div[data-id="${event.target.dataset.id}"]`).append(chosenEmail)
           })
